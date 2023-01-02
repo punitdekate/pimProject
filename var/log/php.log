@@ -1,0 +1,2 @@
+[27-Dec-2022 14:14:42 Asia/Calcutta] 2022-12-27T14:14:42+05:30 [info] User Deprecated: Method "Symfony\Component\HttpKernel\KernelInterface::locateResource()" might add "string" as a native return type declaration in the future. Do the same in implementation "Pimcore\Kernel" now to avoid errors or add an explicit @return annotation to suppress this message.
+[27-Dec-2022 14:14:42 Asia/Calcutta] 2022-12-27T14:14:42+05:30 [critical] Uncaught Exception: Unable to create the "cache" directory (/var/www/html/test/pimProject/var/cache/dev).
