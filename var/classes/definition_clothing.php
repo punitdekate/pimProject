@@ -5,12 +5,11 @@
  * Variants: no
  *
  * Fields Summary:
- * - genric_attributes [classificationstore]
- * - product_image [image]
- * - other_details [block]
- * -- attribute_name [input]
- * -- attribute_details [input]
- * - new_field [fieldcollections]
+ * - Name_Desc [classificationstore]
+ * - Product_image [image]
+ * - product_color [rgbaColor]
+ * - product_details [classificationstore]
+ * - Manufracture_Details [classificationstore]
  */
 
 return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
@@ -19,7 +18,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'clothing',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1672833166,
+   'modificationDate' => 1673245464,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -53,11 +52,11 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'children' => 
     array (
       0 => 
-      Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+      Pimcore\Model\DataObject\ClassDefinition\Layout\Tabpanel::__set_state(array(
          'name' => 'Layout',
          'type' => NULL,
          'region' => NULL,
-         'title' => '',
+         'title' => 'Product Information',
          'width' => '',
          'height' => '',
          'collapsible' => false,
@@ -68,109 +67,24 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Classificationstore::__set_state(array(
-             'name' => 'genric_attributes',
-             'title' => 'Genric Attributes',
-             'tooltip' => '',
-             'mandatory' => false,
-             'noteditable' => false,
-             'index' => false,
-             'locked' => false,
-             'style' => '',
-             'permissions' => NULL,
-             'datatype' => 'data',
-             'fieldtype' => 'classificationstore',
-             'relationType' => false,
-             'invisible' => false,
-             'visibleGridView' => false,
-             'visibleSearch' => false,
-             'blockedVarsForExport' => 
-            array (
-            ),
-             'children' => 
-            array (
-            ),
+          Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+             'name' => 'Name_Description',
+             'type' => NULL,
              'region' => NULL,
-             'layout' => NULL,
-             'width' => 0,
-             'height' => 0,
-             'maxTabs' => NULL,
-             'labelWidth' => 0,
-             'localized' => false,
-             'storeId' => 1,
-             'hideEmptyData' => false,
-             'disallowAddRemove' => false,
-             'referencedFields' => 
-            array (
-            ),
-             'fieldDefinitionsCache' => NULL,
-             'allowedGroupIds' => 
-            array (
-            ),
-             'activeGroupDefinitions' => 
-            array (
-            ),
-             'maxItems' => NULL,
-             'permissionView' => NULL,
-             'permissionEdit' => NULL,
-          )),
-          1 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Image::__set_state(array(
-             'name' => 'product_image',
-             'title' => 'Product _image',
-             'tooltip' => '',
-             'mandatory' => false,
-             'noteditable' => false,
-             'index' => false,
-             'locked' => false,
-             'style' => '',
-             'permissions' => NULL,
-             'datatype' => 'data',
-             'fieldtype' => 'image',
-             'relationType' => false,
-             'invisible' => false,
-             'visibleGridView' => false,
-             'visibleSearch' => false,
-             'blockedVarsForExport' => 
-            array (
-            ),
+             'title' => 'Name and description',
              'width' => '',
              'height' => '',
-             'uploadPath' => '',
-          )),
-          2 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Block::__set_state(array(
-             'name' => 'other_details',
-             'title' => 'Other _details',
-             'tooltip' => '',
-             'mandatory' => false,
-             'noteditable' => false,
-             'index' => false,
-             'locked' => false,
-             'style' => '',
-             'permissions' => NULL,
-             'datatype' => 'data',
-             'fieldtype' => 'block',
-             'relationType' => false,
-             'invisible' => false,
-             'visibleGridView' => false,
-             'visibleSearch' => false,
-             'blockedVarsForExport' => 
-            array (
-            ),
-             'lazyLoading' => false,
-             'disallowAddRemove' => false,
-             'disallowReorder' => false,
              'collapsible' => false,
              'collapsed' => false,
-             'maxItems' => NULL,
-             'styleElement' => '',
+             'bodyStyle' => '',
+             'datatype' => 'layout',
+             'permissions' => NULL,
              'children' => 
             array (
               0 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
-                 'name' => 'attribute_name',
-                 'title' => 'Attribute _name',
+              Pimcore\Model\DataObject\ClassDefinition\Data\Classificationstore::__set_state(array(
+                 'name' => 'Name_Desc',
+                 'title' => 'Name  and   Description',
                  'tooltip' => '',
                  'mandatory' => false,
                  'noteditable' => false,
@@ -179,7 +93,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'style' => '',
                  'permissions' => NULL,
                  'datatype' => 'data',
-                 'fieldtype' => 'input',
+                 'fieldtype' => 'classificationstore',
                  'relationType' => false,
                  'invisible' => false,
                  'visibleGridView' => false,
@@ -187,98 +101,274 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'blockedVarsForExport' => 
                 array (
                 ),
-                 'width' => '',
-                 'defaultValue' => NULL,
-                 'columnLength' => 190,
-                 'regex' => '',
-                 'regexFlags' => 
+                 'children' => 
                 array (
                 ),
-                 'unique' => false,
-                 'showCharCount' => false,
-                 'defaultValueGenerator' => '',
-              )),
-              1 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
-                 'name' => 'attribute_details',
-                 'title' => 'Attribute _details',
-                 'tooltip' => '',
-                 'mandatory' => false,
-                 'noteditable' => false,
-                 'index' => false,
-                 'locked' => false,
-                 'style' => '',
-                 'permissions' => NULL,
-                 'datatype' => 'data',
-                 'fieldtype' => 'input',
-                 'relationType' => false,
-                 'invisible' => false,
-                 'visibleGridView' => false,
-                 'visibleSearch' => false,
-                 'blockedVarsForExport' => 
+                 'region' => NULL,
+                 'layout' => NULL,
+                 'width' => 0,
+                 'height' => 0,
+                 'maxTabs' => NULL,
+                 'labelWidth' => 0,
+                 'localized' => false,
+                 'storeId' => 3,
+                 'hideEmptyData' => false,
+                 'disallowAddRemove' => false,
+                 'referencedFields' => 
                 array (
                 ),
-                 'width' => '',
-                 'defaultValue' => NULL,
-                 'columnLength' => 190,
-                 'regex' => '',
-                 'regexFlags' => 
+                 'fieldDefinitionsCache' => NULL,
+                 'allowedGroupIds' => 
                 array (
                 ),
-                 'unique' => false,
-                 'showCharCount' => false,
-                 'defaultValueGenerator' => '',
+                 'activeGroupDefinitions' => 
+                array (
+                ),
+                 'maxItems' => NULL,
+                 'permissionView' => NULL,
+                 'permissionEdit' => NULL,
               )),
             ),
-             'layout' => NULL,
-             'referencedFields' => 
-            array (
-            ),
-             'fieldDefinitionsCache' => NULL,
-          )),
-          3 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Fieldcollections::__set_state(array(
-             'name' => 'new_field',
-             'title' => 'New _field',
-             'tooltip' => '',
-             'mandatory' => false,
-             'noteditable' => false,
-             'index' => false,
              'locked' => false,
-             'style' => '',
-             'permissions' => NULL,
-             'datatype' => 'data',
-             'fieldtype' => 'fieldcollections',
-             'relationType' => false,
-             'invisible' => false,
-             'visibleGridView' => false,
-             'visibleSearch' => false,
              'blockedVarsForExport' => 
             array (
             ),
-             'allowedTypes' => 
-            array (
-              0 => 'new',
-            ),
-             'lazyLoading' => true,
-             'maxItems' => NULL,
-             'disallowAddRemove' => false,
-             'disallowReorder' => false,
-             'collapsed' => false,
-             'collapsible' => false,
+             'fieldtype' => 'panel',
+             'layout' => NULL,
              'border' => false,
+             'icon' => '',
+             'labelWidth' => 0,
+             'labelAlign' => 'left',
+          )),
+          1 => 
+          Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+             'name' => 'Layout',
+             'type' => NULL,
+             'region' => NULL,
+             'title' => 'Image and color',
+             'width' => '',
+             'height' => '',
+             'collapsible' => false,
+             'collapsed' => false,
+             'bodyStyle' => '',
+             'datatype' => 'layout',
+             'permissions' => NULL,
+             'children' => 
+            array (
+              0 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Image::__set_state(array(
+                 'name' => 'Product_image',
+                 'title' => 'Product _image',
+                 'tooltip' => '',
+                 'mandatory' => true,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'image',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'width' => '',
+                 'height' => '',
+                 'uploadPath' => '',
+              )),
+              1 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\RgbaColor::__set_state(array(
+                 'name' => 'product_color',
+                 'title' => 'Product _color',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'rgbaColor',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'width' => '',
+              )),
+            ),
+             'locked' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'fieldtype' => 'panel',
+             'layout' => NULL,
+             'border' => false,
+             'icon' => '',
+             'labelWidth' => 0,
+             'labelAlign' => 'left',
+          )),
+          2 => 
+          Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+             'name' => 'Layout',
+             'type' => NULL,
+             'region' => NULL,
+             'title' => 'Product Details',
+             'width' => '',
+             'height' => '',
+             'collapsible' => false,
+             'collapsed' => false,
+             'bodyStyle' => '',
+             'datatype' => 'layout',
+             'permissions' => NULL,
+             'children' => 
+            array (
+              0 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Classificationstore::__set_state(array(
+                 'name' => 'product_details',
+                 'title' => 'Product _details',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'classificationstore',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'children' => 
+                array (
+                ),
+                 'region' => NULL,
+                 'layout' => NULL,
+                 'width' => 0,
+                 'height' => 0,
+                 'maxTabs' => NULL,
+                 'labelWidth' => 0,
+                 'localized' => false,
+                 'storeId' => 1,
+                 'hideEmptyData' => false,
+                 'disallowAddRemove' => false,
+                 'referencedFields' => 
+                array (
+                ),
+                 'fieldDefinitionsCache' => NULL,
+                 'allowedGroupIds' => 
+                array (
+                ),
+                 'activeGroupDefinitions' => 
+                array (
+                ),
+                 'maxItems' => NULL,
+                 'permissionView' => NULL,
+                 'permissionEdit' => NULL,
+              )),
+            ),
+             'locked' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'fieldtype' => 'panel',
+             'layout' => NULL,
+             'border' => false,
+             'icon' => '',
+             'labelWidth' => 0,
+             'labelAlign' => 'left',
+          )),
+          3 => 
+          Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
+             'name' => 'Layout',
+             'type' => NULL,
+             'region' => NULL,
+             'title' => 'Manufracturer details',
+             'width' => '',
+             'height' => '',
+             'collapsible' => false,
+             'collapsed' => false,
+             'bodyStyle' => '',
+             'datatype' => 'layout',
+             'permissions' => NULL,
+             'children' => 
+            array (
+              0 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Classificationstore::__set_state(array(
+                 'name' => 'Manufracture_Details',
+                 'title' => 'Manufracture  Details',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'classificationstore',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'children' => 
+                array (
+                ),
+                 'region' => NULL,
+                 'layout' => NULL,
+                 'width' => 0,
+                 'height' => 0,
+                 'maxTabs' => NULL,
+                 'labelWidth' => 0,
+                 'localized' => false,
+                 'storeId' => 5,
+                 'hideEmptyData' => false,
+                 'disallowAddRemove' => false,
+                 'referencedFields' => 
+                array (
+                ),
+                 'fieldDefinitionsCache' => NULL,
+                 'allowedGroupIds' => 
+                array (
+                ),
+                 'activeGroupDefinitions' => 
+                array (
+                ),
+                 'maxItems' => NULL,
+                 'permissionView' => NULL,
+                 'permissionEdit' => NULL,
+              )),
+            ),
+             'locked' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'fieldtype' => 'panel',
+             'layout' => NULL,
+             'border' => false,
+             'icon' => '',
+             'labelWidth' => 0,
+             'labelAlign' => 'left',
           )),
         ),
          'locked' => false,
          'blockedVarsForExport' => 
         array (
         ),
-         'fieldtype' => 'panel',
-         'layout' => NULL,
+         'fieldtype' => 'tabpanel',
          'border' => false,
-         'icon' => '',
-         'labelWidth' => 0,
-         'labelAlign' => 'left',
+         'tabPosition' => NULL,
       )),
     ),
      'locked' => false,
