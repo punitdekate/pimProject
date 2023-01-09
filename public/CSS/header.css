@@ -1,0 +1,12 @@
+h1{
+    color:red;
+}
+
+.horizontal-list{
+    display: inline;
+}
+.horizontal-list li{
+    display: inline-block;
+    font-weight: 100;
+    font-size: 0.9rem;
+}
