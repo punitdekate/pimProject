@@ -5,7 +5,7 @@
  * Variants: no
  *
  * Fields Summary:
- * - props [classificationstore]
+ * - price [input]
  */
 
 return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
@@ -14,7 +14,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'name' => 'Clothes',
    'description' => '',
    'creationDate' => 0,
-   'modificationDate' => 1672660825,
+   'modificationDate' => 1673328606,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -63,9 +63,9 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
          'children' => 
         array (
           0 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\Classificationstore::__set_state(array(
-             'name' => 'props',
-             'title' => 'Props',
+          Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+             'name' => 'price',
+             'title' => 'Price',
              'tooltip' => '',
              'mandatory' => false,
              'noteditable' => false,
@@ -74,7 +74,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'classificationstore',
+             'fieldtype' => 'input',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => false,
@@ -82,32 +82,16 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'blockedVarsForExport' => 
             array (
             ),
-             'children' => 
+             'width' => '',
+             'defaultValue' => NULL,
+             'columnLength' => 190,
+             'regex' => '',
+             'regexFlags' => 
             array (
             ),
-             'region' => NULL,
-             'layout' => NULL,
-             'width' => 0,
-             'height' => 0,
-             'maxTabs' => NULL,
-             'labelWidth' => 0,
-             'localized' => false,
-             'storeId' => 1,
-             'hideEmptyData' => false,
-             'disallowAddRemove' => false,
-             'referencedFields' => 
-            array (
-            ),
-             'fieldDefinitionsCache' => NULL,
-             'allowedGroupIds' => 
-            array (
-            ),
-             'activeGroupDefinitions' => 
-            array (
-            ),
-             'maxItems' => NULL,
-             'permissionView' => NULL,
-             'permissionEdit' => NULL,
+             'unique' => false,
+             'showCharCount' => false,
+             'defaultValueGenerator' => '',
           )),
         ),
          'locked' => false,

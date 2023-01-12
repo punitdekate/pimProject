@@ -5,7 +5,7 @@
  * Variants: no
  *
  * Fields Summary:
- * - props [classificationstore]
+ * - price [input]
  */
 
 namespace Pimcore\Model\DataObject;
@@ -15,13 +15,14 @@ use Pimcore\Model\DataObject\PreGetValueHookInterface;
 
 /**
 * @method static \Pimcore\Model\DataObject\Clothes\Listing getList(array $config = [])
+* @method static \Pimcore\Model\DataObject\Clothes\Listing|\Pimcore\Model\DataObject\Clothes|null getByPrice($value, $limit = 0, $offset = 0, $objectTypes = null)
 */
 
 class Clothes extends Concrete
 {
 protected $o_classId = "clothes";
 protected $o_className = "Clothes";
-protected $props;
+protected $price;
 
 
 /**
@@ -35,31 +36,35 @@ public static function create($values = array()) {
 }
 
 /**
-* Get props - Props
-* @return \Pimcore\Model\DataObject\Classificationstore|null
+* Get price - Price
+* @return string|null
 */
-public function getProps(): ?\Pimcore\Model\DataObject\Classificationstore
+public function getPrice(): ?string
 {
 	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
-		$preValue = $this->preGetValue("props");
+		$preValue = $this->preGetValue("price");
 		if ($preValue !== null) {
 			return $preValue;
 		}
 	}
 
-	$data = $this->getClass()->getFieldDefinition("props")->preGetData($this);
+	$data = $this->price;
+
+	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
+		return $data->getPlain();
+	}
 
 	return $data;
 }
 
 /**
-* Set props - Props
-* @param \Pimcore\Model\DataObject\Classificationstore|null $props
+* Set price - Price
+* @param string|null $price
 * @return \Pimcore\Model\DataObject\Clothes
 */
-public function setProps(?\Pimcore\Model\DataObject\Classificationstore $props)
+public function setPrice(?string $price)
 {
-	$this->props = $props;
+	$this->price = $price;
 
 	return $this;
 }

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>beauty</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="Style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Skranjidisplay=swap" rel="stylesheet">
+</head>
+
+	<body>
+		{# header snippet#}
+		{{ pimcore_snippet("header") }}
+
+			<div class="container">
+				<div class="row-my-2 ">
+            	<label>
+                	<h1 style="font-family:'Skranji', cursive">Beauty</h1>
+            	</label>
+        	</div>
+
+			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+				{% for object in objects %}
+					<div class="col">
+						<div class="card shadow-sm" style="width: 25rem;">
+							<div class="card-body" >
+								<img src="{{ object.getProductImage() }} " alt="tv1" class="bd-placeholder-img card-img-top" width="100%" height="225px">
+								<p class="card-text">
+									{{ object.getDescription() }}
+								</p>
+								<h5>Price:{{ object.getPrice }}</h5>
+									
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+		{# header snippet#}
+		{{ pimcore_snippet("footer") }}
+    </body>
+</html>
