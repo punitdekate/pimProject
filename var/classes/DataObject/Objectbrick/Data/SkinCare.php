@@ -2,9 +2,13 @@
 
 /**
  * Fields Summary:
+<<<<<<< HEAD
  * - skincare_Product [select]
  * - Material [select]
  * - Quantity [quantityValue]
+=======
+ * - skinCareProduct [select]
+>>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
  */
 
 namespace Pimcore\Model\DataObject\Objectbrick\Data;
@@ -17,9 +21,13 @@ use Pimcore\Model\DataObject\PreGetValueHookInterface;
 class SkinCare extends DataObject\Objectbrick\Data\AbstractData
 {
 protected $type = "SkinCare";
+<<<<<<< HEAD
 protected $skincare_Product;
 protected $Material;
 protected $Quantity;
+=======
+protected $skinCareProduct;
+>>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
 
 
 /**
@@ -34,6 +42,7 @@ public function __construct(DataObject\Concrete $object)
 
 
 /**
+<<<<<<< HEAD
 * Get skincare_Product - Skincare _ Product
 * @return string|null
 */
@@ -43,6 +52,17 @@ public function getSkincare_Product(): ?string
 	if(\Pimcore\Model\DataObject::doGetInheritedValues($this->getObject()) && $this->getDefinition()->getFieldDefinition("skincare_Product")->isEmpty($data)) {
 		try {
 			return $this->getValueFromParent("skincare_Product");
+=======
+* Get skinCareProduct - Skin Care Product
+* @return string|null
+*/
+public function getSkinCareProduct(): ?string
+{
+	$data = $this->skinCareProduct;
+	if(\Pimcore\Model\DataObject::doGetInheritedValues($this->getObject()) && $this->getDefinition()->getFieldDefinition("skinCareProduct")->isEmpty($data)) {
+		try {
+			return $this->getValueFromParent("skinCareProduct");
+>>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
 		} catch (InheritanceParentNotFoundException $e) {
 			// no data from parent available, continue ...
 		}
@@ -55,6 +75,7 @@ public function getSkincare_Product(): ?string
 }
 
 /**
+<<<<<<< HEAD
 * Set skincare_Product - Skincare _ Product
 * @param string|null $skincare_Product
 * @return \Pimcore\Model\DataObject\Objectbrick\Data\SkinCare
@@ -128,6 +149,15 @@ public function getQuantity(): ?\Pimcore\Model\DataObject\Data\QuantityValue
 public function setQuantity (?\Pimcore\Model\DataObject\Data\QuantityValue $Quantity)
 {
 	$this->Quantity = $Quantity;
+=======
+* Set skinCareProduct - Skin Care Product
+* @param string|null $skinCareProduct
+* @return \Pimcore\Model\DataObject\Objectbrick\Data\SkinCare
+*/
+public function setSkinCareProduct (?string $skinCareProduct)
+{
+	$this->skinCareProduct = $skinCareProduct;
+>>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
 
 	return $this;
 }

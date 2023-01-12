@@ -7,8 +7,16 @@
  * 
  *
  * Fields Summary:
+<<<<<<< HEAD
  * - BaseAttributes [classificationstore]
  * - BeautySpecific [objectbricks]
+=======
+ * - productId [input]
+ * - pruductName [input]
+ * - description [textarea]
+ * - price [numeric]
+ * - beautySpecific [objectbricks]
+>>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
  * - ProductImage [image]
  * - ProductColor [rgbaColor]
  * - featuresSpecification [classificationstore]
@@ -26,15 +34,32 @@ use Pimcore\Model\DataObject\PreGetValueHookInterface;
 
 /**
 * @method static \Pimcore\Model\DataObject\Beauty\Listing getList(array $config = [])
+<<<<<<< HEAD
+=======
+* @method static \Pimcore\Model\DataObject\Beauty\Listing|\Pimcore\Model\DataObject\Beauty|null getByProductId($value, $limit = 0, $offset = 0, $objectTypes = null)
+* @method static \Pimcore\Model\DataObject\Beauty\Listing|\Pimcore\Model\DataObject\Beauty|null getByPruductName($value, $limit = 0, $offset = 0, $objectTypes = null)
+* @method static \Pimcore\Model\DataObject\Beauty\Listing|\Pimcore\Model\DataObject\Beauty|null getByDescription($value, $limit = 0, $offset = 0, $objectTypes = null)
+* @method static \Pimcore\Model\DataObject\Beauty\Listing|\Pimcore\Model\DataObject\Beauty|null getByPrice($value, $limit = 0, $offset = 0, $objectTypes = null)
+>>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
 * @method static \Pimcore\Model\DataObject\Beauty\Listing|\Pimcore\Model\DataObject\Beauty|null getByProductImage($value, $limit = 0, $offset = 0, $objectTypes = null)
 */
 
 class Beauty extends Concrete
 {
+<<<<<<< HEAD
 protected $o_classId = "1";
 protected $o_className = "beauty";
 protected $BaseAttributes;
 protected $BeautySpecific;
+=======
+protected $o_classId = "beauty";
+protected $o_className = "beauty";
+protected $productId;
+protected $pruductName;
+protected $description;
+protected $price;
+protected $beautySpecific;
+>>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
 protected $ProductImage;
 protected $ProductColor;
 protected $featuresSpecification;
@@ -54,6 +79,7 @@ public static function create($values = array()) {
 }
 
 /**
+<<<<<<< HEAD
 * Get BaseAttributes - Base Attributes
 * @return \Pimcore\Model\DataObject\Classificationstore|null
 */
@@ -61,17 +87,69 @@ public function getBaseAttributes(): ?\Pimcore\Model\DataObject\Classificationst
 {
 	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
 		$preValue = $this->preGetValue("BaseAttributes");
+=======
+* Get productId - Product Id
+* @return string|null
+*/
+public function getProductId(): ?string
+{
+	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
+		$preValue = $this->preGetValue("productId");
 		if ($preValue !== null) {
 			return $preValue;
 		}
 	}
 
-	$data = $this->getClass()->getFieldDefinition("BaseAttributes")->preGetData($this);
+	$data = $this->productId;
+
+	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
+		return $data->getPlain();
+	}
 
 	return $data;
 }
 
 /**
+* Set productId - Product Id
+* @param string|null $productId
+* @return \Pimcore\Model\DataObject\Beauty
+*/
+public function setProductId(?string $productId)
+{
+	$this->productId = $productId;
+
+	return $this;
+}
+
+/**
+* Get pruductName - Pruduct Name
+* @return string|null
+*/
+public function getPruductName(): ?string
+{
+	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
+		$preValue = $this->preGetValue("pruductName");
+>>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
+		if ($preValue !== null) {
+			return $preValue;
+		}
+	}
+
+<<<<<<< HEAD
+	$data = $this->getClass()->getFieldDefinition("BaseAttributes")->preGetData($this);
+=======
+	$data = $this->pruductName;
+
+	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
+		return $data->getPlain();
+	}
+>>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
+
+	return $data;
+}
+
+/**
+<<<<<<< HEAD
 * Set BaseAttributes - Base Attributes
 * @param \Pimcore\Model\DataObject\Classificationstore|null $BaseAttributes
 * @return \Pimcore\Model\DataObject\Beauty
@@ -79,26 +157,119 @@ public function getBaseAttributes(): ?\Pimcore\Model\DataObject\Classificationst
 public function setBaseAttributes(?\Pimcore\Model\DataObject\Classificationstore $BaseAttributes)
 {
 	$this->BaseAttributes = $BaseAttributes;
+=======
+* Set pruductName - Pruduct Name
+* @param string|null $pruductName
+* @return \Pimcore\Model\DataObject\Beauty
+*/
+public function setPruductName(?string $pruductName)
+{
+	$this->pruductName = $pruductName;
+>>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
 
 	return $this;
 }
 
 /**
+<<<<<<< HEAD
+=======
+* Get description - Description
+* @return string|null
+*/
+public function getDescription(): ?string
+{
+	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
+		$preValue = $this->preGetValue("description");
+		if ($preValue !== null) {
+			return $preValue;
+		}
+	}
+
+	$data = $this->description;
+
+	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
+		return $data->getPlain();
+	}
+
+	return $data;
+}
+
+/**
+* Set description - Description
+* @param string|null $description
+* @return \Pimcore\Model\DataObject\Beauty
+*/
+public function setDescription(?string $description)
+{
+	$this->description = $description;
+
+	return $this;
+}
+
+/**
+* Get price - Price
+* @return float|null
+*/
+public function getPrice(): ?float
+{
+	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
+		$preValue = $this->preGetValue("price");
+		if ($preValue !== null) {
+			return $preValue;
+		}
+	}
+
+	$data = $this->price;
+
+	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
+		return $data->getPlain();
+	}
+
+	return $data;
+}
+
+/**
+* Set price - Price
+* @param float|null $price
+* @return \Pimcore\Model\DataObject\Beauty
+*/
+public function setPrice(?float $price)
+{
+	/** @var \Pimcore\Model\DataObject\ClassDefinition\Data\Numeric $fd */
+	$fd = $this->getClass()->getFieldDefinition("price");
+	$this->price = $fd->preSetData($this, $price);
+	return $this;
+}
+
+/**
+>>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
 * @return \Pimcore\Model\DataObject\Beauty\BeautySpecific
 */
 public function getBeautySpecific(): ?\Pimcore\Model\DataObject\Objectbrick
 {
+<<<<<<< HEAD
 	$data = $this->BeautySpecific;
 	if (!$data) {
 		if (\Pimcore\Tool::classExists("\\Pimcore\\Model\\DataObject\\Beauty\\BeautySpecific")) {
 			$data = new \Pimcore\Model\DataObject\Beauty\BeautySpecific($this, "BeautySpecific");
 			$this->BeautySpecific = $data;
+=======
+	$data = $this->beautySpecific;
+	if (!$data) {
+		if (\Pimcore\Tool::classExists("\\Pimcore\\Model\\DataObject\\Beauty\\BeautySpecific")) {
+			$data = new \Pimcore\Model\DataObject\Beauty\BeautySpecific($this, "beautySpecific");
+			$this->beautySpecific = $data;
+>>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
 		} else {
 			return null;
 		}
 	}
 	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
+<<<<<<< HEAD
 		$preValue = $this->preGetValue("BeautySpecific");
+=======
+		$preValue = $this->preGetValue("beautySpecific");
+>>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
 		if ($preValue !== null) {
 			return $preValue;
 		}
@@ -108,6 +279,7 @@ public function getBeautySpecific(): ?\Pimcore\Model\DataObject\Objectbrick
 }
 
 /**
+<<<<<<< HEAD
 * Set BeautySpecific - Beauty Specific
 * @param \Pimcore\Model\DataObject\Objectbrick|null $BeautySpecific
 * @return \Pimcore\Model\DataObject\Beauty
@@ -117,6 +289,17 @@ public function setBeautySpecific(?\Pimcore\Model\DataObject\Objectbrick $Beauty
 	/** @var \Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks $fd */
 	$fd = $this->getClass()->getFieldDefinition("BeautySpecific");
 	$this->BeautySpecific = $fd->preSetData($this, $BeautySpecific);
+=======
+* Set beautySpecific - Beauty Specific
+* @param \Pimcore\Model\DataObject\Objectbrick|null $beautySpecific
+* @return \Pimcore\Model\DataObject\Beauty
+*/
+public function setBeautySpecific(?\Pimcore\Model\DataObject\Objectbrick $beautySpecific)
+{
+	/** @var \Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks $fd */
+	$fd = $this->getClass()->getFieldDefinition("beautySpecific");
+	$this->beautySpecific = $fd->preSetData($this, $beautySpecific);
+>>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
 	return $this;
 }
 
