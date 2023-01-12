@@ -58,61 +58,49 @@ class __TwigTemplate_55ca9297fe5578b7e373ffa6899a30a2 extends Template
 </head>
 
 \t<body>
+\t\t<div class=\"row\" style=\"margin-top:20px;\">
 \t\t";
-        // line 18
+        // line 19
         echo "\t\t";
         echo $this->extensions['Pimcore\Twig\Extension\DocumentEditableExtension']->renderEditable($context, "snippet", "header");
         echo "
-
-\t\t\t<div class=\"container\">
-\t\t\t\t<div class=\"row-my-2 \">
-            \t<label>
-                \t<h1 style=\"font-family:'Skranji', cursive\">Electronics</h1>
-            \t</label>
+\t\t<div class=\"d-flex flex-row-reverse\">
+\t\t\t<div class=\"btn-group\" role=\"group\" aria-label=\"Basic example\">Filters</div>
+        \t<button type=\"button\" class=\"btn btn-primary\">Left</button>
+        \t<button type=\"button\" class=\"btn btn-primary\">Middle</button>
+        \t<button type=\"button\" class=\"btn btn-primary\">Right</button>
         \t</div>
+\t\t</div>
 
-\t\t\t<div class=\"row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3\">
-\t\t\t\t";
+\t\t";
         // line 28
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["objects"]) || array_key_exists("objects", $context) ? $context["objects"] : (function () { throw new RuntimeError('Variable "objects" does not exist.', 28, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["object"]) {
             // line 29
-            echo "                    ";
-            // line 36
-            echo "\t\t\t\t\t
-\t\t\t\t\t<div class=\"col\">
-\t\t\t\t\t\t<div class=\"card shadow-sm\" style=\"width: 25rem;\">
-\t\t\t\t\t\t\t<div class=\"card-body\" >
-\t\t\t\t\t\t\t\t<img src=\"";
-            // line 40
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["object"], "getProductImage", [], "method", false, false, true, 40), 40, $this->source), "html", null, true);
-            echo " \" alt=\"tv1\" class=\"bd-placeholder-img card-img-top\" width=\"100%\" height=\"225px\">
-\t\t\t\t\t\t\t\t<p class=\"card-text\">
-\t\t\t\t\t\t\t\t\t";
-            // line 42
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["object"], "getDescription", [], "method", false, false, true, 42), 42, $this->source), "html", null, true);
-            echo "
-\t\t\t\t\t\t\t\t</p>
-\t\t\t\t\t\t\t\t<h5>Price:";
-            // line 44
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["object"], "getPrice", [], "any", false, false, true, 44), 44, $this->source), "html", null, true);
-            echo "</h5>
-\t\t\t\t\t\t\t\t\t";
-            // line 52
-            echo "\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t";
+            echo "\t\t<div class=\"col-md-3\">
+    \t<div style=\"border:solid black;margin-top:20px;\"align=\"center;\">
+        \t    <img class=\"rounded mx-auto d-block\" src=\"";
+            // line 31
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["object"], "getProductImage", [], "method", false, false, true, 31), 31, $this->source), "html", null, true);
+            echo "\"style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
+            \t<h3 align=\"center\"style=\"color:green\">Price :";
+            // line 32
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["object"], "getPrice", [], "any", false, false, true, 32), 32, $this->source), "html", null, true);
+            echo " </h3>
+            \t<p style=\"height:100px; widht:100px;margin-top:20px;\" align=\"center\" >
+\t               ";
+            // line 34
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["object"], "getDescription", [], "method", false, false, true, 34), 34, $this->source), "html", null, true);
+            echo " </p>
+    \t     </div>
+      \t</div>
+    \t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['object'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 56
-        echo "\t\t\t</div>
-\t\t</div>
-\t\t";
-        // line 59
+        // line 38
         echo "\t\t";
         echo $this->extensions['Pimcore\Twig\Extension\DocumentEditableExtension']->renderEditable($context, "snippet", "footer");
         echo "
@@ -138,7 +126,7 @@ class __TwigTemplate_55ca9297fe5578b7e373ffa6899a30a2 extends Template
 
     public function getDebugInfo()
     {
-        return array (  116 => 59,  112 => 56,  103 => 52,  99 => 44,  94 => 42,  89 => 40,  83 => 36,  81 => 29,  77 => 28,  63 => 18,  45 => 1,);
+        return array (  104 => 38,  94 => 34,  89 => 32,  85 => 31,  81 => 29,  77 => 28,  64 => 19,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -159,48 +147,27 @@ class __TwigTemplate_55ca9297fe5578b7e373ffa6899a30a2 extends Template
 </head>
 
 \t<body>
+\t\t<div class=\"row\" style=\"margin-top:20px;\">
 \t\t{# header snippet#}
 \t\t{{ pimcore_snippet(\"header\") }}
-
-\t\t\t<div class=\"container\">
-\t\t\t\t<div class=\"row-my-2 \">
-            \t<label>
-                \t<h1 style=\"font-family:'Skranji', cursive\">Electronics</h1>
-            \t</label>
+\t\t<div class=\"d-flex flex-row-reverse\">
+\t\t\t<div class=\"btn-group\" role=\"group\" aria-label=\"Basic example\">Filters</div>
+        \t<button type=\"button\" class=\"btn btn-primary\">Left</button>
+        \t<button type=\"button\" class=\"btn btn-primary\">Middle</button>
+        \t<button type=\"button\" class=\"btn btn-primary\">Right</button>
         \t</div>
-
-\t\t\t<div class=\"row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3\">
-\t\t\t\t{% for object in objects %}
-                    {# <div class=\"card\" style=\"width: 18rem;\">
-                        <img src=\"{{ object.getProductImage() }}\" class=\"card-img-top\"  width=\"100%\" height=\"225px\">
-                        <div class=\"card-text\">
-                            <h5 class=\"card-title\">{{ object.getDescription() }}</h5>
-                            Price:{{ object.getPrice }}<h2>
-                        </div>
-                    </div> #}
-\t\t\t\t\t
-\t\t\t\t\t<div class=\"col\">
-\t\t\t\t\t\t<div class=\"card shadow-sm\" style=\"width: 25rem;\">
-\t\t\t\t\t\t\t<div class=\"card-body\" >
-\t\t\t\t\t\t\t\t<img src=\"{{ object.getProductImage() }} \" alt=\"tv1\" class=\"bd-placeholder-img card-img-top\" width=\"100%\" height=\"225px\">
-\t\t\t\t\t\t\t\t<p class=\"card-text\">
-\t\t\t\t\t\t\t\t\t{{ object.getDescription() }}
-\t\t\t\t\t\t\t\t</p>
-\t\t\t\t\t\t\t\t<h5>Price:{{ object.getPrice }}</h5>
-\t\t\t\t\t\t\t\t\t{# <div class=\"d-flex justify-content-between align-items-center\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"btn-group\">
-\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm btn-secondary\">Buy</button>
-\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">Add to Cart</button>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t    \t\t\t<small class=\"text-muted\">9 mins</small>
-\t\t\t\t\t\t\t\t\t</div> #}
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t{% endfor %}
-\t\t\t</div>
 \t\t</div>
-\t\t{# header snippet#}
+
+\t\t{% for object in objects %}
+\t\t<div class=\"col-md-3\">
+    \t<div style=\"border:solid black;margin-top:20px;\"align=\"center;\">
+        \t    <img class=\"rounded mx-auto d-block\" src=\"{{ object.getProductImage() }}\"style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
+            \t<h3 align=\"center\"style=\"color:green\">Price :{{ object.getPrice}} </h3>
+            \t<p style=\"height:100px; widht:100px;margin-top:20px;\" align=\"center\" >
+\t               {{object.getDescription()}} </p>
+    \t     </div>
+      \t</div>
+    \t{% endfor %}
 \t\t{{ pimcore_snippet(\"footer\") }}
     </body>
 </html>", "default/electronics.html.twig", "/var/www/html/test/pimProject/templates/default/electronics.html.twig");
@@ -209,8 +176,8 @@ class __TwigTemplate_55ca9297fe5578b7e373ffa6899a30a2 extends Template
     public function checkSecurity()
     {
         static $tags = array("for" => 28);
-        static $filters = array("escape" => 40);
-        static $functions = array("pimcore_snippet" => 18);
+        static $filters = array("escape" => 31);
+        static $functions = array("pimcore_snippet" => 19);
 
         try {
             $this->sandbox->checkSecurity(

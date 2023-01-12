@@ -76,7 +76,7 @@ class __TwigTemplate_7eb0e9bcbf165e3f4ab2902c9e5b4c8c extends Template
         \t    <img class=\"rounded mx-auto d-block\" src=\"";
             // line 24
             echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["object"], "getProductImage", [], "method", false, false, true, 24), 24, $this->source), "html", null, true);
-            echo "\"style=\"height:300px; width:250px;margin-top:20px;\" align=\"center\"/><br>
+            echo "\"style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
             \t<h3 align=\"center\"style=\"color:green\">Price :";
             // line 25
             echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["object"], "getPrice", [], "any", false, false, true, 25), 25, $this->source), "html", null, true);
@@ -94,20 +94,59 @@ class __TwigTemplate_7eb0e9bcbf165e3f4ab2902c9e5b4c8c extends Template
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['object'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 31
-        echo "\t\t\t\t\t
-\t\t\t\t\t";
-        // line 40
-        echo "\t\t\t\t\t\t\t\t\t";
-        // line 50
-        echo "\t\t";
-        // line 51
         echo "\t\t";
         echo $this->extensions['Pimcore\Twig\Extension\DocumentEditableExtension']->renderEditable($context, "snippet", "footer");
         echo "
     </body>
 </html>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ";
+        // line 85
+        echo "\t\t\t\t\t\t\t\t\t";
+        // line 95
+        echo "\t\t";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
 
@@ -128,7 +167,7 @@ class __TwigTemplate_7eb0e9bcbf165e3f4ab2902c9e5b4c8c extends Template
 
     public function getDebugInfo()
     {
-        return array (  104 => 51,  102 => 50,  100 => 40,  97 => 31,  87 => 27,  82 => 25,  78 => 24,  74 => 22,  70 => 21,  64 => 19,  45 => 1,);
+        return array (  149 => 95,  147 => 85,  97 => 31,  87 => 27,  82 => 25,  78 => 24,  74 => 22,  70 => 21,  64 => 19,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -156,15 +195,60 @@ class __TwigTemplate_7eb0e9bcbf165e3f4ab2902c9e5b4c8c extends Template
 \t\t{% for object in objects %}
 \t\t<div class=\"col-md-3\">
     \t<div style=\"border:solid black;margin-top:20px;\"align=\"center;\">
-        \t    <img class=\"rounded mx-auto d-block\" src=\"{{ object.getProductImage() }}\"style=\"height:300px; width:250px;margin-top:20px;\" align=\"center\"/><br>
+        \t    <img class=\"rounded mx-auto d-block\" src=\"{{ object.getProductImage() }}\"style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
             \t<h3 align=\"center\"style=\"color:green\">Price :{{ object.getPrice}} </h3>
             \t<p style=\"height:100px; widht:100px;margin-top:20px;\" align=\"center\" >
 \t               {{object.getDescription()}} </p>
     \t     </div>
       \t</div>
     \t{% endfor %}
-\t\t\t\t\t
-\t\t\t\t\t{# <div class=\"col\">
+\t\t{{ pimcore_snippet(\"footer\") }}
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{# <div class=\"col\">
 \t\t\t\t\t\t<div class=\"card shadow-sm\" style=\"width: 25rem;\">
 \t\t\t\t\t\t\t<div class=\"card-body\" >
 \t\t\t\t\t\t\t\t<img src=\"{{ object.getProductImage() }} \" alt=\"tv1\" class=\"bd-placeholder-img card-img-top\" width=\"100%\" height=\"225px\">
@@ -183,10 +267,6 @@ class __TwigTemplate_7eb0e9bcbf165e3f4ab2902c9e5b4c8c extends Template
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>#}
 \t\t{# header snippet#}
-\t\t{{ pimcore_snippet(\"footer\") }}
-    </body>
-</html>
-
 ", "default/footwear.html.twig", "/var/www/html/test/pimProject/templates/default/footwear.html.twig");
     }
     

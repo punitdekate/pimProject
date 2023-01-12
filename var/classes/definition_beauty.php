@@ -15,13 +15,16 @@
  * - pruductName [input]
  * - description [textarea]
  * - price [numeric]
+ * - productFor [select]
  * - beautySpecific [objectbricks]
 >>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
  * - ProductImage [image]
  * - ProductColor [rgbaColor]
  * - featuresSpecification [classificationstore]
- * - manufacturerDetails [classificationstore]
- * - sellerDetails [classificationstore]
+ * - manufacturingCompany [input]
+ * - manufacturingDate [date]
+ * - expiryDate [date]
+ * - sellerDetails [manyToManyObjectRelation]
  * - ExtraAttributes [block]
  * -- AttributeName [input]
  * -- AttributeDetails [input]
@@ -39,6 +42,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
 ',
    'creationDate' => 0,
 <<<<<<< HEAD
+<<<<<<< HEAD
    'modificationDate' => 1673342986,
    'userOwner' => 2,
    'userModification' => 2,
@@ -47,6 +51,11 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'userOwner' => 2,
    'userModification' => 5,
 >>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
+=======
+   'modificationDate' => 1673522238,
+   'userOwner' => 2,
+   'userModification' => 2,
+>>>>>>> fc13ccf3beabb5cf76d7eda91d10b62586ddb0cb
    'parentClass' => '',
    'implementsInterfaces' => '',
    'listingParentClass' => '',
@@ -264,6 +273,62 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'decimalPrecision' => NULL,
                  'defaultValueGenerator' => '',
 >>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
+              )),
+              4 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
+                 'name' => 'productFor',
+                 'title' => 'Product For',
+                 'tooltip' => '',
+                 'mandatory' => true,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'select',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'options' => 
+                array (
+                  0 => 
+                  array (
+                    'key' => 'Hair',
+                    'value' => 'Hair',
+                  ),
+                  1 => 
+                  array (
+                    'key' => 'Makeup',
+                    'value' => 'Makeup',
+                  ),
+                  2 => 
+                  array (
+                    'key' => 'Fragrance',
+                    'value' => 'Fragrance',
+                  ),
+                  3 => 
+                  array (
+                    'key' => 'Skin',
+                    'value' => 'Skin',
+                  ),
+                  4 => 
+                  array (
+                    'key' => '',
+                    'value' => '',
+                  ),
+                ),
+                 'width' => '',
+                 'defaultValue' => '',
+                 'optionsProviderClass' => '',
+                 'optionsProviderData' => '',
+                 'columnLength' => 190,
+                 'dynamicOptions' => false,
+                 'defaultValueGenerator' => '',
               )),
             ),
              'locked' => false,
@@ -508,9 +573,9 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Classificationstore::__set_state(array(
-                 'name' => 'manufacturerDetails',
-                 'title' => 'Manufacturer Details',
+              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+                 'name' => 'manufacturingCompany',
+                 'title' => 'Manufacturing Company',
                  'tooltip' => '',
                  'mandatory' => false,
                  'noteditable' => false,
@@ -519,7 +584,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'style' => '',
                  'permissions' => NULL,
                  'datatype' => 'data',
-                 'fieldtype' => 'classificationstore',
+                 'fieldtype' => 'input',
                  'relationType' => false,
                  'invisible' => false,
                  'visibleGridView' => false,
@@ -527,32 +592,68 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'blockedVarsForExport' => 
                 array (
                 ),
-                 'children' => 
+                 'width' => '',
+                 'defaultValue' => NULL,
+                 'columnLength' => 190,
+                 'regex' => '',
+                 'regexFlags' => 
                 array (
                 ),
-                 'region' => NULL,
-                 'layout' => NULL,
-                 'width' => 0,
-                 'height' => 0,
-                 'maxTabs' => NULL,
-                 'labelWidth' => 0,
-                 'localized' => false,
-                 'storeId' => 3,
-                 'hideEmptyData' => false,
-                 'disallowAddRemove' => false,
-                 'referencedFields' => 
+                 'unique' => false,
+                 'showCharCount' => false,
+                 'defaultValueGenerator' => '',
+              )),
+              1 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
+                 'name' => 'manufacturingDate',
+                 'title' => 'Manufacturing Date',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'date',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
                 array (
                 ),
-                 'fieldDefinitionsCache' => NULL,
-                 'allowedGroupIds' => 
+                 'queryColumnType' => 'bigint(20)',
+                 'columnType' => 'bigint(20)',
+                 'defaultValue' => 1673461800,
+                 'useCurrentDate' => false,
+                 'defaultValueGenerator' => '',
+              )),
+              2 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
+                 'name' => 'expiryDate',
+                 'title' => 'Expiry Date',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'date',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
                 array (
                 ),
-                 'activeGroupDefinitions' => 
-                array (
-                ),
-                 'maxItems' => NULL,
-                 'permissionView' => NULL,
-                 'permissionEdit' => NULL,
+                 'queryColumnType' => 'bigint(20)',
+                 'columnType' => 'bigint(20)',
+                 'defaultValue' => NULL,
+                 'useCurrentDate' => false,
+                 'defaultValueGenerator' => '',
               )),
             ),
              'locked' => false,
@@ -582,7 +683,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
-              Pimcore\Model\DataObject\ClassDefinition\Data\Classificationstore::__set_state(array(
+              Pimcore\Model\DataObject\ClassDefinition\Data\ManyToManyObjectRelation::__set_state(array(
                  'name' => 'sellerDetails',
                  'title' => 'Seller Details',
                  'tooltip' => '',
@@ -593,40 +694,32 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'style' => '',
                  'permissions' => NULL,
                  'datatype' => 'data',
-                 'fieldtype' => 'classificationstore',
-                 'relationType' => false,
+                 'fieldtype' => 'manyToManyObjectRelation',
+                 'relationType' => true,
                  'invisible' => false,
                  'visibleGridView' => false,
                  'visibleSearch' => false,
                  'blockedVarsForExport' => 
                 array (
                 ),
-                 'children' => 
+                 'classes' => 
                 array (
+                  0 => 
+                  array (
+                    'classes' => 'seller',
+                  ),
                 ),
-                 'region' => NULL,
-                 'layout' => NULL,
-                 'width' => 0,
-                 'height' => 0,
-                 'maxTabs' => NULL,
-                 'labelWidth' => 0,
-                 'localized' => false,
-                 'storeId' => 4,
-                 'hideEmptyData' => false,
-                 'disallowAddRemove' => false,
-                 'referencedFields' => 
-                array (
-                ),
-                 'fieldDefinitionsCache' => NULL,
-                 'allowedGroupIds' => 
-                array (
-                ),
-                 'activeGroupDefinitions' => 
-                array (
-                ),
+                 'pathFormatterClass' => '',
+                 'width' => '',
+                 'height' => '',
                  'maxItems' => NULL,
-                 'permissionView' => NULL,
-                 'permissionEdit' => NULL,
+                 'visibleFields' => 'sellerId,Name,product',
+                 'allowToCreateNewObject' => false,
+                 'optimizedAdminLoading' => false,
+                 'enableTextSelection' => false,
+                 'visibleFieldDefinitions' => 
+                array (
+                ),
               )),
             ),
              'locked' => false,

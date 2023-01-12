@@ -169,4 +169,34 @@
 [10-Jan-2023 13:03:07 Asia/Calcutta] PHP Warning:  Undefined variable $sql in /var/www/html/test/pimProject/vendor/vrana/adminer/adminer/script.inc.php on line 15
 [10-Jan-2023 13:03:07 Asia/Calcutta] PHP Warning:  Undefined variable $sql in /var/www/html/test/pimProject/vendor/vrana/adminer/adminer/script.inc.php on line 15
 [10-Jan-2023 23:53:37 Asia/Calcutta] PHP Fatal error:  Cannot use Pimcore\Model\DataObject as DataObject because the name is already in use in /var/www/html/test/pimProject/src/Controller/MyController.php on line 10
+<<<<<<< HEAD
 >>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
+=======
+[12-Jan-2023 08:15:55 Asia/Calcutta] PHP Fatal error:  Cannot declare class App\Controller\MyController, because the name is already in use in /var/www/html/test/pimProject/src/Controller/FilterController.php on line 17
+[12-Jan-2023 08:16:25 Asia/Calcutta] PHP Fatal error:  Cannot declare class App\Controller\MyController, because the name is already in use in /var/www/html/test/pimProject/src/Controller/FilterController.php on line 0
+[12-Jan-2023 08:16:55 Asia/Calcutta] PHP Fatal error:  Cannot declare class App\Controller\MyController, because the name is already in use in /var/www/html/test/pimProject/src/Controller/FilterController.php on line 0
+[12-Jan-2023 08:17:25 Asia/Calcutta] PHP Fatal error:  Cannot declare class App\Controller\MyController, because the name is already in use in /var/www/html/test/pimProject/src/Controller/FilterController.php on line 0
+[12-Jan-2023 08:17:55 Asia/Calcutta] PHP Fatal error:  Cannot declare class App\Controller\MyController, because the name is already in use in /var/www/html/test/pimProject/src/Controller/FilterController.php on line 0
+[12-Jan-2023 08:18:25 Asia/Calcutta] PHP Fatal error:  Cannot declare class App\Controller\MyController, because the name is already in use in /var/www/html/test/pimProject/src/Controller/FilterController.php on line 0
+[12-Jan-2023 08:18:55 Asia/Calcutta] PHP Fatal error:  Cannot declare class App\Controller\MyController, because the name is already in use in /var/www/html/test/pimProject/src/Controller/FilterController.php on line 0
+[12-Jan-2023 08:19:25 Asia/Calcutta] PHP Fatal error:  Cannot declare class App\Controller\MyController, because the name is already in use in /var/www/html/test/pimProject/src/Controller/FilterController.php on line 0
+[12-Jan-2023 08:19:52 Asia/Calcutta] PHP Fatal error:  Cannot declare class App\Controller\MyController, because the name is already in use in /var/www/html/test/pimProject/src/Controller/FilterController.php on line 0
+[12-Jan-2023 08:19:52 Asia/Calcutta] PHP Fatal error:  Cannot declare class App\Controller\MyController, because the name is already in use in /var/www/html/test/pimProject/src/Controller/FilterController.php on line 0
+[12-Jan-2023 13:26:14 Asia/Calcutta] PHP Fatal error:  Cannot redeclare App\Controller\FilterController::showMobile() in /var/www/html/test/pimProject/src/Controller/FilterController.php on line 185
+[12-Jan-2023 13:26:44 Asia/Calcutta] PHP Fatal error:  Cannot redeclare App\Controller\FilterController::showLaptop() in /var/www/html/test/pimProject/src/Controller/FilterController.php on line 204
+[12-Jan-2023 13:27:14 Asia/Calcutta] 2023-01-12T13:27:14+05:30 [critical] Uncaught Error: syntax error, unexpected token "="
+[12-Jan-2023 13:27:44 Asia/Calcutta] 2023-01-12T13:27:44+05:30 [critical] Uncaught Error: syntax error, unexpected token "="
+[12-Jan-2023 13:28:14 Asia/Calcutta] PHP Fatal error:  Cannot redeclare App\Controller\FilterController::showLaptop() in /var/www/html/test/pimProject/src/Controller/FilterController.php on line 204
+[12-Jan-2023 13:28:44 Asia/Calcutta] PHP Fatal error:  Cannot redeclare App\Controller\FilterController::showLaptop() in /var/www/html/test/pimProject/src/Controller/FilterController.php on line 204
+[12-Jan-2023 13:29:14 Asia/Calcutta] PHP Fatal error:  Cannot redeclare App\Controller\FilterController::showLaptop() in /var/www/html/test/pimProject/src/Controller/FilterController.php on line 204
+[12-Jan-2023 13:29:44 Asia/Calcutta] PHP Fatal error:  Cannot redeclare App\Controller\FilterController::showMakeup() in /var/www/html/test/pimProject/src/Controller/FilterController.php on line 224
+[12-Jan-2023 13:30:14 Asia/Calcutta] PHP Fatal error:  Cannot redeclare App\Controller\FilterController::showMakeup() in /var/www/html/test/pimProject/src/Controller/FilterController.php on line 224
+[12-Jan-2023 13:30:44 Asia/Calcutta] PHP Fatal error:  Cannot redeclare App\Controller\FilterController::showMakeup() in /var/www/html/test/pimProject/src/Controller/FilterController.php on line 224
+[12-Jan-2023 13:31:14 Asia/Calcutta] PHP Fatal error:  Cannot redeclare App\Controller\FilterController::showMakeup() in /var/www/html/test/pimProject/src/Controller/FilterController.php on line 224
+[12-Jan-2023 13:31:44 Asia/Calcutta] PHP Fatal error:  Cannot redeclare App\Controller\FilterController::showMakeup() in /var/www/html/test/pimProject/src/Controller/FilterController.php on line 224
+[12-Jan-2023 13:32:14 Asia/Calcutta] PHP Fatal error:  Cannot redeclare App\Controller\FilterController::showMakeup() in /var/www/html/test/pimProject/src/Controller/FilterController.php on line 224
+[12-Jan-2023 13:32:44 Asia/Calcutta] PHP Fatal error:  Cannot redeclare App\Controller\FilterController::showMakeup() in /var/www/html/test/pimProject/src/Controller/FilterController.php on line 243
+[12-Jan-2023 13:33:14 Asia/Calcutta] PHP Fatal error:  Cannot redeclare App\Controller\FilterController::showMakeup() in /var/www/html/test/pimProject/src/Controller/FilterController.php on line 243
+[12-Jan-2023 13:33:44 Asia/Calcutta] PHP Fatal error:  Cannot redeclare App\Controller\FilterController::showMakeup() in /var/www/html/test/pimProject/src/Controller/FilterController.php on line 243
+[12-Jan-2023 13:34:14 Asia/Calcutta] PHP Fatal error:  Cannot redeclare App\Controller\FilterController::showMakeup() in /var/www/html/test/pimProject/src/Controller/FilterController.php on line 243
+>>>>>>> fc13ccf3beabb5cf76d7eda91d10b62586ddb0cb

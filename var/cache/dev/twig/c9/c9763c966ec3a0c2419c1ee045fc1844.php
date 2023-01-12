@@ -100,36 +100,37 @@ class __TwigTemplate_1aafd0f3a20022df1d2deb7a932601c7 extends Template
         </div>
         <div class=\"container\">
             <div class=\"row justify-content-evenlys\">
-                <div class=\"col-md-4\">
-                    <div class=\"card\" style=\"width: 18rem;\">
-                        <img src=\"images/iphone.jpg\" class=\"card-img-top\" alt=\"...\">
-                        <div class=\"card-body\">
-                            <h5 class=\"card-title\">iphone 12 pro</h5>
-                        </div>
-                    </div>
-                </div>
+                <div class=\"col-md-3\">
+    \t            <div style=\"border:solid black;margin-top:20px;\"align=\"center;\">
+        \t        <img class=\"rounded mx-auto d-block\" src=\"images/iphone.jpg\"style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
+            \t    <p style=\"height:100px; widht:100px;margin-top:20px; font-size:25px;\" align=\"center\" >iphone12 pro </p>
+    \t            </div>
+      \t        </div>
 
-                <div class=\"col-md-4\">
+                <div class=\"col-md-3\">
+    \t            <div style=\"border:solid black;margin-top:20px;\"align=\"center;\">
+        \t        <img class=\"rounded mx-auto d-block\" src=\"images/saree.jpg\" style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
+            \t    <p style=\"height:100px; widht:100px;margin-top:20px; font-size:25px;\" align=\"center\" >Banarasi Handmade Saree</p>
+    \t            </div>
+      \t        </div>
 
-                    <div class=\"card\" style=\"width: 18rem;\">
-                        <img src=\"images/saree.jpg\" class=\"card-img-top\" alt=\"...\">
-                        <div class=\"card-body\">
-                            <h5 class=\"card-title\">Banarasi Handmade Saree</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-md-4\">
-                    <div class=\"card\" style=\"width: 18rem;\">
-                        <img src=\"images/nike_shoe.jpg\" class=\"card-img-top\" alt=\"...\">
-                        <div class=\"card-body\">
-                            <h5 class=\"card-title\">Nike sports shoe lightweight</h5>
-                        </div>
-                    </div>
-                </div>
+                <div class=\"col-md-3\">
+    \t            <div style=\"border:solid black;margin-top:20px;\"align=\"center;\">
+        \t        <img class=\"rounded mx-auto d-block\" src=\"images/nike_shoe.jpg\" style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
+            \t    <p style=\"height:100px; widht:100px;margin-top:20px; font-size:25px;\" align=\"center\" >Banarasi Handmade Saree</p>
+    \t            </div>
+      \t        </div>
+
+                <div class=\"col-md-3\">
+    \t            <div style=\"border:solid black;margin-top:20px;\"align=\"center;\">
+        \t        <img class=\"rounded mx-auto d-block\" src=\"images/perfume2.jpg\" style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
+            \t    <p style=\"height:100px; widht:100px;margin-top:20px; font-size:25px;\" align=\"center\" >Mercury Fragrance</p>
+    \t            </div>
+      \t        </div>
             </div>
     </section>
 \t\t";
-        // line 86
+        // line 87
         echo "\t\t";
         echo $this->extensions['Pimcore\Twig\Extension\DocumentEditableExtension']->renderEditable($context, "snippet", "footer");
         echo "
@@ -139,7 +140,55 @@ class __TwigTemplate_1aafd0f3a20022df1d2deb7a932601c7 extends Template
       crossorigin=\"anonymous\"></script>
 \t</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ";
+        // line 145
+        echo "
+                ";
+        // line 155
+        echo "                ";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
 
@@ -160,7 +209,7 @@ class __TwigTemplate_1aafd0f3a20022df1d2deb7a932601c7 extends Template
 
     public function getDebugInfo()
     {
-        return array (  133 => 86,  76 => 30,  56 => 11,  45 => 1,);
+        return array (  191 => 155,  188 => 145,  134 => 87,  76 => 30,  56 => 11,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -221,32 +270,33 @@ class __TwigTemplate_1aafd0f3a20022df1d2deb7a932601c7 extends Template
         </div>
         <div class=\"container\">
             <div class=\"row justify-content-evenlys\">
-                <div class=\"col-md-4\">
-                    <div class=\"card\" style=\"width: 18rem;\">
-                        <img src=\"images/iphone.jpg\" class=\"card-img-top\" alt=\"...\">
-                        <div class=\"card-body\">
-                            <h5 class=\"card-title\">iphone 12 pro</h5>
-                        </div>
-                    </div>
-                </div>
+                <div class=\"col-md-3\">
+    \t            <div style=\"border:solid black;margin-top:20px;\"align=\"center;\">
+        \t        <img class=\"rounded mx-auto d-block\" src=\"images/iphone.jpg\"style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
+            \t    <p style=\"height:100px; widht:100px;margin-top:20px; font-size:25px;\" align=\"center\" >iphone12 pro </p>
+    \t            </div>
+      \t        </div>
 
-                <div class=\"col-md-4\">
+                <div class=\"col-md-3\">
+    \t            <div style=\"border:solid black;margin-top:20px;\"align=\"center;\">
+        \t        <img class=\"rounded mx-auto d-block\" src=\"images/saree.jpg\" style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
+            \t    <p style=\"height:100px; widht:100px;margin-top:20px; font-size:25px;\" align=\"center\" >Banarasi Handmade Saree</p>
+    \t            </div>
+      \t        </div>
 
-                    <div class=\"card\" style=\"width: 18rem;\">
-                        <img src=\"images/saree.jpg\" class=\"card-img-top\" alt=\"...\">
-                        <div class=\"card-body\">
-                            <h5 class=\"card-title\">Banarasi Handmade Saree</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class=\"col-md-4\">
-                    <div class=\"card\" style=\"width: 18rem;\">
-                        <img src=\"images/nike_shoe.jpg\" class=\"card-img-top\" alt=\"...\">
-                        <div class=\"card-body\">
-                            <h5 class=\"card-title\">Nike sports shoe lightweight</h5>
-                        </div>
-                    </div>
-                </div>
+                <div class=\"col-md-3\">
+    \t            <div style=\"border:solid black;margin-top:20px;\"align=\"center;\">
+        \t        <img class=\"rounded mx-auto d-block\" src=\"images/nike_shoe.jpg\" style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
+            \t    <p style=\"height:100px; widht:100px;margin-top:20px; font-size:25px;\" align=\"center\" >Banarasi Handmade Saree</p>
+    \t            </div>
+      \t        </div>
+
+                <div class=\"col-md-3\">
+    \t            <div style=\"border:solid black;margin-top:20px;\"align=\"center;\">
+        \t        <img class=\"rounded mx-auto d-block\" src=\"images/perfume2.jpg\" style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
+            \t    <p style=\"height:100px; widht:100px;margin-top:20px; font-size:25px;\" align=\"center\" >Mercury Fragrance</p>
+    \t            </div>
+      \t        </div>
             </div>
     </section>
 \t\t{# footer snippet#}
@@ -257,7 +307,75 @@ class __TwigTemplate_1aafd0f3a20022df1d2deb7a932601c7 extends Template
       crossorigin=\"anonymous\"></script>
 \t</body>
 </html>
-", "default/home.html.twig", "/var/www/html/test/pimProject/templates/default/home.html.twig");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{# <div class=\"col-md-4\">
+                    <div class=\"card\" style=\"width: 18rem;\">
+                        <img src=\"images/iphone.jpg\" class=\"card-img-top\" alt=\"...\">
+                        <div class=\"card-body\">
+                            <h5 class=\"card-title\">iphone 12 pro</h5>
+                        </div>
+                    </div>
+                </div> #}
+
+                {# <div class=\"col-md-4\">
+
+                    <div class=\"card\" style=\"width: 18rem;\">
+                        <img src=\"images/saree.jpg\" class=\"card-img-top\" alt=\"...\">
+                        <div class=\"card-body\">
+                            <h5 class=\"card-title\">Banarasi Handmade Saree</h5>
+                        </div>
+                    </div>
+                </div> #}
+                {# <div class=\"col-md-4\">
+                    <div class=\"card\" style=\"width: 18rem;\">
+                        <img src=\"images/nike_shoe.jpg\" class=\"card-img-top\" alt=\"...\">
+                        <div class=\"card-body\">
+                            <h5 class=\"card-title\">Nike sports shoe lightweight</h5>
+                        </div>
+                    </div>
+                </div> #}", "default/home.html.twig", "/var/www/html/test/pimProject/templates/default/home.html.twig");
     }
     
     public function checkSecurity()

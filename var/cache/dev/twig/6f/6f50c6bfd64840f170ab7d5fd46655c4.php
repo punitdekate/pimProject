@@ -83,7 +83,7 @@ class __TwigTemplate_8897f452dcae8a5fbd4b6aa7f209ad2a extends Template
         
         
       </ul>
-      <form class=\"d-flex\">
+      <form class=\"d-flex\"> 
         <input class=\"form-control me-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">
         <button class=\"btn btn-outline-success\" type=\"submit\">Search</button>
       </form>
@@ -153,7 +153,7 @@ class __TwigTemplate_8897f452dcae8a5fbd4b6aa7f209ad2a extends Template
         
         
       </ul>
-      <form class=\"d-flex\">
+      <form class=\"d-flex\"> 
         <input class=\"form-control me-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">
         <button class=\"btn btn-outline-success\" type=\"submit\">Search</button>
       </form>
