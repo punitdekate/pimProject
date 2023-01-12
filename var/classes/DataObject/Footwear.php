@@ -12,11 +12,14 @@
  * - description [textarea]
  * - price [numeric]
  * - footwearSpecific [objectbricks]
+ * - gender [select]
  * - ProductImage [image]
  * - ProductColor [rgbaColor]
  * - featuresSpecification [classificationstore]
- * - manufacturerDetails [classificationstore]
- * - sellerDetails [classificationstore]
+ * - manufacturingCompany [input]
+ * - manufacturingDate [date]
+ * - expiryDate [date]
+ * - sellerDetails [manyToManyObjectRelation]
  * - ExtraAttributes [block]
  * -- AttributeName [input]
  * -- AttributeDetails [input]
@@ -33,7 +36,12 @@ use Pimcore\Model\DataObject\PreGetValueHookInterface;
 * @method static \Pimcore\Model\DataObject\Footwear\Listing|\Pimcore\Model\DataObject\Footwear|null getByProductName($value, $limit = 0, $offset = 0, $objectTypes = null)
 * @method static \Pimcore\Model\DataObject\Footwear\Listing|\Pimcore\Model\DataObject\Footwear|null getByDescription($value, $limit = 0, $offset = 0, $objectTypes = null)
 * @method static \Pimcore\Model\DataObject\Footwear\Listing|\Pimcore\Model\DataObject\Footwear|null getByPrice($value, $limit = 0, $offset = 0, $objectTypes = null)
+* @method static \Pimcore\Model\DataObject\Footwear\Listing|\Pimcore\Model\DataObject\Footwear|null getByGender($value, $limit = 0, $offset = 0, $objectTypes = null)
 * @method static \Pimcore\Model\DataObject\Footwear\Listing|\Pimcore\Model\DataObject\Footwear|null getByProductImage($value, $limit = 0, $offset = 0, $objectTypes = null)
+* @method static \Pimcore\Model\DataObject\Footwear\Listing|\Pimcore\Model\DataObject\Footwear|null getByManufacturingCompany($value, $limit = 0, $offset = 0, $objectTypes = null)
+* @method static \Pimcore\Model\DataObject\Footwear\Listing|\Pimcore\Model\DataObject\Footwear|null getByManufacturingDate($value, $limit = 0, $offset = 0, $objectTypes = null)
+* @method static \Pimcore\Model\DataObject\Footwear\Listing|\Pimcore\Model\DataObject\Footwear|null getByExpiryDate($value, $limit = 0, $offset = 0, $objectTypes = null)
+* @method static \Pimcore\Model\DataObject\Footwear\Listing|\Pimcore\Model\DataObject\Footwear|null getBySellerDetails($value, $limit = 0, $offset = 0, $objectTypes = null)
 */
 
 class Footwear extends Concrete
@@ -45,10 +53,13 @@ protected $productName;
 protected $description;
 protected $price;
 protected $footwearSpecific;
+protected $gender;
 protected $ProductImage;
 protected $ProductColor;
 protected $featuresSpecification;
-protected $manufacturerDetails;
+protected $manufacturingCompany;
+protected $manufacturingDate;
+protected $expiryDate;
 protected $sellerDetails;
 protected $ExtraAttributes;
 
@@ -238,6 +249,40 @@ public function setFootwearSpecific(?\Pimcore\Model\DataObject\Objectbrick $foot
 }
 
 /**
+* Get gender - Gender
+* @return string|null
+*/
+public function getGender(): ?string
+{
+	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
+		$preValue = $this->preGetValue("gender");
+		if ($preValue !== null) {
+			return $preValue;
+		}
+	}
+
+	$data = $this->gender;
+
+	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
+		return $data->getPlain();
+	}
+
+	return $data;
+}
+
+/**
+* Set gender - Gender
+* @param string|null $gender
+* @return \Pimcore\Model\DataObject\Footwear
+*/
+public function setGender(?string $gender)
+{
+	$this->gender = $gender;
+
+	return $this;
+}
+
+/**
 * Get ProductImage - Product Image
 * @return \Pimcore\Model\Asset\Image|null
 */
@@ -336,40 +381,112 @@ public function setFeaturesSpecification(?\Pimcore\Model\DataObject\Classificati
 }
 
 /**
-* Get manufacturerDetails - Manufacturer Details
-* @return \Pimcore\Model\DataObject\Classificationstore|null
+* Get manufacturingCompany - Manufacturing Company
+* @return string|null
 */
-public function getManufacturerDetails(): ?\Pimcore\Model\DataObject\Classificationstore
+public function getManufacturingCompany(): ?string
 {
 	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
-		$preValue = $this->preGetValue("manufacturerDetails");
+		$preValue = $this->preGetValue("manufacturingCompany");
 		if ($preValue !== null) {
 			return $preValue;
 		}
 	}
 
-	$data = $this->getClass()->getFieldDefinition("manufacturerDetails")->preGetData($this);
+	$data = $this->manufacturingCompany;
+
+	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
+		return $data->getPlain();
+	}
 
 	return $data;
 }
 
 /**
-* Set manufacturerDetails - Manufacturer Details
-* @param \Pimcore\Model\DataObject\Classificationstore|null $manufacturerDetails
+* Set manufacturingCompany - Manufacturing Company
+* @param string|null $manufacturingCompany
 * @return \Pimcore\Model\DataObject\Footwear
 */
-public function setManufacturerDetails(?\Pimcore\Model\DataObject\Classificationstore $manufacturerDetails)
+public function setManufacturingCompany(?string $manufacturingCompany)
 {
-	$this->manufacturerDetails = $manufacturerDetails;
+	$this->manufacturingCompany = $manufacturingCompany;
+
+	return $this;
+}
+
+/**
+* Get manufacturingDate - Manufacturing Date
+* @return \Carbon\Carbon|null
+*/
+public function getManufacturingDate(): ?\Carbon\Carbon
+{
+	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
+		$preValue = $this->preGetValue("manufacturingDate");
+		if ($preValue !== null) {
+			return $preValue;
+		}
+	}
+
+	$data = $this->manufacturingDate;
+
+	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
+		return $data->getPlain();
+	}
+
+	return $data;
+}
+
+/**
+* Set manufacturingDate - Manufacturing Date
+* @param \Carbon\Carbon|null $manufacturingDate
+* @return \Pimcore\Model\DataObject\Footwear
+*/
+public function setManufacturingDate(?\Carbon\Carbon $manufacturingDate)
+{
+	$this->manufacturingDate = $manufacturingDate;
+
+	return $this;
+}
+
+/**
+* Get expiryDate - Expiry Date
+* @return \Carbon\Carbon|null
+*/
+public function getExpiryDate(): ?\Carbon\Carbon
+{
+	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
+		$preValue = $this->preGetValue("expiryDate");
+		if ($preValue !== null) {
+			return $preValue;
+		}
+	}
+
+	$data = $this->expiryDate;
+
+	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
+		return $data->getPlain();
+	}
+
+	return $data;
+}
+
+/**
+* Set expiryDate - Expiry Date
+* @param \Carbon\Carbon|null $expiryDate
+* @return \Pimcore\Model\DataObject\Footwear
+*/
+public function setExpiryDate(?\Carbon\Carbon $expiryDate)
+{
+	$this->expiryDate = $expiryDate;
 
 	return $this;
 }
 
 /**
 * Get sellerDetails - Seller Details
-* @return \Pimcore\Model\DataObject\Classificationstore|null
+* @return \Pimcore\Model\DataObject\Seller[]
 */
-public function getSellerDetails(): ?\Pimcore\Model\DataObject\Classificationstore
+public function getSellerDetails(): array
 {
 	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
 		$preValue = $this->preGetValue("sellerDetails");
@@ -380,18 +497,31 @@ public function getSellerDetails(): ?\Pimcore\Model\DataObject\Classificationsto
 
 	$data = $this->getClass()->getFieldDefinition("sellerDetails")->preGetData($this);
 
+	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
+		return $data->getPlain();
+	}
+
 	return $data;
 }
 
 /**
 * Set sellerDetails - Seller Details
-* @param \Pimcore\Model\DataObject\Classificationstore|null $sellerDetails
+* @param \Pimcore\Model\DataObject\Seller[] $sellerDetails
 * @return \Pimcore\Model\DataObject\Footwear
 */
-public function setSellerDetails(?\Pimcore\Model\DataObject\Classificationstore $sellerDetails)
+public function setSellerDetails(?array $sellerDetails)
 {
-	$this->sellerDetails = $sellerDetails;
-
+	/** @var \Pimcore\Model\DataObject\ClassDefinition\Data\ManyToManyObjectRelation $fd */
+	$fd = $this->getClass()->getFieldDefinition("sellerDetails");
+	$hideUnpublished = \Pimcore\Model\DataObject\Concrete::getHideUnpublished();
+	\Pimcore\Model\DataObject\Concrete::setHideUnpublished(false);
+	$currentData = $this->getSellerDetails();
+	\Pimcore\Model\DataObject\Concrete::setHideUnpublished($hideUnpublished);
+	$isEqual = $fd->isEqual($currentData, $sellerDetails);
+	if (!$isEqual) {
+		$this->markFieldDirty("sellerDetails", true);
+	}
+	$this->sellerDetails = $fd->preSetData($this, $sellerDetails);
 	return $this;
 }
 

@@ -77,6 +77,21 @@ class MyController extends FrontendController
 
 
 
+    //  do listing of objects for clothing class
+    /**
+     * @Route("/clothing", name="clothing", methods={"GET","POST"})
+     */
+    public function showClothing(Request $request):Response
+    {
+        $cItems = new Clothing\Listing();
+        $cItems->setOrderKey("price");
+        $cItems->setOrder("asc");
+
+        return $this->render('default/clothing.html.twig',['objects'=>$cItems]);
+    }
+
+
+
     //  do listing of objects for electronics class
     /**
      * @Route("/electronics", name="electronics", methods={"GET","POST"})
@@ -86,18 +101,6 @@ class MyController extends FrontendController
         $eItems = new Electronics\Listing();
         $eItems->setOrderKey("RAND()", false);
         return $this->render('default/electronics.html.twig',['objects'=>$eItems]);
-    }
-
-
-    //  do listing of objects for clothing class
-    /**
-     * @Route("/clothing", name="clothing", methods={"GET","POST"})
-     */
-    public function showClothing(Request $request):Response
-    {
-        $cItems = new Clothing\Listing();
-        $cItems->setOrderKey("RAND()", false);
-        return $this->render('default/clothing.html.twig',['objects'=>$cItems]);
     }
 
 

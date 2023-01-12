@@ -58,61 +58,42 @@ class __TwigTemplate_067349a4eba4137e604b8e549c08fe3e extends Template
 </head>
 
 \t<body>
+\t<div class=\"row\" style=\"margin-top:20px;\">
 \t\t";
-        // line 18
+        // line 19
         echo "\t\t";
         echo $this->extensions['Pimcore\Twig\Extension\DocumentEditableExtension']->renderEditable($context, "snippet", "header");
         echo "
 
-\t\t\t<div class=\"container\">
-\t\t\t\t<div class=\"row-my-2 \">
-            \t<label>
-                \t<h1 style=\"font-family:'Skranji', cursive\">Beauty</h1>
-            \t</label>
-        \t</div>
-
-\t\t\t<div class=\"row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3\">
-\t\t\t\t";
-        // line 28
+\t\t";
+        // line 21
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["objects"]) || array_key_exists("objects", $context) ? $context["objects"] : (function () { throw new RuntimeError('Variable "objects" does not exist.', 28, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["objects"]) || array_key_exists("objects", $context) ? $context["objects"] : (function () { throw new RuntimeError('Variable "objects" does not exist.', 21, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["object"]) {
-            // line 29
-            echo "                    ";
-            // line 36
-            echo "\t\t\t\t\t
-\t\t\t\t\t<div class=\"col\">
-\t\t\t\t\t\t<div class=\"card shadow-sm\" style=\"width: 25rem;\">
-\t\t\t\t\t\t\t<div class=\"card-body\" >
-\t\t\t\t\t\t\t\t<img src=\"";
-            // line 40
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["object"], "getProductImage", [], "method", false, false, true, 40), 40, $this->source), "html", null, true);
-            echo " \" alt=\"tv1\" class=\"bd-placeholder-img card-img-top\" width=\"100%\" height=\"225px\">
-\t\t\t\t\t\t\t\t<p class=\"card-text\">
-\t\t\t\t\t\t\t\t\t<h3>";
-            // line 42
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["object"], "getDescription", [], "method", false, false, true, 42), 42, $this->source), "html", null, true);
-            echo "</h3>
-\t\t\t\t\t\t\t\t</p>
-\t\t\t\t\t\t\t\t<h5>Price:";
-            // line 44
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["object"], "getPrice", [], "any", false, false, true, 44), 44, $this->source), "html", null, true);
-            echo "</h5>
-\t\t\t\t\t\t\t\t\t";
-            // line 52
-            echo "\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t";
+            // line 22
+            echo "\t\t<div class=\"col-md-3\">
+    \t<div style=\"border:solid black;margin-top:20px;\"align=\"center;\">
+        \t    <img class=\"rounded mx-auto d-block\" src=\"";
+            // line 24
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["object"], "getProductImage", [], "method", false, false, true, 24), 24, $this->source), "html", null, true);
+            echo "\"style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
+            \t<h3 align=\"center\"style=\"color:green\">Price :";
+            // line 25
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["object"], "getPrice", [], "any", false, false, true, 25), 25, $this->source), "html", null, true);
+            echo " </h3>
+            \t<p style=\"height:100px; widht:100px;margin-top:20px;\" align=\"center\" >
+\t               ";
+            // line 27
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["object"], "getDescription", [], "method", false, false, true, 27), 27, $this->source), "html", null, true);
+            echo " </p>
+    \t     </div>
+      \t</div>
+    \t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['object'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 56
-        echo "\t\t\t</div>
-\t\t</div>
-\t\t";
-        // line 59
+        // line 31
         echo "\t\t";
         echo $this->extensions['Pimcore\Twig\Extension\DocumentEditableExtension']->renderEditable($context, "snippet", "footer");
         echo "
@@ -138,7 +119,7 @@ class __TwigTemplate_067349a4eba4137e604b8e549c08fe3e extends Template
 
     public function getDebugInfo()
     {
-        return array (  116 => 59,  112 => 56,  103 => 52,  99 => 44,  94 => 42,  89 => 40,  83 => 36,  81 => 29,  77 => 28,  63 => 18,  45 => 1,);
+        return array (  97 => 31,  87 => 27,  82 => 25,  78 => 24,  74 => 22,  70 => 21,  64 => 19,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -159,48 +140,20 @@ class __TwigTemplate_067349a4eba4137e604b8e549c08fe3e extends Template
 </head>
 
 \t<body>
+\t<div class=\"row\" style=\"margin-top:20px;\">
 \t\t{# header snippet#}
 \t\t{{ pimcore_snippet(\"header\") }}
 
-\t\t\t<div class=\"container\">
-\t\t\t\t<div class=\"row-my-2 \">
-            \t<label>
-                \t<h1 style=\"font-family:'Skranji', cursive\">Beauty</h1>
-            \t</label>
-        \t</div>
-
-\t\t\t<div class=\"row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3\">
-\t\t\t\t{% for object in objects %}
-                    {# <div class=\"card\" style=\"width: 18rem;\">
-                        <img src=\"{{ object.getProductImage() }}\" class=\"card-img-top\"  width=\"100%\" height=\"225px\">
-                        <div class=\"card-text\">
-                            <h5 class=\"card-title\">{{ object.getDescription() }}</h5>
-                            Price:{{ object.getPrice }}<h2>
-                        </div>
-                    </div> #}
-\t\t\t\t\t
-\t\t\t\t\t<div class=\"col\">
-\t\t\t\t\t\t<div class=\"card shadow-sm\" style=\"width: 25rem;\">
-\t\t\t\t\t\t\t<div class=\"card-body\" >
-\t\t\t\t\t\t\t\t<img src=\"{{ object.getProductImage() }} \" alt=\"tv1\" class=\"bd-placeholder-img card-img-top\" width=\"100%\" height=\"225px\">
-\t\t\t\t\t\t\t\t<p class=\"card-text\">
-\t\t\t\t\t\t\t\t\t<h3>{{ object.getDescription() }}</h3>
-\t\t\t\t\t\t\t\t</p>
-\t\t\t\t\t\t\t\t<h5>Price:{{ object.getPrice }}</h5>
-\t\t\t\t\t\t\t\t\t{# <div class=\"d-flex justify-content-between align-items-center\">
-\t\t\t\t\t\t\t\t\t\t<div class=\"btn-group\">
-\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm btn-secondary\">Buy</button>
-\t\t\t\t\t\t\t\t\t\t\t<button type=\"button\" class=\"btn btn-sm btn-outline-secondary\">Add to Cart</button>
-\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t    \t\t\t<small class=\"text-muted\">9 mins</small>
-\t\t\t\t\t\t\t\t\t</div> #}
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t{% endfor %}
-\t\t\t</div>
-\t\t</div>
-\t\t{# header snippet#}
+\t\t{% for object in objects %}
+\t\t<div class=\"col-md-3\">
+    \t<div style=\"border:solid black;margin-top:20px;\"align=\"center;\">
+        \t    <img class=\"rounded mx-auto d-block\" src=\"{{ object.getProductImage() }}\"style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
+            \t<h3 align=\"center\"style=\"color:green\">Price :{{ object.getPrice}} </h3>
+            \t<p style=\"height:100px; widht:100px;margin-top:20px;\" align=\"center\" >
+\t               {{object.getDescription()}} </p>
+    \t     </div>
+      \t</div>
+    \t{% endfor %}
 \t\t{{ pimcore_snippet(\"footer\") }}
     </body>
 </html>", "default/beauty.html.twig", "/var/www/html/test/pimProject/templates/default/beauty.html.twig");
@@ -208,9 +161,9 @@ class __TwigTemplate_067349a4eba4137e604b8e549c08fe3e extends Template
     
     public function checkSecurity()
     {
-        static $tags = array("for" => 28);
-        static $filters = array("escape" => 40);
-        static $functions = array("pimcore_snippet" => 18);
+        static $tags = array("for" => 21);
+        static $filters = array("escape" => 24);
+        static $functions = array("pimcore_snippet" => 19);
 
         try {
             $this->sandbox->checkSecurity(

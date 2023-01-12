@@ -54,12 +54,12 @@ class __TwigTemplate_ca8ee0e357a7381a181cf76ccfb1c3a6 extends Template
  <div class=\"container\">
   <footer class=\"py-3 my-4\">
     <ul class=\"nav justify-content-center border-bottom pb-3 mb-3\">
-      <li class=\"nav-item\"><a href=\"#\" class=\"nav-link px-2 text-muted\">Home</a></li>
-      <li class=\"nav-item\"><a href=\"#\" class=\"nav-link px-2 text-muted\">Clothing</a></li>
-      <li class=\"nav-item\"><a href=\"#\" class=\"nav-link px-2 text-muted\">Electronics</a></li>
-      <li class=\"nav-item\"><a href=\"#\" class=\"nav-link px-2 text-muted\">Footwear</a></li>
-      <li class=\"nav-item\"><a href=\"#\" class=\"nav-link px-2 text-muted\">Beauty</a></li>
-      <li class=\"nav-item\"><a href=\"#\" class=\"nav-link px-2 text-muted\">About</a></li>
+      <li class=\"nav-item\"><a href=\"home\" class=\"nav-link px-2 text-muted\">Home</a></li>
+      <li class=\"nav-item\"><a href=\"clothing\" class=\"nav-link px-2 text-muted\">Clothing</a></li>
+      <li class=\"nav-item\"><a href=\"electronics\" class=\"nav-link px-2 text-muted\">Electronics</a></li>
+      <li class=\"nav-item\"><a href=\"footwear\" class=\"nav-link px-2 text-muted\">Footwear</a></li>
+      <li class=\"nav-item\"><a href=\"beauty\" class=\"nav-link px-2 text-muted\">Beauty</a></li>
+      <li class=\"nav-item\"><a href=\"about\" class=\"nav-link px-2 text-muted\">About</a></li>
     </ul>
     <p class=\"text-center text-muted\">© 2022 Company, Inc</p>
   </footer>
@@ -99,12 +99,12 @@ class __TwigTemplate_ca8ee0e357a7381a181cf76ccfb1c3a6 extends Template
  <div class=\"container\">
   <footer class=\"py-3 my-4\">
     <ul class=\"nav justify-content-center border-bottom pb-3 mb-3\">
-      <li class=\"nav-item\"><a href=\"#\" class=\"nav-link px-2 text-muted\">Home</a></li>
-      <li class=\"nav-item\"><a href=\"#\" class=\"nav-link px-2 text-muted\">Clothing</a></li>
-      <li class=\"nav-item\"><a href=\"#\" class=\"nav-link px-2 text-muted\">Electronics</a></li>
-      <li class=\"nav-item\"><a href=\"#\" class=\"nav-link px-2 text-muted\">Footwear</a></li>
-      <li class=\"nav-item\"><a href=\"#\" class=\"nav-link px-2 text-muted\">Beauty</a></li>
-      <li class=\"nav-item\"><a href=\"#\" class=\"nav-link px-2 text-muted\">About</a></li>
+      <li class=\"nav-item\"><a href=\"home\" class=\"nav-link px-2 text-muted\">Home</a></li>
+      <li class=\"nav-item\"><a href=\"clothing\" class=\"nav-link px-2 text-muted\">Clothing</a></li>
+      <li class=\"nav-item\"><a href=\"electronics\" class=\"nav-link px-2 text-muted\">Electronics</a></li>
+      <li class=\"nav-item\"><a href=\"footwear\" class=\"nav-link px-2 text-muted\">Footwear</a></li>
+      <li class=\"nav-item\"><a href=\"beauty\" class=\"nav-link px-2 text-muted\">Beauty</a></li>
+      <li class=\"nav-item\"><a href=\"about\" class=\"nav-link px-2 text-muted\">About</a></li>
     </ul>
     <p class=\"text-center text-muted\">© 2022 Company, Inc</p>
   </footer>
