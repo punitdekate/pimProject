@@ -412,6 +412,14 @@
             <parameter key="definitions" type="collection"/>
           </parameter>
         </parameter>
+        <parameter key="versions" type="collection">
+          <parameter key="days">null</parameter>
+          <parameter key="steps">null</parameter>
+          <parameter key="use_hardlinks">true</parameter>
+          <parameter key="disable_stack_trace">false</parameter>
+        </parameter>
+        <parameter key="hide_edit_image">false</parameter>
+        <parameter key="disable_tree_preview">true</parameter>
         <parameter key="frontend_prefixes" type="collection">
           <parameter key="source"></parameter>
           <parameter key="thumbnail"></parameter>
@@ -454,16 +462,8 @@
             <parameter key="auto_clear_temp_files">true</parameter>
           </parameter>
         </parameter>
-        <parameter key="versions" type="collection">
-          <parameter key="days">null</parameter>
-          <parameter key="steps">null</parameter>
-          <parameter key="use_hardlinks">true</parameter>
-          <parameter key="disable_stack_trace">false</parameter>
-        </parameter>
         <parameter key="icc_rgb_profile">null</parameter>
         <parameter key="icc_cmyk_profile">null</parameter>
-        <parameter key="hide_edit_image">false</parameter>
-        <parameter key="disable_tree_preview">true</parameter>
       </parameter>
       <parameter key="objects" type="collection">
         <parameter key="class_definitions" type="collection">
@@ -537,6 +537,11 @@
             <parameter key="map" type="collection"/>
           </parameter>
         </parameter>
+        <parameter key="versions" type="collection">
+          <parameter key="days">null</parameter>
+          <parameter key="steps">null</parameter>
+          <parameter key="disable_stack_trace">false</parameter>
+        </parameter>
         <parameter key="ignore_localized_query_fallback">false</parameter>
         <parameter key="tree_paging_limit">30</parameter>
         <parameter key="auto_save_interval">60</parameter>
@@ -566,6 +571,17 @@
           <parameter>link</parameter>
           <parameter>page</parameter>
           <parameter>snippet</parameter>
+        </parameter>
+        <parameter key="versions" type="collection">
+          <parameter key="days">null</parameter>
+          <parameter key="steps">null</parameter>
+          <parameter key="disable_stack_trace">false</parameter>
+        </parameter>
+        <parameter key="error_pages" type="collection">
+          <parameter key="default"></parameter>
+          <parameter key="localized" type="collection">
+            <parameter key="en"></parameter>
+          </parameter>
         </parameter>
         <parameter key="doc_types" type="collection">
           <parameter key="definitions" type="collection"/>
@@ -802,17 +818,33 @@
         <parameter key="data_object" type="collection"/>
       </parameter>
       <parameter key="general" type="collection">
-        <parameter key="language">en</parameter>
-        <parameter key="timezone"></parameter>
-        <parameter key="path_variable">null</parameter>
         <parameter key="domain"></parameter>
         <parameter key="redirect_to_maindomain">false</parameter>
+        <parameter key="language">en</parameter>
         <parameter key="valid_languages">en</parameter>
-        <parameter key="fallback_languages" type="collection"/>
+        <parameter key="fallback_languages" type="collection">
+          <parameter key="en"></parameter>
+        </parameter>
         <parameter key="default_language">en</parameter>
-        <parameter key="disable_usage_statistics">false</parameter>
         <parameter key="debug_admin_translations">false</parameter>
+        <parameter key="timezone"></parameter>
+        <parameter key="path_variable">null</parameter>
+        <parameter key="disable_usage_statistics">false</parameter>
         <parameter key="instance_identifier">null</parameter>
+      </parameter>
+      <parameter key="email" type="collection">
+        <parameter key="debug" type="collection">
+          <parameter key="email_addresses">punitdekateofficial@gmail.com</parameter>
+        </parameter>
+        <parameter key="sender" type="collection">
+          <parameter key="name"></parameter>
+          <parameter key="email"></parameter>
+        </parameter>
+        <parameter key="return" type="collection">
+          <parameter key="name"></parameter>
+          <parameter key="email"></parameter>
+        </parameter>
+        <parameter key="usespecific">false</parameter>
       </parameter>
       <parameter key="error_handling" type="collection">
         <parameter key="render_error_document">true</parameter>
@@ -846,20 +878,6 @@
       <parameter key="full_page_cache" type="collection">
         <parameter key="enabled">true</parameter>
         <parameter key="lifetime">null</parameter>
-      </parameter>
-      <parameter key="email" type="collection">
-        <parameter key="sender" type="collection">
-          <parameter key="name"></parameter>
-          <parameter key="email"></parameter>
-        </parameter>
-        <parameter key="return" type="collection">
-          <parameter key="name"></parameter>
-          <parameter key="email"></parameter>
-        </parameter>
-        <parameter key="debug" type="collection">
-          <parameter key="email_addresses"></parameter>
-        </parameter>
-        <parameter key="usespecific">false</parameter>
       </parameter>
       <parameter key="workflows" type="collection"/>
       <parameter key="httpclient" type="collection">
@@ -956,6 +974,13 @@
     <parameter key="pimcore_admin.custom_admin_path_identifier">null</parameter>
     <parameter key="pimcore_admin.custom_admin_route_name">my_custom_admin_entry_point</parameter>
     <parameter key="pimcore_admin.config" type="collection">
+      <parameter key="branding" type="collection">
+        <parameter key="login_screen_invert_colors">false</parameter>
+        <parameter key="color_login_screen"></parameter>
+        <parameter key="color_admin_interface"></parameter>
+        <parameter key="color_admin_interface_background"></parameter>
+        <parameter key="login_screen_custom_image"></parameter>
+      </parameter>
       <parameter key="gdpr_data_extractor" type="collection">
         <parameter key="dataObjects" type="collection">
           <parameter key="classes" type="collection"/>
@@ -1017,13 +1042,6 @@
       </parameter>
       <parameter key="custom_admin_path_identifier">null</parameter>
       <parameter key="custom_admin_route_name">my_custom_admin_entry_point</parameter>
-      <parameter key="branding" type="collection">
-        <parameter key="login_screen_invert_colors">false</parameter>
-        <parameter key="color_login_screen">null</parameter>
-        <parameter key="color_admin_interface">null</parameter>
-        <parameter key="color_admin_interface_background">null</parameter>
-        <parameter key="login_screen_custom_image">null</parameter>
-      </parameter>
     </parameter>
     <parameter key="data_collector.templates" type="collection">
       <parameter key="Pimcore\Bundle\CoreBundle\DataCollector\PimcoreDataCollector" type="collection">
@@ -1121,6 +1139,8 @@
     </parameter>
     <parameter key="pimcore.service_controllers" type="collection">
       <parameter key="App\Controller\DefaultController">App\Controller\DefaultController</parameter>
+      <parameter key="App\Controller\FilterController">App\Controller\FilterController</parameter>
+      <parameter key="App\Controller\MyController">App\Controller\MyController</parameter>
       <parameter key="App\Controller\Web2printController">App\Controller\Web2printController</parameter>
       <parameter key="Doctrine\Bundle\DoctrineBundle\Controller\ProfilerController">Doctrine\Bundle\DoctrineBundle\Controller\ProfilerController</parameter>
       <parameter key="Pimcore\Bundle\AdminBundle\Controller\Admin\Asset\AssetController">Pimcore\Bundle\AdminBundle\Controller\Admin\Asset\AssetController</parameter>
@@ -1175,6 +1195,11 @@
       <parameter key="kernel">App\Kernel</parameter>
     </parameter>
     <parameter key="console.command.ids" type="collection">
+      <parameter>console.command.public_alias.App\Command\csvBeautyImport</parameter>
+      <parameter>console.command.public_alias.App\Command\csvClothingImport</parameter>
+      <parameter>console.command.public_alias.App\Command\csvElectronicsImport</parameter>
+      <parameter>console.command.public_alias.App\Command\csvFootwearImport</parameter>
+      <parameter>console.command.public_alias.App\Command\testing</parameter>
       <parameter>console.command.public_alias.Pimcore\Bundle\CoreBundle\Command\Bundle\ListCommand</parameter>
       <parameter>console.command.public_alias.Pimcore\Bundle\CoreBundle\Command\CacheWarmingCommand</parameter>
       <parameter>console.command.public_alias.Pimcore\Bundle\CoreBundle\Command\ClassesDefinitionsBuildCommand</parameter>
@@ -1228,12 +1253,49 @@
         <argument type="service" id=".service_locator.Z3eEsyj.App\Controller\DefaultController"/>
       </call>
     </service>
+    <service id="App\Controller\FilterController" class="App\Controller\FilterController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.Z3eEsyj.App\Controller\FilterController"/>
+      </call>
+    </service>
+    <service id="App\Controller\MyController" class="App\Controller\MyController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.Z3eEsyj.App\Controller\MyController"/>
+      </call>
+    </service>
     <service id="App\Controller\Web2printController" class="App\Controller\Web2printController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.Z3eEsyj.App\Controller\Web2printController"/>
       </call>
+    </service>
+    <service id="App\Command\csvBeautyImport" class="App\Command\csvBeautyImport" autowire="true" autoconfigure="true">
+      <tag name="console.command"/>
+      <tag name="container.no_preload"/>
+    </service>
+    <service id="App\Command\csvClothingImport" class="App\Command\csvClothingImport" autowire="true" autoconfigure="true">
+      <tag name="console.command"/>
+      <tag name="container.no_preload"/>
+    </service>
+    <service id="App\Command\csvElectronicsImport" class="App\Command\csvElectronicsImport" autowire="true" autoconfigure="true">
+      <tag name="console.command"/>
+      <tag name="container.no_preload"/>
+    </service>
+    <service id="App\Command\csvFootwearImport" class="App\Command\csvFootwearImport" autowire="true" autoconfigure="true">
+      <tag name="console.command"/>
+      <tag name="container.no_preload"/>
+    </service>
+    <service id="App\Command\testing" class="App\Command\testing" autowire="true" autoconfigure="true">
+      <tag name="console.command"/>
+      <tag name="container.no_preload"/>
+    </service>
+    <service id="App\EventListener\ManufactureDate" class="App\EventListener\ManufactureDate" autowire="true" autoconfigure="true">
+      <tag name="kernel.event_listener" event="pimcore.dataobject.preUpdate" method="onObjectPreUpdate"/>
     </service>
     <service id="argument_metadata_factory" class="Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactory"/>
     <service id="response_listener" class="Symfony\Component\HttpKernel\EventListener\ResponseListener">
@@ -2463,8 +2525,8 @@
     </service>
     <service id="mailer.transports" class="Symfony\Component\Mailer\Transport\Transports">
       <argument type="collection">
-        <argument key="main">native://default</argument>
-        <argument key="pimcore_newsletter">native://default</argument>
+        <argument key="main">smtp://punitdekateofficial@gmail.com:tileiedjbbsgvwdz@smtp.gmail.com:587</argument>
+        <argument key="pimcore_newsletter">smtp://punitdekateofficial@gmail.com:tileiedjbbsgvwdz@smtp.gmail.com:587</argument>
       </argument>
       <factory service="mailer.transport_factory" method="fromStrings"/>
     </service>
@@ -2472,7 +2534,7 @@
       <argument type="tagged_iterator" tag="mailer.transport_factory"/>
     </service>
     <service id="mailer.default_transport" class="Symfony\Component\Mailer\Transport\TransportInterface">
-      <argument>native://default</argument>
+      <argument>smtp://punitdekateofficial@gmail.com:tileiedjbbsgvwdz@smtp.gmail.com:587</argument>
       <factory service="mailer.transport_factory" method="fromString"/>
     </service>
     <service id="mailer.messenger.message_handler" class="Symfony\Component\Mailer\Messenger\MessageHandler">
@@ -3175,6 +3237,14 @@
         <argument type="collection">
           <argument type="service_closure" id="Pimcore\Bundle\AdminBundle\EventListener\TwoFactorListener"/>
           <argument>onAuthenticationAttempt</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>pimcore.dataobject.preUpdate</argument>
+        <argument type="collection">
+          <argument type="service_closure" id="App\EventListener\ManufactureDate"/>
+          <argument>onObjectPreUpdate</argument>
         </argument>
         <argument>0</argument>
       </call>
@@ -11773,9 +11843,25 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\DefaultController" class="App\Controller\DefaultController" public="true" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\DefaultController" class="App\Controller\DefaultController" public="true" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\DefaultController" class="App\Controller\DefaultController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\FilterController" class="App\Controller\FilterController" public="true" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\FilterController" class="App\Controller\FilterController" public="true" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\FilterController" class="App\Controller\FilterController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\MyController" class="App\Controller\MyController" public="true" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\MyController" class="App\Controller\MyController" public="true" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\MyController" class="App\Controller\MyController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Web2printController" class="App\Controller\Web2printController" public="true" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Web2printController" class="App\Controller\Web2printController" public="true" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Web2printController" class="App\Controller\Web2printController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Console\Command\Command.0.App\Command\csvBeautyImport" class="App\Command\csvBeautyImport" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Command\csvBeautyImport" class="App\Command\csvBeautyImport" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Console\Command\Command.0.App\Command\csvClothingImport" class="App\Command\csvClothingImport" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Command\csvClothingImport" class="App\Command\csvClothingImport" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Console\Command\Command.0.App\Command\csvElectronicsImport" class="App\Command\csvElectronicsImport" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Command\csvElectronicsImport" class="App\Command\csvElectronicsImport" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Console\Command\Command.0.App\Command\csvFootwearImport" class="App\Command\csvFootwearImport" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Command\csvFootwearImport" class="App\Command\csvFootwearImport" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Console\Command\Command.0.App\Command\testing" class="App\Command\testing" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Command\testing" class="App\Command\testing" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerInterface.0.Pimcore\HttpKernel\CacheWarmer\MkdirCacheWarmer" class="Pimcore\HttpKernel\CacheWarmer\MkdirCacheWarmer" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.Pimcore\HttpKernel\CacheWarmer\MkdirCacheWarmer" class="Pimcore\HttpKernel\CacheWarmer\MkdirCacheWarmer" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerInterface.0.Pimcore\HttpKernel\CacheWarmer\PimcoreCoreCacheWarmer" class="Pimcore\HttpKernel\CacheWarmer\PimcoreCoreCacheWarmer" autowire="true" abstract="true"/>
@@ -12705,7 +12791,7 @@
         <argument key="configWriter" type="service_closure" id="Pimcore\Config\ReportConfigWriter"/>
       </argument>
     </service>
-    <service id=".service_locator.AdcHsuO" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.zURQW9t" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Kernel::loadRoutes" type="service_closure" id=".service_locator.xUrKPVU"/>
@@ -13662,6 +13748,18 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.Z3eEsyj" method="withContext"/>
     </service>
+    <service id=".service_locator.Z3eEsyj.App\Controller\FilterController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\FilterController"/>
+      <argument>App\Controller\FilterController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.Z3eEsyj" method="withContext"/>
+    </service>
+    <service id=".service_locator.Z3eEsyj.App\Controller\MyController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\MyController"/>
+      <argument>App\Controller\MyController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.Z3eEsyj" method="withContext"/>
+    </service>
     <service id=".service_locator.Z3eEsyj.App\Controller\Web2printController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\Web2printController"/>
       <argument>App\Controller\Web2printController</argument>
@@ -14319,12 +14417,12 @@
     </service>
     <service id="debug.Pimcore\Controller\ArgumentValueResolver\WebsiteConfigValueResolver.inner" class="Pimcore\Controller\ArgumentValueResolver\WebsiteConfigValueResolver" autowire="true" autoconfigure="true"/>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.AdcHsuO"/>
+      <argument type="service" id=".service_locator.zURQW9t"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.AdcHsuO"/>
+      <argument type="service" id=".service_locator.zURQW9t"/>
     </service>
     <service id="debug.traced.messenger.bus.pimcore-core.inner" class="Symfony\Component\Messenger\MessageBus">
       <argument type="iterator">
@@ -15177,7 +15275,7 @@
     <service id="pimcore_admin.security.user_checker" alias="Pimcore\Bundle\AdminBundle\Security\User\UserChecker" public="true"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.AdcHsuO"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.zURQW9t"/>
     <service id="session" alias=".session.do-not-use" public="true">
       <deprecated package="symfony/framework-bundle" version="5.3">The "%alias_id%" service and "SessionInterface" alias are deprecated, use "$requestStack-&gt;getSession()" instead.</deprecated>
     </service>
@@ -15235,7 +15333,7 @@
     <service id=".service_locator.QGYrWSe" alias=".service_locator.KtQBKFH"/>
     <service id=".service_locator.d.LHN9k" alias=".service_locator.oA5BLRO"/>
     <service id=".service_locator.HWrFtH0" alias=".service_locator.Iq6MQcq"/>
-    <service id=".service_locator.5NZOu1y" alias=".service_locator.AdcHsuO"/>
+    <service id=".service_locator.5yCPF1z" alias=".service_locator.zURQW9t"/>
     <service id=".service_locator.i5moiQS" alias=".service_locator.C44LVBj"/>
     <service id=".service_locator.dSJzmMd" alias=".service_locator.sBOjgcc"/>
     <service id=".service_locator.RJeKnCN" alias=".service_locator.RUwm74c"/>
@@ -15340,6 +15438,11 @@
     <service id=".service_locator.aa1PbBb" alias=".service_locator.nLgZj7R"/>
     <service id=".service_locator.zlDwv4E" alias=".service_locator.eYe0Ese"/>
     <service id=".service_locator.dOLgA_b" alias=".service_locator.kdHTR1k"/>
+    <service id="console.command.public_alias.App\Command\csvBeautyImport" alias="App\Command\csvBeautyImport" public="true"/>
+    <service id="console.command.public_alias.App\Command\csvClothingImport" alias="App\Command\csvClothingImport" public="true"/>
+    <service id="console.command.public_alias.App\Command\csvElectronicsImport" alias="App\Command\csvElectronicsImport" public="true"/>
+    <service id="console.command.public_alias.App\Command\csvFootwearImport" alias="App\Command\csvFootwearImport" public="true"/>
+    <service id="console.command.public_alias.App\Command\testing" alias="App\Command\testing" public="true"/>
     <service id="console.command.public_alias.Pimcore\Bundle\CoreBundle\Command\Bundle\ListCommand" alias="Pimcore\Bundle\CoreBundle\Command\Bundle\ListCommand" public="true"/>
     <service id="console.command.public_alias.Pimcore\Bundle\CoreBundle\Command\CacheWarmingCommand" alias="Pimcore\Bundle\CoreBundle\Command\CacheWarmingCommand" public="true"/>
     <service id="console.command.public_alias.Pimcore\Bundle\CoreBundle\Command\ClassesDefinitionsBuildCommand" alias="Pimcore\Bundle\CoreBundle\Command\ClassesDefinitionsBuildCommand" public="true"/>

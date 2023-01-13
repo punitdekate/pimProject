@@ -66,6 +66,8 @@ return [[
 '[C]App%5CController%5CDefaultController' => 1,
 'App%5CController%5CDefaultController%23defaultAction' => 0,
 '[C]App%5CController%5CDefaultController%23defaultAction' => 1,
+'App%5CController%5CDefaultController%23body' => 0,
+'[C]App%5CController%5CDefaultController%23body' => 1,
 'Pimcore%5CController%5CFrontendController%23getSubscribedServices' => 0,
 '[C]Pimcore%5CController%5CFrontendController%23getSubscribedServices' => 1,
 'Pimcore%5CController%5CFrontendController%23__get' => 0,
@@ -2036,7 +2038,7 @@ return [[
 ], [
 
 0 => [],
-1 => 1672146710,
+1 => 1673599450,
 2 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [

@@ -3,31 +3,26 @@
 /**
  * Inheritance: no
  * Variants: no
-<<<<<<< HEAD
- *
- * Fields Summary:
- * - genric_attributes [classificationstore]
- * - product_image [image]
- * - other_details [block]
- * -- attribute_name [input]
- * -- attribute_details [input]
- * - new_field [fieldcollections]
-=======
  * Contain information about clothing class and its attributes
  * 
  *
  * Fields Summary:
- * - BaseAttributes [classificationstore]
+ * - productId [input]
+ * - productName [input]
+ * - description [textarea]
+ * - price [numeric]
  * - clotheSpecific [objectbricks]
+ * - gender [select]
  * - ProductImage [image]
  * - ProductColor [rgbaColor]
  * - featuresSpecification [classificationstore]
- * - manufacturerDetails [classificationstore]
- * - sellerDetails [classificationstore]
+ * - manufacturingCompany [input]
+ * - manufacturingDate [date]
+ * - expiryDate [date]
+ * - sellerDetails [manyToManyObjectRelation]
  * - ExtraAttributes [block]
  * -- AttributeName [input]
  * -- AttributeDetails [input]
->>>>>>> 755474dfb48098f23d896c2a74c5eb309d7b8f7e
  */
 
 namespace Pimcore\Model\DataObject;
@@ -37,32 +32,36 @@ use Pimcore\Model\DataObject\PreGetValueHookInterface;
 
 /**
 * @method static \Pimcore\Model\DataObject\Clothing\Listing getList(array $config = [])
-<<<<<<< HEAD
-* @method static \Pimcore\Model\DataObject\Clothing\Listing|\Pimcore\Model\DataObject\Clothing|null getByProduct_image($value, $limit = 0, $offset = 0, $objectTypes = null)
-=======
+* @method static \Pimcore\Model\DataObject\Clothing\Listing|\Pimcore\Model\DataObject\Clothing|null getByProductId($value, $limit = 0, $offset = 0, $objectTypes = null)
+* @method static \Pimcore\Model\DataObject\Clothing\Listing|\Pimcore\Model\DataObject\Clothing|null getByProductName($value, $limit = 0, $offset = 0, $objectTypes = null)
+* @method static \Pimcore\Model\DataObject\Clothing\Listing|\Pimcore\Model\DataObject\Clothing|null getByDescription($value, $limit = 0, $offset = 0, $objectTypes = null)
+* @method static \Pimcore\Model\DataObject\Clothing\Listing|\Pimcore\Model\DataObject\Clothing|null getByPrice($value, $limit = 0, $offset = 0, $objectTypes = null)
+* @method static \Pimcore\Model\DataObject\Clothing\Listing|\Pimcore\Model\DataObject\Clothing|null getByGender($value, $limit = 0, $offset = 0, $objectTypes = null)
 * @method static \Pimcore\Model\DataObject\Clothing\Listing|\Pimcore\Model\DataObject\Clothing|null getByProductImage($value, $limit = 0, $offset = 0, $objectTypes = null)
->>>>>>> 755474dfb48098f23d896c2a74c5eb309d7b8f7e
+* @method static \Pimcore\Model\DataObject\Clothing\Listing|\Pimcore\Model\DataObject\Clothing|null getByManufacturingCompany($value, $limit = 0, $offset = 0, $objectTypes = null)
+* @method static \Pimcore\Model\DataObject\Clothing\Listing|\Pimcore\Model\DataObject\Clothing|null getByManufacturingDate($value, $limit = 0, $offset = 0, $objectTypes = null)
+* @method static \Pimcore\Model\DataObject\Clothing\Listing|\Pimcore\Model\DataObject\Clothing|null getByExpiryDate($value, $limit = 0, $offset = 0, $objectTypes = null)
+* @method static \Pimcore\Model\DataObject\Clothing\Listing|\Pimcore\Model\DataObject\Clothing|null getBySellerDetails($value, $limit = 0, $offset = 0, $objectTypes = null)
 */
 
 class Clothing extends Concrete
 {
 protected $o_classId = "clothing";
 protected $o_className = "clothing";
-<<<<<<< HEAD
-protected $genric_attributes;
-protected $product_image;
-protected $other_details;
-protected $new_field;
-=======
-protected $BaseAttributes;
+protected $productId;
+protected $productName;
+protected $description;
+protected $price;
 protected $clotheSpecific;
+protected $gender;
 protected $ProductImage;
 protected $ProductColor;
 protected $featuresSpecification;
-protected $manufacturerDetails;
+protected $manufacturingCompany;
+protected $manufacturingDate;
+protected $expiryDate;
 protected $sellerDetails;
 protected $ExtraAttributes;
->>>>>>> 755474dfb48098f23d896c2a74c5eb309d7b8f7e
 
 
 /**
@@ -76,69 +75,143 @@ public static function create($values = array()) {
 }
 
 /**
-<<<<<<< HEAD
-* Get genric_attributes - Genric Attributes
-* @return \Pimcore\Model\DataObject\Classificationstore|null
+* Get productId - Product Id
+* @return string|null
 */
-public function getGenric_attributes(): ?\Pimcore\Model\DataObject\Classificationstore
+public function getProductId(): ?string
 {
 	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
-		$preValue = $this->preGetValue("genric_attributes");
-=======
-* Get BaseAttributes - Base Attributes
-* @return \Pimcore\Model\DataObject\Classificationstore|null
-*/
-public function getBaseAttributes(): ?\Pimcore\Model\DataObject\Classificationstore
-{
-	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
-		$preValue = $this->preGetValue("BaseAttributes");
->>>>>>> 755474dfb48098f23d896c2a74c5eb309d7b8f7e
+		$preValue = $this->preGetValue("productId");
 		if ($preValue !== null) {
 			return $preValue;
 		}
 	}
 
-<<<<<<< HEAD
-	$data = $this->getClass()->getFieldDefinition("genric_attributes")->preGetData($this);
-=======
-	$data = $this->getClass()->getFieldDefinition("BaseAttributes")->preGetData($this);
->>>>>>> 755474dfb48098f23d896c2a74c5eb309d7b8f7e
+	$data = $this->productId;
+
+	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
+		return $data->getPlain();
+	}
 
 	return $data;
 }
 
 /**
-<<<<<<< HEAD
-* Set genric_attributes - Genric Attributes
-* @param \Pimcore\Model\DataObject\Classificationstore|null $genric_attributes
+* Set productId - Product Id
+* @param string|null $productId
 * @return \Pimcore\Model\DataObject\Clothing
 */
-public function setGenric_attributes(?\Pimcore\Model\DataObject\Classificationstore $genric_attributes)
+public function setProductId(?string $productId)
 {
-	$this->genric_attributes = $genric_attributes;
-=======
-* Set BaseAttributes - Base Attributes
-* @param \Pimcore\Model\DataObject\Classificationstore|null $BaseAttributes
-* @return \Pimcore\Model\DataObject\Clothing
-*/
-public function setBaseAttributes(?\Pimcore\Model\DataObject\Classificationstore $BaseAttributes)
-{
-	$this->BaseAttributes = $BaseAttributes;
->>>>>>> 755474dfb48098f23d896c2a74c5eb309d7b8f7e
+	$this->productId = $productId;
 
 	return $this;
 }
 
 /**
-<<<<<<< HEAD
-* Get product_image - Product _image
-* @return \Pimcore\Model\Asset\Image|null
+* Get productName - Product Name
+* @return string|null
 */
-public function getProduct_image(): ?\Pimcore\Model\Asset\Image
+public function getProductName(): ?string
 {
 	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
-		$preValue = $this->preGetValue("product_image");
-=======
+		$preValue = $this->preGetValue("productName");
+		if ($preValue !== null) {
+			return $preValue;
+		}
+	}
+
+	$data = $this->productName;
+
+	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
+		return $data->getPlain();
+	}
+
+	return $data;
+}
+
+/**
+* Set productName - Product Name
+* @param string|null $productName
+* @return \Pimcore\Model\DataObject\Clothing
+*/
+public function setProductName(?string $productName)
+{
+	$this->productName = $productName;
+
+	return $this;
+}
+
+/**
+* Get description - Description
+* @return string|null
+*/
+public function getDescription(): ?string
+{
+	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
+		$preValue = $this->preGetValue("description");
+		if ($preValue !== null) {
+			return $preValue;
+		}
+	}
+
+	$data = $this->description;
+
+	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
+		return $data->getPlain();
+	}
+
+	return $data;
+}
+
+/**
+* Set description - Description
+* @param string|null $description
+* @return \Pimcore\Model\DataObject\Clothing
+*/
+public function setDescription(?string $description)
+{
+	$this->description = $description;
+
+	return $this;
+}
+
+/**
+* Get price - Price
+* @return float|null
+*/
+public function getPrice(): ?float
+{
+	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
+		$preValue = $this->preGetValue("price");
+		if ($preValue !== null) {
+			return $preValue;
+		}
+	}
+
+	$data = $this->price;
+
+	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
+		return $data->getPlain();
+	}
+
+	return $data;
+}
+
+/**
+* Set price - Price
+* @param float|null $price
+* @return \Pimcore\Model\DataObject\Clothing
+*/
+public function setPrice(?float $price)
+{
+	/** @var \Pimcore\Model\DataObject\ClassDefinition\Data\Numeric $fd */
+	$fd = $this->getClass()->getFieldDefinition("price");
+	$this->price = $fd->preSetData($this, $price);
+	return $this;
+}
+
+/**
 * @return \Pimcore\Model\DataObject\Clothing\ClotheSpecific
 */
 public function getClotheSpecific(): ?\Pimcore\Model\DataObject\Objectbrick
@@ -176,6 +249,40 @@ public function setClotheSpecific(?\Pimcore\Model\DataObject\Objectbrick $clothe
 }
 
 /**
+* Get gender - Gender
+* @return string|null
+*/
+public function getGender(): ?string
+{
+	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
+		$preValue = $this->preGetValue("gender");
+		if ($preValue !== null) {
+			return $preValue;
+		}
+	}
+
+	$data = $this->gender;
+
+	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
+		return $data->getPlain();
+	}
+
+	return $data;
+}
+
+/**
+* Set gender - Gender
+* @param string|null $gender
+* @return \Pimcore\Model\DataObject\Clothing
+*/
+public function setGender(?string $gender)
+{
+	$this->gender = $gender;
+
+	return $this;
+}
+
+/**
 * Get ProductImage - Product Image
 * @return \Pimcore\Model\Asset\Image|null
 */
@@ -183,17 +290,12 @@ public function getProductImage(): ?\Pimcore\Model\Asset\Image
 {
 	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
 		$preValue = $this->preGetValue("ProductImage");
->>>>>>> 755474dfb48098f23d896c2a74c5eb309d7b8f7e
 		if ($preValue !== null) {
 			return $preValue;
 		}
 	}
 
-<<<<<<< HEAD
-	$data = $this->product_image;
-=======
 	$data = $this->ProductImage;
->>>>>>> 755474dfb48098f23d896c2a74c5eb309d7b8f7e
 
 	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
 		return $data->getPlain();
@@ -203,15 +305,6 @@ public function getProductImage(): ?\Pimcore\Model\Asset\Image
 }
 
 /**
-<<<<<<< HEAD
-* Set product_image - Product _image
-* @param \Pimcore\Model\Asset\Image|null $product_image
-* @return \Pimcore\Model\DataObject\Clothing
-*/
-public function setProduct_image(?\Pimcore\Model\Asset\Image $product_image)
-{
-	$this->product_image = $product_image;
-=======
 * Set ProductImage - Product Image
 * @param \Pimcore\Model\Asset\Image|null $ProductImage
 * @return \Pimcore\Model\DataObject\Clothing
@@ -219,21 +312,11 @@ public function setProduct_image(?\Pimcore\Model\Asset\Image $product_image)
 public function setProductImage(?\Pimcore\Model\Asset\Image $ProductImage)
 {
 	$this->ProductImage = $ProductImage;
->>>>>>> 755474dfb48098f23d896c2a74c5eb309d7b8f7e
 
 	return $this;
 }
 
 /**
-<<<<<<< HEAD
-* Get other_details - Other _details
-* @return \Pimcore\Model\DataObject\Data\BlockElement[][]
-*/
-public function getOther_details(): ?array
-{
-	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
-		$preValue = $this->preGetValue("other_details");
-=======
 * Get ProductColor - Product Color
 * @return \Pimcore\Model\DataObject\Data\RgbaColor|null
 */
@@ -241,17 +324,12 @@ public function getProductColor(): ?\Pimcore\Model\DataObject\Data\RgbaColor
 {
 	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
 		$preValue = $this->preGetValue("ProductColor");
->>>>>>> 755474dfb48098f23d896c2a74c5eb309d7b8f7e
 		if ($preValue !== null) {
 			return $preValue;
 		}
 	}
 
-<<<<<<< HEAD
-	$data = $this->getClass()->getFieldDefinition("other_details")->preGetData($this);
-=======
 	$data = $this->ProductColor;
->>>>>>> 755474dfb48098f23d896c2a74c5eb309d7b8f7e
 
 	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
 		return $data->getPlain();
@@ -261,17 +339,6 @@ public function getProductColor(): ?\Pimcore\Model\DataObject\Data\RgbaColor
 }
 
 /**
-<<<<<<< HEAD
-* Set other_details - Other _details
-* @param \Pimcore\Model\DataObject\Data\BlockElement[][] $other_details
-* @return \Pimcore\Model\DataObject\Clothing
-*/
-public function setOther_details(?array $other_details)
-{
-	/** @var \Pimcore\Model\DataObject\ClassDefinition\Data\Block $fd */
-	$fd = $this->getClass()->getFieldDefinition("other_details");
-	$this->other_details = $fd->preSetData($this, $other_details);
-=======
 * Set ProductColor - Product Color
 * @param \Pimcore\Model\DataObject\Data\RgbaColor|null $ProductColor
 * @return \Pimcore\Model\DataObject\Clothing
@@ -280,19 +347,10 @@ public function setProductColor(?\Pimcore\Model\DataObject\Data\RgbaColor $Produ
 {
 	$this->ProductColor = $ProductColor;
 
->>>>>>> 755474dfb48098f23d896c2a74c5eb309d7b8f7e
 	return $this;
 }
 
 /**
-<<<<<<< HEAD
-* @return \Pimcore\Model\DataObject\Fieldcollection|null
-*/
-public function getNew_field(): ?\Pimcore\Model\DataObject\Fieldcollection
-{
-	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
-		$preValue = $this->preGetValue("new_field");
-=======
 * Get featuresSpecification - Features Specification
 * @return \Pimcore\Model\DataObject\Classificationstore|null
 */
@@ -300,15 +358,11 @@ public function getFeaturesSpecification(): ?\Pimcore\Model\DataObject\Classific
 {
 	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
 		$preValue = $this->preGetValue("featuresSpecification");
->>>>>>> 755474dfb48098f23d896c2a74c5eb309d7b8f7e
 		if ($preValue !== null) {
 			return $preValue;
 		}
 	}
 
-<<<<<<< HEAD
-	$data = $this->getClass()->getFieldDefinition("new_field")->preGetData($this);
-=======
 	$data = $this->getClass()->getFieldDefinition("featuresSpecification")->preGetData($this);
 
 	return $data;
@@ -327,52 +381,112 @@ public function setFeaturesSpecification(?\Pimcore\Model\DataObject\Classificati
 }
 
 /**
-* Get manufacturerDetails - Manufacturer Details
-* @return \Pimcore\Model\DataObject\Classificationstore|null
+* Get manufacturingCompany - Manufacturing Company
+* @return string|null
 */
-public function getManufacturerDetails(): ?\Pimcore\Model\DataObject\Classificationstore
+public function getManufacturingCompany(): ?string
 {
 	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
-		$preValue = $this->preGetValue("manufacturerDetails");
+		$preValue = $this->preGetValue("manufacturingCompany");
 		if ($preValue !== null) {
 			return $preValue;
 		}
 	}
 
-	$data = $this->getClass()->getFieldDefinition("manufacturerDetails")->preGetData($this);
+	$data = $this->manufacturingCompany;
 
->>>>>>> 755474dfb48098f23d896c2a74c5eb309d7b8f7e
+	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
+		return $data->getPlain();
+	}
+
 	return $data;
 }
 
 /**
-<<<<<<< HEAD
-* Set new_field - New _field
-* @param \Pimcore\Model\DataObject\Fieldcollection|null $new_field
+* Set manufacturingCompany - Manufacturing Company
+* @param string|null $manufacturingCompany
 * @return \Pimcore\Model\DataObject\Clothing
 */
-public function setNew_field(?\Pimcore\Model\DataObject\Fieldcollection $new_field)
+public function setManufacturingCompany(?string $manufacturingCompany)
 {
-	/** @var \Pimcore\Model\DataObject\ClassDefinition\Data\Fieldcollections $fd */
-	$fd = $this->getClass()->getFieldDefinition("new_field");
-	$this->new_field = $fd->preSetData($this, $new_field);
-=======
-* Set manufacturerDetails - Manufacturer Details
-* @param \Pimcore\Model\DataObject\Classificationstore|null $manufacturerDetails
+	$this->manufacturingCompany = $manufacturingCompany;
+
+	return $this;
+}
+
+/**
+* Get manufacturingDate - Manufacturing Date
+* @return \Carbon\Carbon|null
+*/
+public function getManufacturingDate(): ?\Carbon\Carbon
+{
+	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
+		$preValue = $this->preGetValue("manufacturingDate");
+		if ($preValue !== null) {
+			return $preValue;
+		}
+	}
+
+	$data = $this->manufacturingDate;
+
+	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
+		return $data->getPlain();
+	}
+
+	return $data;
+}
+
+/**
+* Set manufacturingDate - Manufacturing Date
+* @param \Carbon\Carbon|null $manufacturingDate
 * @return \Pimcore\Model\DataObject\Clothing
 */
-public function setManufacturerDetails(?\Pimcore\Model\DataObject\Classificationstore $manufacturerDetails)
+public function setManufacturingDate(?\Carbon\Carbon $manufacturingDate)
 {
-	$this->manufacturerDetails = $manufacturerDetails;
+	$this->manufacturingDate = $manufacturingDate;
+
+	return $this;
+}
+
+/**
+* Get expiryDate - Expiry Date
+* @return \Carbon\Carbon|null
+*/
+public function getExpiryDate(): ?\Carbon\Carbon
+{
+	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
+		$preValue = $this->preGetValue("expiryDate");
+		if ($preValue !== null) {
+			return $preValue;
+		}
+	}
+
+	$data = $this->expiryDate;
+
+	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
+		return $data->getPlain();
+	}
+
+	return $data;
+}
+
+/**
+* Set expiryDate - Expiry Date
+* @param \Carbon\Carbon|null $expiryDate
+* @return \Pimcore\Model\DataObject\Clothing
+*/
+public function setExpiryDate(?\Carbon\Carbon $expiryDate)
+{
+	$this->expiryDate = $expiryDate;
 
 	return $this;
 }
 
 /**
 * Get sellerDetails - Seller Details
-* @return \Pimcore\Model\DataObject\Classificationstore|null
+* @return \Pimcore\Model\DataObject\Seller[]
 */
-public function getSellerDetails(): ?\Pimcore\Model\DataObject\Classificationstore
+public function getSellerDetails(): array
 {
 	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
 		$preValue = $this->preGetValue("sellerDetails");
@@ -383,18 +497,31 @@ public function getSellerDetails(): ?\Pimcore\Model\DataObject\Classificationsto
 
 	$data = $this->getClass()->getFieldDefinition("sellerDetails")->preGetData($this);
 
+	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
+		return $data->getPlain();
+	}
+
 	return $data;
 }
 
 /**
 * Set sellerDetails - Seller Details
-* @param \Pimcore\Model\DataObject\Classificationstore|null $sellerDetails
+* @param \Pimcore\Model\DataObject\Seller[] $sellerDetails
 * @return \Pimcore\Model\DataObject\Clothing
 */
-public function setSellerDetails(?\Pimcore\Model\DataObject\Classificationstore $sellerDetails)
+public function setSellerDetails(?array $sellerDetails)
 {
-	$this->sellerDetails = $sellerDetails;
-
+	/** @var \Pimcore\Model\DataObject\ClassDefinition\Data\ManyToManyObjectRelation $fd */
+	$fd = $this->getClass()->getFieldDefinition("sellerDetails");
+	$hideUnpublished = \Pimcore\Model\DataObject\Concrete::getHideUnpublished();
+	\Pimcore\Model\DataObject\Concrete::setHideUnpublished(false);
+	$currentData = $this->getSellerDetails();
+	\Pimcore\Model\DataObject\Concrete::setHideUnpublished($hideUnpublished);
+	$isEqual = $fd->isEqual($currentData, $sellerDetails);
+	if (!$isEqual) {
+		$this->markFieldDirty("sellerDetails", true);
+	}
+	$this->sellerDetails = $fd->preSetData($this, $sellerDetails);
 	return $this;
 }
 
@@ -430,7 +557,6 @@ public function setExtraAttributes(?array $ExtraAttributes)
 	/** @var \Pimcore\Model\DataObject\ClassDefinition\Data\Block $fd */
 	$fd = $this->getClass()->getFieldDefinition("ExtraAttributes");
 	$this->ExtraAttributes = $fd->preSetData($this, $ExtraAttributes);
->>>>>>> 755474dfb48098f23d896c2a74c5eb309d7b8f7e
 	return $this;
 }
 
