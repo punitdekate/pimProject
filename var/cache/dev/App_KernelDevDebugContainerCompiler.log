@@ -16,10 +16,6 @@ Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Reso
 Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for "App\Command\csvClothingImport" (parent: .instanceof.Symfony\Component\Console\Command\Command.0.App\Command\csvClothingImport).
 Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for ".instanceof.Symfony\Component\Console\Command\Command.0.App\Command\csvElectronicsImport" (parent: .abstract.instanceof.App\Command\csvElectronicsImport).
 Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for "App\Command\csvElectronicsImport" (parent: .instanceof.Symfony\Component\Console\Command\Command.0.App\Command\csvElectronicsImport).
-Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for ".instanceof.Symfony\Component\Console\Command\Command.0.App\Command\csvFootwearImport" (parent: .abstract.instanceof.App\Command\csvFootwearImport).
-Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for "App\Command\csvFootwearImport" (parent: .instanceof.Symfony\Component\Console\Command\Command.0.App\Command\csvFootwearImport).
-Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for ".instanceof.Symfony\Component\Console\Command\Command.0.App\Command\testing" (parent: .abstract.instanceof.App\Command\testing).
-Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for "App\Command\testing" (parent: .instanceof.Symfony\Component\Console\Command\Command.0.App\Command\testing).
 Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for ".instanceof.Symfony\Contracts\Service\ResetInterface.0.pimcore.cache.pool.app" (parent: .abstract.instanceof.pimcore.cache.pool.app).
 Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for "pimcore.cache.pool.app" (parent: .instanceof.Symfony\Contracts\Service\ResetInterface.0.pimcore.cache.pool.app).
 Symfony\Component\DependencyInjection\Compiler\ResolveChildDefinitionsPass: Resolving inheritance for "cache.app" (parent: pimcore.cache.pool.app).
@@ -1316,10 +1312,6 @@ Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Re
 Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service ".abstract.instanceof.App\Command\csvClothingImport"; reason: abstract.
 Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service ".instanceof.Symfony\Component\Console\Command\Command.0.App\Command\csvElectronicsImport"; reason: abstract.
 Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service ".abstract.instanceof.App\Command\csvElectronicsImport"; reason: abstract.
-Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service ".instanceof.Symfony\Component\Console\Command\Command.0.App\Command\csvFootwearImport"; reason: abstract.
-Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service ".abstract.instanceof.App\Command\csvFootwearImport"; reason: abstract.
-Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service ".instanceof.Symfony\Component\Console\Command\Command.0.App\Command\testing"; reason: abstract.
-Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service ".abstract.instanceof.App\Command\testing"; reason: abstract.
 Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service ".instanceof.Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerInterface.0.Pimcore\HttpKernel\CacheWarmer\MkdirCacheWarmer"; reason: abstract.
 Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service ".abstract.instanceof.Pimcore\HttpKernel\CacheWarmer\MkdirCacheWarmer"; reason: abstract.
 Symfony\Component\DependencyInjection\Compiler\RemoveAbstractDefinitionsPass: Removed service ".instanceof.Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerInterface.0.Pimcore\HttpKernel\CacheWarmer\PimcoreCoreCacheWarmer"; reason: abstract.

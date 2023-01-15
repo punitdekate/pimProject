@@ -1198,8 +1198,6 @@
       <parameter>console.command.public_alias.App\Command\csvBeautyImport</parameter>
       <parameter>console.command.public_alias.App\Command\csvClothingImport</parameter>
       <parameter>console.command.public_alias.App\Command\csvElectronicsImport</parameter>
-      <parameter>console.command.public_alias.App\Command\csvFootwearImport</parameter>
-      <parameter>console.command.public_alias.App\Command\testing</parameter>
       <parameter>console.command.public_alias.Pimcore\Bundle\CoreBundle\Command\Bundle\ListCommand</parameter>
       <parameter>console.command.public_alias.Pimcore\Bundle\CoreBundle\Command\CacheWarmingCommand</parameter>
       <parameter>console.command.public_alias.Pimcore\Bundle\CoreBundle\Command\ClassesDefinitionsBuildCommand</parameter>
@@ -1283,14 +1281,6 @@
       <tag name="container.no_preload"/>
     </service>
     <service id="App\Command\csvElectronicsImport" class="App\Command\csvElectronicsImport" autowire="true" autoconfigure="true">
-      <tag name="console.command"/>
-      <tag name="container.no_preload"/>
-    </service>
-    <service id="App\Command\csvFootwearImport" class="App\Command\csvFootwearImport" autowire="true" autoconfigure="true">
-      <tag name="console.command"/>
-      <tag name="container.no_preload"/>
-    </service>
-    <service id="App\Command\testing" class="App\Command\testing" autowire="true" autoconfigure="true">
       <tag name="console.command"/>
       <tag name="container.no_preload"/>
     </service>
@@ -11858,10 +11848,6 @@
     <service id=".abstract.instanceof.App\Command\csvClothingImport" class="App\Command\csvClothingImport" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Console\Command\Command.0.App\Command\csvElectronicsImport" class="App\Command\csvElectronicsImport" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Command\csvElectronicsImport" class="App\Command\csvElectronicsImport" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Component\Console\Command\Command.0.App\Command\csvFootwearImport" class="App\Command\csvFootwearImport" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Command\csvFootwearImport" class="App\Command\csvFootwearImport" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Component\Console\Command\Command.0.App\Command\testing" class="App\Command\testing" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Command\testing" class="App\Command\testing" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerInterface.0.Pimcore\HttpKernel\CacheWarmer\MkdirCacheWarmer" class="Pimcore\HttpKernel\CacheWarmer\MkdirCacheWarmer" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.Pimcore\HttpKernel\CacheWarmer\MkdirCacheWarmer" class="Pimcore\HttpKernel\CacheWarmer\MkdirCacheWarmer" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerInterface.0.Pimcore\HttpKernel\CacheWarmer\PimcoreCoreCacheWarmer" class="Pimcore\HttpKernel\CacheWarmer\PimcoreCoreCacheWarmer" autowire="true" abstract="true"/>
@@ -15441,8 +15427,6 @@
     <service id="console.command.public_alias.App\Command\csvBeautyImport" alias="App\Command\csvBeautyImport" public="true"/>
     <service id="console.command.public_alias.App\Command\csvClothingImport" alias="App\Command\csvClothingImport" public="true"/>
     <service id="console.command.public_alias.App\Command\csvElectronicsImport" alias="App\Command\csvElectronicsImport" public="true"/>
-    <service id="console.command.public_alias.App\Command\csvFootwearImport" alias="App\Command\csvFootwearImport" public="true"/>
-    <service id="console.command.public_alias.App\Command\testing" alias="App\Command\testing" public="true"/>
     <service id="console.command.public_alias.Pimcore\Bundle\CoreBundle\Command\Bundle\ListCommand" alias="Pimcore\Bundle\CoreBundle\Command\Bundle\ListCommand" public="true"/>
     <service id="console.command.public_alias.Pimcore\Bundle\CoreBundle\Command\CacheWarmingCommand" alias="Pimcore\Bundle\CoreBundle\Command\CacheWarmingCommand" public="true"/>
     <service id="console.command.public_alias.Pimcore\Bundle\CoreBundle\Command\ClassesDefinitionsBuildCommand" alias="Pimcore\Bundle\CoreBundle\Command\ClassesDefinitionsBuildCommand" public="true"/>

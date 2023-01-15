@@ -6,33 +6,8 @@ use Pimcore\Model\DataObject\Exception\InheritanceParentNotFoundException;
 
 class ClotheSpecific extends \Pimcore\Model\DataObject\Objectbrick {
 
-protected $brickGetters = ['TopWear','BottomWear','Ethnic'];
+protected $brickGetters = ['BottomWear','Ethnic','TopWear'];
 
-
-protected $TopWear = null;
-
-/**
-* @return \Pimcore\Model\DataObject\Objectbrick\Data\TopWear|null
-*/
-public function getTopWear(bool $includeDeletedBricks = false)
-{
-	if(!$includeDeletedBricks &&
-		isset($this->TopWear) &&
-		$this->TopWear->getDoDelete()) {
-			return null;
-	}
-	return $this->TopWear;
-}
-
-/**
-* @param \Pimcore\Model\DataObject\Objectbrick\Data\TopWear $TopWear
-* @return \Pimcore\Model\DataObject\Clothing\ClotheSpecific
-*/
-public function setTopWear($TopWear)
-{
-	$this->TopWear = $TopWear;
-	return $this;
-}
 
 protected $BottomWear = null;
 
@@ -81,6 +56,31 @@ public function getEthnic(bool $includeDeletedBricks = false)
 public function setEthnic($Ethnic)
 {
 	$this->Ethnic = $Ethnic;
+	return $this;
+}
+
+protected $TopWear = null;
+
+/**
+* @return \Pimcore\Model\DataObject\Objectbrick\Data\TopWear|null
+*/
+public function getTopWear(bool $includeDeletedBricks = false)
+{
+	if(!$includeDeletedBricks &&
+		isset($this->TopWear) &&
+		$this->TopWear->getDoDelete()) {
+			return null;
+	}
+	return $this->TopWear;
+}
+
+/**
+* @param \Pimcore\Model\DataObject\Objectbrick\Data\TopWear $TopWear
+* @return \Pimcore\Model\DataObject\Clothing\ClotheSpecific
+*/
+public function setTopWear($TopWear)
+{
+	$this->TopWear = $TopWear;
 	return $this;
 }
 

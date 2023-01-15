@@ -4,7 +4,7 @@
  * Fields Summary:
  * - fragranceProduct [select]
  * - Strength [select]
- * - quantity [quantityValue]
+ * - quantity [numeric]
  */
 
 return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
@@ -142,7 +142,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'defaultValueGenerator' => '',
           )),
           2 => 
-          Pimcore\Model\DataObject\ClassDefinition\Data\QuantityValue::__set_state(array(
+          Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
              'name' => 'quantity',
              'title' => 'Quantity',
              'tooltip' => '',
@@ -153,7 +153,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'style' => '',
              'permissions' => NULL,
              'datatype' => 'data',
-             'fieldtype' => 'quantityValue',
+             'fieldtype' => 'numeric',
              'relationType' => false,
              'invisible' => false,
              'visibleGridView' => false,
@@ -162,13 +162,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
             array (
             ),
              'width' => '',
-             'unitWidth' => '',
              'defaultValue' => NULL,
-             'defaultUnit' => NULL,
-             'validUnits' => 
-            array (
-              0 => 'ml',
-            ),
              'integer' => false,
              'unsigned' => false,
              'minValue' => 20,
@@ -176,7 +170,6 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'unique' => false,
              'decimalSize' => NULL,
              'decimalPrecision' => NULL,
-             'autoConvert' => false,
              'defaultValueGenerator' => '',
           )),
         ),

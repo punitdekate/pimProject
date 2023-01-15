@@ -4,7 +4,7 @@
  * Fields Summary:
  * - fragranceProduct [select]
  * - Strength [select]
- * - quantity [quantityValue]
+ * - quantity [numeric]
  */
 
 namespace Pimcore\Model\DataObject\Objectbrick\Data;
@@ -101,9 +101,9 @@ public function setStrength (?string $Strength)
 
 /**
 * Get quantity - Quantity
-* @return \Pimcore\Model\DataObject\Data\QuantityValue|null
+* @return float|null
 */
-public function getQuantity(): ?\Pimcore\Model\DataObject\Data\QuantityValue
+public function getQuantity(): ?float
 {
 	$data = $this->quantity;
 	if(\Pimcore\Model\DataObject::doGetInheritedValues($this->getObject()) && $this->getDefinition()->getFieldDefinition("quantity")->isEmpty($data)) {
@@ -122,13 +122,14 @@ public function getQuantity(): ?\Pimcore\Model\DataObject\Data\QuantityValue
 
 /**
 * Set quantity - Quantity
-* @param \Pimcore\Model\DataObject\Data\QuantityValue|null $quantity
+* @param float|null $quantity
 * @return \Pimcore\Model\DataObject\Objectbrick\Data\Fragrance
 */
-public function setQuantity (?\Pimcore\Model\DataObject\Data\QuantityValue $quantity)
+public function setQuantity (?float $quantity)
 {
-	$this->quantity = $quantity;
-
+	/** @var \Pimcore\Model\DataObject\ClassDefinition\Data\Numeric $fd */
+	$fd = $this->getDefinition()->getFieldDefinition("quantity");
+	$this->quantity = $fd->preSetData($this, $quantity);
 	return $this;
 }
 
