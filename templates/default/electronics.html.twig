@@ -4,13 +4,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD
     <title>electronics</title>
+=======
+    <title>Speed for life</title>
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="Style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Skranjidisplay=swap" rel="stylesheet">
+<<<<<<< HEAD
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="./CSS/header.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3b1214deef.js" crossorigin="anonymous"></script>
@@ -89,3 +94,42 @@
   </footer>
     </body>
 </html>
+=======
+</head>
+
+<body>
+<div class="container">
+
+			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+				{% for object in objects %}
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ object.getProductImage() }}" class="card-img-top"  width="100%" height="225px">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ object.getDescription() }}</h5>
+                            Price:{{ object.getPrice }}<h2>
+                        </div>
+                    </div>
+					
+					{# <div class="col">
+						<div class="card shadow-sm">
+							<div class="card-body">
+								<img src="{{ object.getPhoto() }} " alt="tv1" class="bd-placeholder-img card-img-top" width="100%" height="225px">
+								<p class="card-text">
+									<h2>{{ object.getDescription() }}</h2>
+                                        This is the description regarding the product
+									</p>
+									Price:{{ object.getPrice }}<h2>
+										<div class="d-flex justify-content-between align-items-center">
+											<div class="btn-group">
+												<button type="button" class="btn btn-sm btn-secondary">Buy</button>
+												<button type="button" class="btn btn-sm btn-outline-secondary">Add to Cart</button>
+											</div>
+											<small class="text-muted">9 mins</small>
+										</div>
+							</div>
+						</div>
+					</div> #}
+				{% endfor %}
+			</div>
+		</div>
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b

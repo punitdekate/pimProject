@@ -8,6 +8,7 @@
  *
  * Fields Summary:
 <<<<<<< HEAD
+<<<<<<< HEAD
  * - BaseAttributes [classificationstore]
  * - BeautySpecific [objectbricks]
 =======
@@ -25,6 +26,15 @@
  * - manufacturingDate [date]
  * - expiryDate [date]
  * - sellerDetails [manyToManyObjectRelation]
+=======
+ * - BaseAttributes [classificationstore]
+ * - beautySpecific [objectbricks]
+ * - ProductImage [image]
+ * - ProductColor [rgbaColor]
+ * - featuresSpecification [classificationstore]
+ * - manufacturerDetails [classificationstore]
+ * - sellerDetails [classificationstore]
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
  * - ExtraAttributes [block]
  * -- AttributeName [input]
  * -- AttributeDetails [input]
@@ -33,14 +43,19 @@
 return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'dao' => NULL,
 <<<<<<< HEAD
+<<<<<<< HEAD
    'id' => '1',
 =======
    'id' => 'beauty',
 >>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
+=======
+   'id' => 'beauty',
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
    'name' => 'beauty',
    'description' => 'Contain information about clothing class and its attributes
 ',
    'creationDate' => 0,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
    'modificationDate' => 1673342986,
@@ -56,6 +71,11 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'userOwner' => 2,
    'userModification' => 2,
 >>>>>>> fc13ccf3beabb5cf76d7eda91d10b62586ddb0cb
+=======
+   'modificationDate' => 1673375700,
+   'userOwner' => 2,
+   'userModification' => 2,
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
    'parentClass' => '',
    'implementsInterfaces' => '',
    'listingParentClass' => '',
@@ -118,6 +138,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
             array (
               0 => 
 <<<<<<< HEAD
+<<<<<<< HEAD
               Pimcore\Model\DataObject\ClassDefinition\Data\Classificationstore::__set_state(array(
                  'name' => 'BaseAttributes',
                  'title' => 'Base Attributes',
@@ -126,6 +147,11 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'name' => 'productId',
                  'title' => 'Product Id',
 >>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
+=======
+              Pimcore\Model\DataObject\ClassDefinition\Data\Classificationstore::__set_state(array(
+                 'name' => 'BaseAttributes',
+                 'title' => 'Base Attributes',
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
                  'tooltip' => '',
                  'mandatory' => true,
                  'noteditable' => false,
@@ -135,10 +161,14 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'permissions' => NULL,
                  'datatype' => 'data',
 <<<<<<< HEAD
+<<<<<<< HEAD
                  'fieldtype' => 'classificationstore',
 =======
                  'fieldtype' => 'input',
 >>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
+=======
+                 'fieldtype' => 'classificationstore',
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
                  'relationType' => false,
                  'invisible' => false,
                  'visibleGridView' => false,
@@ -147,6 +177,9 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 array (
                 ),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
                  'children' => 
                 array (
                 ),
@@ -173,6 +206,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'maxItems' => NULL,
                  'permissionView' => NULL,
                  'permissionEdit' => NULL,
+<<<<<<< HEAD
 =======
                  'width' => '',
                  'defaultValue' => NULL,
@@ -329,6 +363,8 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'columnLength' => 190,
                  'dynamicOptions' => false,
                  'defaultValueGenerator' => '',
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
               )),
             ),
              'locked' => false,
@@ -360,10 +396,14 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
               0 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Objectbricks::__set_state(array(
 <<<<<<< HEAD
+<<<<<<< HEAD
                  'name' => 'BeautySpecific',
 =======
                  'name' => 'beautySpecific',
 >>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
+=======
+                 'name' => 'beautySpecific',
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
                  'title' => 'Beauty Specific',
                  'tooltip' => '',
                  'mandatory' => false,
@@ -384,16 +424,22 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'allowedTypes' => 
                 array (
 <<<<<<< HEAD
+<<<<<<< HEAD
                   0 => 'SkinCare',
                   1 => 'Makeup',
                   2 => 'HairCare',
                   3 => 'fragrances',
 =======
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
                   0 => 'Fragrance',
                   1 => 'HairCare',
                   2 => 'Makeup',
                   3 => 'SkinCare',
+<<<<<<< HEAD
 >>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
                 ),
                  'maxItems' => NULL,
                  'border' => false,
@@ -573,9 +619,15 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
+<<<<<<< HEAD
               Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
                  'name' => 'manufacturingCompany',
                  'title' => 'Manufacturing Company',
+=======
+              Pimcore\Model\DataObject\ClassDefinition\Data\Classificationstore::__set_state(array(
+                 'name' => 'manufacturerDetails',
+                 'title' => 'Manufacturer Details',
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
                  'tooltip' => '',
                  'mandatory' => false,
                  'noteditable' => false,
@@ -584,7 +636,11 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'style' => '',
                  'permissions' => NULL,
                  'datatype' => 'data',
+<<<<<<< HEAD
                  'fieldtype' => 'input',
+=======
+                 'fieldtype' => 'classificationstore',
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
                  'relationType' => false,
                  'invisible' => false,
                  'visibleGridView' => false,
@@ -592,6 +648,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'blockedVarsForExport' => 
                 array (
                 ),
+<<<<<<< HEAD
                  'width' => '',
                  'defaultValue' => NULL,
                  'columnLength' => 190,
@@ -654,6 +711,34 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'defaultValue' => NULL,
                  'useCurrentDate' => false,
                  'defaultValueGenerator' => '',
+=======
+                 'children' => 
+                array (
+                ),
+                 'region' => NULL,
+                 'layout' => NULL,
+                 'width' => 0,
+                 'height' => 0,
+                 'maxTabs' => NULL,
+                 'labelWidth' => 0,
+                 'localized' => false,
+                 'storeId' => 3,
+                 'hideEmptyData' => false,
+                 'disallowAddRemove' => false,
+                 'referencedFields' => 
+                array (
+                ),
+                 'fieldDefinitionsCache' => NULL,
+                 'allowedGroupIds' => 
+                array (
+                ),
+                 'activeGroupDefinitions' => 
+                array (
+                ),
+                 'maxItems' => NULL,
+                 'permissionView' => NULL,
+                 'permissionEdit' => NULL,
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
               )),
             ),
              'locked' => false,
@@ -683,7 +768,11 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
+<<<<<<< HEAD
               Pimcore\Model\DataObject\ClassDefinition\Data\ManyToManyObjectRelation::__set_state(array(
+=======
+              Pimcore\Model\DataObject\ClassDefinition\Data\Classificationstore::__set_state(array(
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
                  'name' => 'sellerDetails',
                  'title' => 'Seller Details',
                  'tooltip' => '',
@@ -694,14 +783,20 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'style' => '',
                  'permissions' => NULL,
                  'datatype' => 'data',
+<<<<<<< HEAD
                  'fieldtype' => 'manyToManyObjectRelation',
                  'relationType' => true,
+=======
+                 'fieldtype' => 'classificationstore',
+                 'relationType' => false,
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
                  'invisible' => false,
                  'visibleGridView' => false,
                  'visibleSearch' => false,
                  'blockedVarsForExport' => 
                 array (
                 ),
+<<<<<<< HEAD
                  'classes' => 
                 array (
                   0 => 
@@ -720,6 +815,34 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'visibleFieldDefinitions' => 
                 array (
                 ),
+=======
+                 'children' => 
+                array (
+                ),
+                 'region' => NULL,
+                 'layout' => NULL,
+                 'width' => 0,
+                 'height' => 0,
+                 'maxTabs' => NULL,
+                 'labelWidth' => 0,
+                 'localized' => false,
+                 'storeId' => 4,
+                 'hideEmptyData' => false,
+                 'disallowAddRemove' => false,
+                 'referencedFields' => 
+                array (
+                ),
+                 'fieldDefinitionsCache' => NULL,
+                 'allowedGroupIds' => 
+                array (
+                ),
+                 'activeGroupDefinitions' => 
+                array (
+                ),
+                 'maxItems' => NULL,
+                 'permissionView' => NULL,
+                 'permissionEdit' => NULL,
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
               )),
             ),
              'locked' => false,
@@ -880,10 +1003,14 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
      'labelAlign' => 'left',
   )),
 <<<<<<< HEAD
+<<<<<<< HEAD
    'icon' => '/bundles/pimcoreadmin/img/object-icons/01_magenta.svg',
 =======
    'icon' => '/bundles/pimcoreadmin/img/flat-color-icons/class.svg',
 >>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
+=======
+   'icon' => '/bundles/pimcoreadmin/img/flat-color-icons/class.svg',
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
    'previewUrl' => '',
    'group' => 'E-commerce',
    'showAppLoggerTab' => false,

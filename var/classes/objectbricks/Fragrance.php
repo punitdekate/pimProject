@@ -171,7 +171,11 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
             ),
              'integer' => false,
              'unsigned' => false,
+<<<<<<< HEAD
              'minValue' => 20,
+=======
+             'minValue' => 100,
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
              'maxValue' => 500,
              'unique' => false,
              'decimalSize' => NULL,

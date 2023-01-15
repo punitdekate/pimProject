@@ -7,6 +7,7 @@ use Pimcore\Model\DataObject\Exception\InheritanceParentNotFoundException;
 class BeautySpecific extends \Pimcore\Model\DataObject\Objectbrick {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 protected $brickGetters = ['Makeup','fragrances','HairCare','SkinCare'];
 
 
@@ -83,6 +84,8 @@ public function setHairCare($HairCare)
 {
 	$this->HairCare = $HairCare;
 =======
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
 protected $brickGetters = ['Fragrance','HairCare','Makeup','SkinCare'];
 
 
@@ -158,7 +161,10 @@ public function getMakeup(bool $includeDeletedBricks = false)
 public function setMakeup($Makeup)
 {
 	$this->Makeup = $Makeup;
+<<<<<<< HEAD
 >>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
 	return $this;
 }
 

@@ -4,6 +4,10 @@
  * Fields Summary:
  * - dialShape [select]
  * - strapMaterial [select]
+<<<<<<< HEAD
+=======
+ * - features [multiselect]
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
  */
 
 return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
@@ -155,6 +159,75 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'dynamicOptions' => false,
              'defaultValueGenerator' => '',
           )),
+<<<<<<< HEAD
+=======
+          2 => 
+          Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
+             'name' => 'features',
+             'title' => 'Features',
+             'tooltip' => '',
+             'mandatory' => false,
+             'noteditable' => false,
+             'index' => false,
+             'locked' => false,
+             'style' => '',
+             'permissions' => NULL,
+             'datatype' => 'data',
+             'fieldtype' => 'multiselect',
+             'relationType' => false,
+             'invisible' => false,
+             'visibleGridView' => false,
+             'visibleSearch' => false,
+             'blockedVarsForExport' => 
+            array (
+            ),
+             'options' => 
+            array (
+              0 => 
+              array (
+                'key' => 'Heart Rate Monitor',
+                'value' => 'Heart Rate Monitor',
+              ),
+              1 => 
+              array (
+                'key' => 'GPS',
+                'value' => 'GPS',
+              ),
+              2 => 
+              array (
+                'key' => 'Calls',
+                'value' => 'Calls',
+              ),
+              3 => 
+              array (
+                'key' => 'Smart Notification',
+                'value' => 'Smart Notification',
+              ),
+              4 => 
+              array (
+                'key' => 'Water Resistance',
+                'value' => 'Water Resistance',
+              ),
+              5 => 
+              array (
+                'key' => 'Mic',
+                'value' => 'Mic',
+              ),
+              6 => 
+              array (
+                'key' => 'Google Assistant',
+                'value' => 'Google Assistant',
+              ),
+            ),
+             'width' => '',
+             'height' => '',
+             'maxItems' => NULL,
+             'renderType' => 'list',
+             'optionsProviderClass' => '',
+             'optionsProviderData' => '',
+             'dynamicOptions' => false,
+          )),
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
         ),
          'locked' => false,
          'blockedVarsForExport' => 

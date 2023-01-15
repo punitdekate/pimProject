@@ -15,14 +15,19 @@ use Pimcore\Model\DataObject;
 class Listing extends DataObject\Listing\Concrete
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 protected $classId = "1";
 =======
 protected $classId = "beauty";
 >>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
+=======
+protected $classId = "beauty";
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
 protected $className = "beauty";
 
 
 /**
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 * Filter by productId (Product Id)
@@ -89,6 +94,8 @@ public function filterByProductFor ($data, $operator = '=')
 
 /**
 >>>>>>> fc13ccf3beabb5cf76d7eda91d10b62586ddb0cb
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
 * Filter by ProductImage (Product Image)
 * @param string|int|float|array|Model\Element\ElementInterface $data  comparison data, can be scalar or array (if operator is e.g. "IN (?)")
 * @param string $operator  SQL comparison operator, e.g. =, <, >= etc. You can use "?" as placeholder, e.g. "IN (?)"
@@ -100,6 +107,7 @@ public function filterByProductImage ($data, $operator = '=')
 	return $this;
 }
 
+<<<<<<< HEAD
 /**
 * Filter by manufacturingCompany (Manufacturing Company)
 * @param string|int|float|array|Model\Element\ElementInterface $data  comparison data, can be scalar or array (if operator is e.g. "IN (?)")
@@ -148,6 +156,8 @@ public function filterBySellerDetails ($data, $operator = '=')
 	return $this;
 }
 
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
 
 
 }

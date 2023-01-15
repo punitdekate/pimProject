@@ -538,6 +538,7 @@ return [
     'pimcore_admin_gdpr_pimcoreusers_exportuserdata' => [[], ['_controller' => 'Pimcore\\Bundle\\AdminBundle\\Controller\\GDPR\\PimcoreUsersController::exportUserDataAction'], [], [['text', '/admin/gdpr/pimcore-users/export-user-data']], [], [], []],
     'pimcore_admin_gdpr_sentmail_exportdataobject' => [[], ['_controller' => 'Pimcore\\Bundle\\AdminBundle\\Controller\\GDPR\\SentMailController::exportDataObjectAction'], [], [['text', '/admin/gdpr/sent-mail/export']], [], [], []],
     'pimcore_admin_page_display_preview_image' => [[], ['_controller' => 'Pimcore\\Bundle\\AdminBundle\\Controller\\Admin\\Document\\PageController::displayPreviewImageAction'], [], [['text', '/admin/page/display-preview-image']], [], [], []],
+<<<<<<< HEAD
     'gents' => [[], ['_controller' => 'App\\Controller\\FilterController::showGentsClothes'], [], [['text', '/gents']], [], [], []],
     'ladies' => [[], ['_controller' => 'App\\Controller\\FilterController::showLadiesClothes'], [], [['text', '/ladies']], [], [], []],
     'fgents' => [[], ['_controller' => 'App\\Controller\\FilterController::showGentsFootwear'], [], [['text', '/fgents']], [], [], []],
@@ -554,4 +555,7 @@ return [
     'electronics' => [[], ['_controller' => 'App\\Controller\\MyController::showElectronics'], [], [['text', '/electronics']], [], [], []],
     'footwear' => [[], ['_controller' => 'App\\Controller\\MyController::showFootwear'], [], [['text', '/footwear']], [], [], []],
     'beauty' => [[], ['_controller' => 'App\\Controller\\MyController::showBeauty'], [], [['text', '/beauty']], [], [], []],
+=======
+    'electronics' => [[], ['_controller' => 'App\\Controller\\MyController::add'], [], [['text', '/electronics']], [], [], []],
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
 ];

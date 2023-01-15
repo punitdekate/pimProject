@@ -12,6 +12,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 require dirname(__DIR__, 3).'/vendor/autoload.php';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 (require __DIR__.'/App_KernelDevDebugContainer.php')->set(\ContainerPKypl6F\App_KernelDevDebugContainer::class, null);
 require __DIR__.'/ContainerPKypl6F/TwoFactorProviderHandler_3ecff6c.php';
 require __DIR__.'/ContainerPKypl6F/IpWhitelistHandler_06fe2b0.php';
@@ -490,6 +491,8 @@ require __DIR__.'/ContainerPKypl6F/get_Container_Private_Form_Type_FileService.p
 require __DIR__.'/ContainerPKypl6F/get_Container_Private_FilesystemService.php';
 require __DIR__.'/ContainerPKypl6F/get_Container_Private_CacheClearerService.php';
 =======
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
 (require __DIR__.'/App_KernelDevDebugContainer.php')->set(\ContainerIvVzORK\App_KernelDevDebugContainer::class, null);
 require __DIR__.'/ContainerIvVzORK/TwoFactorProviderHandler_3ecff6c.php';
 require __DIR__.'/ContainerIvVzORK/IpWhitelistHandler_06fe2b0.php';
@@ -968,6 +971,7 @@ require __DIR__.'/ContainerIvVzORK/get_Container_Private_Security_Csrf_TokenMana
 require __DIR__.'/ContainerIvVzORK/get_Container_Private_Form_Type_FileService.php';
 require __DIR__.'/ContainerIvVzORK/get_Container_Private_FilesystemService.php';
 require __DIR__.'/ContainerIvVzORK/get_Container_Private_CacheClearerService.php';
+<<<<<<< HEAD
 >>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
 =======
 (require __DIR__.'/App_KernelDevDebugContainer.php')->set(\ContainerSQ1vNOu\App_KernelDevDebugContainer::class, null);
@@ -1450,6 +1454,8 @@ require __DIR__.'/ContainerSQ1vNOu/get_Container_Private_Form_Type_FileService.p
 require __DIR__.'/ContainerSQ1vNOu/get_Container_Private_FilesystemService.php';
 require __DIR__.'/ContainerSQ1vNOu/get_Container_Private_CacheClearerService.php';
 >>>>>>> fc13ccf3beabb5cf76d7eda91d10b62586ddb0cb
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -1606,7 +1612,10 @@ $classes[] = 'Symfony\Component\HttpFoundation\RequestMatcher';
 $classes[] = 'Symfony\Component\HttpFoundation\Session\SessionInterface';
 $classes[] = 'Symfony\Bundle\FrameworkBundle\Session\DeprecatedSessionFactory';
 $classes[] = 'App\Controller\DefaultController';
+<<<<<<< HEAD
 $classes[] = 'App\Controller\FilterController';
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
 $classes[] = 'App\Controller\MyController';
 $classes[] = 'App\Controller\Web2printController';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Controller\ProfilerController';

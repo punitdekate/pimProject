@@ -20,6 +20,7 @@ protected $className = "clothing";
 
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 * Filter by Product_image (Product _image)
 =======
 * Filter by productId (Product Id)
@@ -88,6 +89,8 @@ public function filterByGender ($data, $operator = '=')
 }
 
 /**
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
 * Filter by ProductImage (Product Image)
 * @param string|int|float|array|Model\Element\ElementInterface $data  comparison data, can be scalar or array (if operator is e.g. "IN (?)")
 * @param string $operator  SQL comparison operator, e.g. =, <, >= etc. You can use "?" as placeholder, e.g. "IN (?)"
@@ -96,6 +99,7 @@ public function filterByGender ($data, $operator = '=')
 public function filterByProductImage ($data, $operator = '=')
 {
 	$this->getClass()->getFieldDefinition("ProductImage")->addListingFilter($this, $data, $operator);
+<<<<<<< HEAD
 >>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
 	return $this;
 }
@@ -145,6 +149,8 @@ public function filterByExpiryDate ($data, $operator = '=')
 public function filterBySellerDetails ($data, $operator = '=')
 {
 	$this->getClass()->getFieldDefinition("sellerDetails")->addListingFilter($this, $data, $operator);
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
 	return $this;
 }
 

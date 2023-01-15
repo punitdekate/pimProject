@@ -3,12 +3,16 @@
 /**
  * Fields Summary:
 <<<<<<< HEAD
+<<<<<<< HEAD
  * - skincare_Product [select]
  * - Material [select]
  * - Quantity [quantityValue]
 =======
  * - skinCareProduct [select]
 >>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
+=======
+ * - skinCareProduct [select]
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
  */
 
 return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
@@ -18,10 +22,14 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
    'implementsInterfaces' => '',
    'title' => '',
 <<<<<<< HEAD
+<<<<<<< HEAD
    'group' => '',
 =======
    'group' => 'Beauty',
 >>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
+=======
+   'group' => 'Beauty',
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
    'layoutDefinitions' => 
   Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
      'name' => NULL,
@@ -40,16 +48,22 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
       0 => 
       Pimcore\Model\DataObject\ClassDefinition\Layout\Panel::__set_state(array(
 <<<<<<< HEAD
+<<<<<<< HEAD
          'name' => 'SkincareSpecific',
          'type' => NULL,
          'region' => NULL,
          'title' => 'Skincare Specific',
 =======
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
          'name' => 'SkinSpecific',
          'type' => NULL,
          'region' => NULL,
          'title' => 'Skin Specific',
+<<<<<<< HEAD
 >>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
          'width' => '',
          'height' => '',
          'collapsible' => false,
@@ -62,16 +76,22 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
           0 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
 <<<<<<< HEAD
+<<<<<<< HEAD
              'name' => 'skincare_Product',
              'title' => 'Skincare _ Product',
              'tooltip' => '',
              'mandatory' => false,
 =======
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
              'name' => 'skinCareProduct',
              'title' => 'Skin Care Product',
              'tooltip' => '',
              'mandatory' => true,
+<<<<<<< HEAD
 >>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
              'noteditable' => false,
              'index' => false,
              'locked' => false,
@@ -91,6 +111,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
               0 => 
               array (
 <<<<<<< HEAD
+<<<<<<< HEAD
                 'key' => 'body oil',
                 'value' => 'body oil',
               ),
@@ -109,6 +130,8 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
                 'key' => 'face mask',
                 'value' => 'face mask',
 =======
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
                 'key' => 'Body Oil',
                 'value' => 'Body Oil',
               ),
@@ -126,7 +149,10 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
               array (
                 'key' => 'Face Mask',
                 'value' => 'Face Mask',
+<<<<<<< HEAD
 >>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
               ),
             ),
              'width' => '',
@@ -137,6 +163,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'dynamicOptions' => false,
              'defaultValueGenerator' => '',
           )),
+<<<<<<< HEAD
 <<<<<<< HEAD
           1 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
@@ -209,6 +236,8 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
           )),
 =======
 >>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
         ),
          'locked' => false,
          'blockedVarsForExport' => 
@@ -243,10 +272,14 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
     array (
       'classname' => 'beauty',
 <<<<<<< HEAD
+<<<<<<< HEAD
       'fieldname' => 'BeautySpecific',
 =======
       'fieldname' => 'beautySpecific',
 >>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
+=======
+      'fieldname' => 'beautySpecific',
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
     ),
   ),
 ));

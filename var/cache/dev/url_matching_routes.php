@@ -549,6 +549,7 @@ return [
         '/admin/gdpr/pimcore-users/search-users' => [[['_route' => 'pimcore_admin_gdpr_pimcoreusers_searchusers', '_controller' => 'Pimcore\\Bundle\\AdminBundle\\Controller\\GDPR\\PimcoreUsersController::searchUsersAction'], null, ['GET' => 0], null, false, false, null]],
         '/admin/gdpr/pimcore-users/export-user-data' => [[['_route' => 'pimcore_admin_gdpr_pimcoreusers_exportuserdata', '_controller' => 'Pimcore\\Bundle\\AdminBundle\\Controller\\GDPR\\PimcoreUsersController::exportUserDataAction'], null, ['GET' => 0], null, false, false, null]],
         '/admin/gdpr/sent-mail/export' => [[['_route' => 'pimcore_admin_gdpr_sentmail_exportdataobject', '_controller' => 'Pimcore\\Bundle\\AdminBundle\\Controller\\GDPR\\SentMailController::exportDataObjectAction'], null, ['GET' => 0], null, false, false, null]],
+<<<<<<< HEAD
         '/gents' => [[['_route' => 'gents', '_controller' => 'App\\Controller\\FilterController::showGentsClothes'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/ladies' => [[['_route' => 'ladies', '_controller' => 'App\\Controller\\FilterController::showLadiesClothes'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/fgents' => [[['_route' => 'fgents', '_controller' => 'App\\Controller\\FilterController::showGentsFootwear'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
@@ -565,6 +566,9 @@ return [
         '/electronics' => [[['_route' => 'electronics', '_controller' => 'App\\Controller\\MyController::showElectronics'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/footwear' => [[['_route' => 'footwear', '_controller' => 'App\\Controller\\MyController::showFootwear'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/beauty' => [[['_route' => 'beauty', '_controller' => 'App\\Controller\\MyController::showBeauty'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+=======
+        '/electronics' => [[['_route' => 'electronics', '_controller' => 'App\\Controller\\MyController::add'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
     ],
     [ // $regexpList
         0 => '{^(?'

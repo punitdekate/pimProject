@@ -3,12 +3,16 @@
 /**
  * Fields Summary:
 <<<<<<< HEAD
+<<<<<<< HEAD
  * - skincare_Product [select]
  * - Material [select]
  * - Quantity [quantityValue]
 =======
  * - skinCareProduct [select]
 >>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
+=======
+ * - skinCareProduct [select]
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
  */
 
 namespace Pimcore\Model\DataObject\Objectbrick\Data;
@@ -22,12 +26,16 @@ class SkinCare extends DataObject\Objectbrick\Data\AbstractData
 {
 protected $type = "SkinCare";
 <<<<<<< HEAD
+<<<<<<< HEAD
 protected $skincare_Product;
 protected $Material;
 protected $Quantity;
 =======
 protected $skinCareProduct;
 >>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
+=======
+protected $skinCareProduct;
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
 
 
 /**
@@ -43,6 +51,7 @@ public function __construct(DataObject\Concrete $object)
 
 /**
 <<<<<<< HEAD
+<<<<<<< HEAD
 * Get skincare_Product - Skincare _ Product
 * @return string|null
 */
@@ -53,6 +62,8 @@ public function getSkincare_Product(): ?string
 		try {
 			return $this->getValueFromParent("skincare_Product");
 =======
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
 * Get skinCareProduct - Skin Care Product
 * @return string|null
 */
@@ -62,6 +73,7 @@ public function getSkinCareProduct(): ?string
 	if(\Pimcore\Model\DataObject::doGetInheritedValues($this->getObject()) && $this->getDefinition()->getFieldDefinition("skinCareProduct")->isEmpty($data)) {
 		try {
 			return $this->getValueFromParent("skinCareProduct");
+<<<<<<< HEAD
 >>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
 		} catch (InheritanceParentNotFoundException $e) {
 			// no data from parent available, continue ...
@@ -97,6 +109,8 @@ public function getMaterial(): ?string
 	if(\Pimcore\Model\DataObject::doGetInheritedValues($this->getObject()) && $this->getDefinition()->getFieldDefinition("Material")->isEmpty($data)) {
 		try {
 			return $this->getValueFromParent("Material");
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
 		} catch (InheritanceParentNotFoundException $e) {
 			// no data from parent available, continue ...
 		}
@@ -109,6 +123,7 @@ public function getMaterial(): ?string
 }
 
 /**
+<<<<<<< HEAD
 * Set Material - Material
 * @param string|null $Material
 * @return \Pimcore\Model\DataObject\Objectbrick\Data\SkinCare
@@ -150,6 +165,8 @@ public function setQuantity (?\Pimcore\Model\DataObject\Data\QuantityValue $Quan
 {
 	$this->Quantity = $Quantity;
 =======
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
 * Set skinCareProduct - Skin Care Product
 * @param string|null $skinCareProduct
 * @return \Pimcore\Model\DataObject\Objectbrick\Data\SkinCare
@@ -157,7 +174,10 @@ public function setQuantity (?\Pimcore\Model\DataObject\Data\QuantityValue $Quan
 public function setSkinCareProduct (?string $skinCareProduct)
 {
 	$this->skinCareProduct = $skinCareProduct;
+<<<<<<< HEAD
 >>>>>>> b1ee972dbad14536cd41c6e7ffe1a381d49f2c4c
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
 
 	return $this;
 }

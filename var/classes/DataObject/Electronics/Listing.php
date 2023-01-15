@@ -67,6 +67,7 @@ public function filterByPrice ($data, $operator = '=')
 }
 
 /**
+<<<<<<< HEAD
 * Filter by productType (Product Type)
 * @param string|int|float|array|Model\Element\ElementInterface $data  comparison data, can be scalar or array (if operator is e.g. "IN (?)")
 * @param string $operator  SQL comparison operator, e.g. =, <, >= etc. You can use "?" as placeholder, e.g. "IN (?)"
@@ -79,6 +80,8 @@ public function filterByProductType ($data, $operator = '=')
 }
 
 /**
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
 * Filter by ProductImage (Product Image)
 * @param string|int|float|array|Model\Element\ElementInterface $data  comparison data, can be scalar or array (if operator is e.g. "IN (?)")
 * @param string $operator  SQL comparison operator, e.g. =, <, >= etc. You can use "?" as placeholder, e.g. "IN (?)"
@@ -90,6 +93,7 @@ public function filterByProductImage ($data, $operator = '=')
 	return $this;
 }
 
+<<<<<<< HEAD
 /**
 * Filter by manufacturingCompany (Manufacturing Company)
 * @param string|int|float|array|Model\Element\ElementInterface $data  comparison data, can be scalar or array (if operator is e.g. "IN (?)")
@@ -138,6 +142,8 @@ public function filterBySellerDetails ($data, $operator = '=')
 	return $this;
 }
 
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
 
 
 }

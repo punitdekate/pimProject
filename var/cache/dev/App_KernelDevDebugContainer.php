@@ -4,6 +4,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 if (\class_exists(\ContainerPKypl6F\App_KernelDevDebugContainer::class, false)) {
     // no-op
 } elseif (!include __DIR__.'/ContainerPKypl6F/App_KernelDevDebugContainer.php') {
@@ -20,11 +21,18 @@ if (\class_exists(\ContainerSQ1vNOu\App_KernelDevDebugContainer::class, false)) 
 } elseif (!include __DIR__.'/ContainerSQ1vNOu/App_KernelDevDebugContainer.php') {
     touch(__DIR__.'/ContainerSQ1vNOu.legacy');
 >>>>>>> fc13ccf3beabb5cf76d7eda91d10b62586ddb0cb
+=======
+if (\class_exists(\ContainerIvVzORK\App_KernelDevDebugContainer::class, false)) {
+    // no-op
+} elseif (!include __DIR__.'/ContainerIvVzORK/App_KernelDevDebugContainer.php') {
+    touch(__DIR__.'/ContainerIvVzORK.legacy');
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
 
     return;
 }
 
 if (!\class_exists(App_KernelDevDebugContainer::class, false)) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     \class_alias(\ContainerPKypl6F\App_KernelDevDebugContainer::class, App_KernelDevDebugContainer::class, false);
@@ -55,3 +63,13 @@ return new \ContainerSQ1vNOu\App_KernelDevDebugContainer([
     'container.build_time' => 1673510684,
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerSQ1vNOu');
 >>>>>>> fc13ccf3beabb5cf76d7eda91d10b62586ddb0cb
+=======
+    \class_alias(\ContainerIvVzORK\App_KernelDevDebugContainer::class, App_KernelDevDebugContainer::class, false);
+}
+
+return new \ContainerIvVzORK\App_KernelDevDebugContainer([
+    'container.build_hash' => 'IvVzORK',
+    'container.build_id' => 'd8d2efe9',
+    'container.build_time' => 1673376078,
+], __DIR__.\DIRECTORY_SEPARATOR.'ContainerIvVzORK');
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b

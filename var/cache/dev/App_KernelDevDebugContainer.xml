@@ -1121,7 +1121,10 @@
     </parameter>
     <parameter key="pimcore.service_controllers" type="collection">
       <parameter key="App\Controller\DefaultController">App\Controller\DefaultController</parameter>
+<<<<<<< HEAD
       <parameter key="App\Controller\FilterController">App\Controller\FilterController</parameter>
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
       <parameter key="App\Controller\MyController">App\Controller\MyController</parameter>
       <parameter key="App\Controller\Web2printController">App\Controller\Web2printController</parameter>
       <parameter key="Doctrine\Bundle\DoctrineBundle\Controller\ProfilerController">Doctrine\Bundle\DoctrineBundle\Controller\ProfilerController</parameter>
@@ -1230,6 +1233,7 @@
         <argument type="service" id=".service_locator.Z3eEsyj.App\Controller\DefaultController"/>
       </call>
     </service>
+<<<<<<< HEAD
     <service id="App\Controller\FilterController" class="App\Controller\FilterController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -1237,6 +1241,8 @@
         <argument type="service" id=".service_locator.Z3eEsyj.App\Controller\FilterController"/>
       </call>
     </service>
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
     <service id="App\Controller\MyController" class="App\Controller\MyController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -11789,9 +11795,12 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\DefaultController" class="App\Controller\DefaultController" public="true" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\DefaultController" class="App\Controller\DefaultController" public="true" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\DefaultController" class="App\Controller\DefaultController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
+<<<<<<< HEAD
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\FilterController" class="App\Controller\FilterController" public="true" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\FilterController" class="App\Controller\FilterController" public="true" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\FilterController" class="App\Controller\FilterController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\MyController" class="App\Controller\MyController" public="true" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\MyController" class="App\Controller\MyController" public="true" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\MyController" class="App\Controller\MyController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
@@ -12727,7 +12736,11 @@
         <argument key="configWriter" type="service_closure" id="Pimcore\Config\ReportConfigWriter"/>
       </argument>
     </service>
+<<<<<<< HEAD
     <service id=".service_locator.zURQW9t" class="Symfony\Component\DependencyInjection\ServiceLocator">
+=======
+    <service id=".service_locator.MoI7EA8" class="Symfony\Component\DependencyInjection\ServiceLocator">
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Kernel::loadRoutes" type="service_closure" id=".service_locator.xUrKPVU"/>
@@ -13684,12 +13697,15 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.Z3eEsyj" method="withContext"/>
     </service>
+<<<<<<< HEAD
     <service id=".service_locator.Z3eEsyj.App\Controller\FilterController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\FilterController"/>
       <argument>App\Controller\FilterController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.Z3eEsyj" method="withContext"/>
     </service>
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
     <service id=".service_locator.Z3eEsyj.App\Controller\MyController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\MyController"/>
       <argument>App\Controller\MyController</argument>
@@ -14353,12 +14369,20 @@
     </service>
     <service id="debug.Pimcore\Controller\ArgumentValueResolver\WebsiteConfigValueResolver.inner" class="Pimcore\Controller\ArgumentValueResolver\WebsiteConfigValueResolver" autowire="true" autoconfigure="true"/>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
+<<<<<<< HEAD
       <argument type="service" id=".service_locator.zURQW9t"/>
+=======
+      <argument type="service" id=".service_locator.MoI7EA8"/>
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
+<<<<<<< HEAD
       <argument type="service" id=".service_locator.zURQW9t"/>
+=======
+      <argument type="service" id=".service_locator.MoI7EA8"/>
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
     </service>
     <service id="debug.traced.messenger.bus.pimcore-core.inner" class="Symfony\Component\Messenger\MessageBus">
       <argument type="iterator">
@@ -15211,7 +15235,11 @@
     <service id="pimcore_admin.security.user_checker" alias="Pimcore\Bundle\AdminBundle\Security\User\UserChecker" public="true"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
+<<<<<<< HEAD
     <service id="argument_resolver.controller_locator" alias=".service_locator.zURQW9t"/>
+=======
+    <service id="argument_resolver.controller_locator" alias=".service_locator.MoI7EA8"/>
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
     <service id="session" alias=".session.do-not-use" public="true">
       <deprecated package="symfony/framework-bundle" version="5.3">The "%alias_id%" service and "SessionInterface" alias are deprecated, use "$requestStack-&gt;getSession()" instead.</deprecated>
     </service>
@@ -15269,7 +15297,11 @@
     <service id=".service_locator.QGYrWSe" alias=".service_locator.KtQBKFH"/>
     <service id=".service_locator.d.LHN9k" alias=".service_locator.oA5BLRO"/>
     <service id=".service_locator.HWrFtH0" alias=".service_locator.Iq6MQcq"/>
+<<<<<<< HEAD
     <service id=".service_locator.5yCPF1z" alias=".service_locator.zURQW9t"/>
+=======
+    <service id=".service_locator.idTsKqj" alias=".service_locator.MoI7EA8"/>
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
     <service id=".service_locator.i5moiQS" alias=".service_locator.C44LVBj"/>
     <service id=".service_locator.dSJzmMd" alias=".service_locator.sBOjgcc"/>
     <service id=".service_locator.RJeKnCN" alias=".service_locator.RUwm74c"/>

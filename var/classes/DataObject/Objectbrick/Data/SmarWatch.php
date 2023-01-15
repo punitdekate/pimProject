@@ -4,6 +4,10 @@
  * Fields Summary:
  * - dialShape [select]
  * - strapMaterial [select]
+<<<<<<< HEAD
+=======
+ * - features [multiselect]
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
  */
 
 namespace Pimcore\Model\DataObject\Objectbrick\Data;
@@ -18,6 +22,10 @@ class SmarWatch extends DataObject\Objectbrick\Data\AbstractData
 protected $type = "SmarWatch";
 protected $dialShape;
 protected $strapMaterial;
+<<<<<<< HEAD
+=======
+protected $features;
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
 
 
 /**
@@ -97,5 +105,41 @@ public function setStrapMaterial (?string $strapMaterial)
 	return $this;
 }
 
+<<<<<<< HEAD
+=======
+/**
+* Get features - Features
+* @return string[]|null
+*/
+public function getFeatures(): ?array
+{
+	$data = $this->features;
+	if(\Pimcore\Model\DataObject::doGetInheritedValues($this->getObject()) && $this->getDefinition()->getFieldDefinition("features")->isEmpty($data)) {
+		try {
+			return $this->getValueFromParent("features");
+		} catch (InheritanceParentNotFoundException $e) {
+			// no data from parent available, continue ...
+		}
+	}
+	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
+		return $data->getPlain();
+	}
+
+	return $data;
+}
+
+/**
+* Set features - Features
+* @param string[]|null $features
+* @return \Pimcore\Model\DataObject\Objectbrick\Data\SmarWatch
+*/
+public function setFeatures (?array $features)
+{
+	$this->features = $features;
+
+	return $this;
+}
+
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
 }
 

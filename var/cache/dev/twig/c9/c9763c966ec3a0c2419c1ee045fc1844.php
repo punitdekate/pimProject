@@ -56,8 +56,11 @@ class __TwigTemplate_1aafd0f3a20022df1d2deb7a932601c7 extends Template
         echo "\t\t";
         echo $this->extensions['Pimcore\Twig\Extension\DocumentEditableExtension']->renderEditable($context, "snippet", "header");
         echo "
+<<<<<<< HEAD
 
         
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
 \t\t<!-- Main body -->
 
     <main>
@@ -72,7 +75,11 @@ class __TwigTemplate_1aafd0f3a20022df1d2deb7a932601c7 extends Template
                 </div>
 
                 ";
+<<<<<<< HEAD
         // line 30
+=======
+        // line 28
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
         echo "            </div>
 
             <button class=\"carousel-control-prev\" type=\"button\" data-bs-target=\"#carouselExampleFade\"
@@ -100,6 +107,7 @@ class __TwigTemplate_1aafd0f3a20022df1d2deb7a932601c7 extends Template
         </div>
         <div class=\"container\">
             <div class=\"row justify-content-evenlys\">
+<<<<<<< HEAD
                 <div class=\"col-md-3\">
     \t            <div style=\"border:solid black;margin-top:20px;\"align=\"center;\">
         \t        <img class=\"rounded mx-auto d-block\" src=\"images/iphone.jpg\"style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
@@ -131,6 +139,38 @@ class __TwigTemplate_1aafd0f3a20022df1d2deb7a932601c7 extends Template
     </section>
 \t\t";
         // line 87
+=======
+                <div class=\"col-md-4\">
+                    <div class=\"card\" style=\"width: 18rem;\">
+                        <img src=\"images/iphone.jpg\" class=\"card-img-top\" alt=\"...\">
+                        <div class=\"card-body\">
+                            <h5 class=\"card-title\">iphone 12 pro</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=\"col-md-4\">
+
+                    <div class=\"card\" style=\"width: 18rem;\">
+                        <img src=\"images/saree.jpg\" class=\"card-img-top\" alt=\"...\">
+                        <div class=\"card-body\">
+                            <h5 class=\"card-title\">Banarasi Handmade Saree</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class=\"col-md-4\">
+                    <div class=\"card\" style=\"width: 18rem;\">
+                        <img src=\"images/nike_shoe.jpg\" class=\"card-img-top\" alt=\"...\">
+                        <div class=\"card-body\">
+                            <h5 class=\"card-title\">Nike sports shoe lightweight</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+\t\t";
+        // line 84
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
         echo "\t\t";
         echo $this->extensions['Pimcore\Twig\Extension\DocumentEditableExtension']->renderEditable($context, "snippet", "footer");
         echo "
@@ -140,6 +180,7 @@ class __TwigTemplate_1aafd0f3a20022df1d2deb7a932601c7 extends Template
       crossorigin=\"anonymous\"></script>
 \t</body>
 </html>
+<<<<<<< HEAD
 
 
 
@@ -189,6 +230,9 @@ class __TwigTemplate_1aafd0f3a20022df1d2deb7a932601c7 extends Template
                 ";
         // line 155
         echo "                ";
+=======
+";
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
 
@@ -209,7 +253,11 @@ class __TwigTemplate_1aafd0f3a20022df1d2deb7a932601c7 extends Template
 
     public function getDebugInfo()
     {
+<<<<<<< HEAD
         return array (  191 => 155,  188 => 145,  134 => 87,  76 => 30,  56 => 11,  45 => 1,);
+=======
+        return array (  131 => 84,  74 => 28,  56 => 11,  45 => 1,);
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
     }
 
     public function getSourceContext()
@@ -225,8 +273,11 @@ class __TwigTemplate_1aafd0f3a20022df1d2deb7a932601c7 extends Template
 \t<body>
 \t\t{# header snippet#}
 \t\t{{ pimcore_snippet(\"header\") }}
+<<<<<<< HEAD
 
         
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
 \t\t<!-- Main body -->
 
     <main>
@@ -241,7 +292,11 @@ class __TwigTemplate_1aafd0f3a20022df1d2deb7a932601c7 extends Template
                 </div>
 
                 {# <div class=\"carousel-item\">
+<<<<<<< HEAD
                     <img src=\"images/crousel5.jpg\" style=\"width:100%; height:549px\" class=\"d-block w-100\" alt=\"...\">
+=======
+                    <img src=\"images/crousel.jpg\" style=\"width:100%; height:549px\" class=\"d-block w-100\" alt=\"...\">
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
                 </div> #}
             </div>
 
@@ -270,6 +325,7 @@ class __TwigTemplate_1aafd0f3a20022df1d2deb7a932601c7 extends Template
         </div>
         <div class=\"container\">
             <div class=\"row justify-content-evenlys\">
+<<<<<<< HEAD
                 <div class=\"col-md-3\">
     \t            <div style=\"border:solid black;margin-top:20px;\"align=\"center;\">
         \t        <img class=\"rounded mx-auto d-block\" src=\"images/iphone.jpg\"style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
@@ -351,15 +407,24 @@ class __TwigTemplate_1aafd0f3a20022df1d2deb7a932601c7 extends Template
 
 
 {# <div class=\"col-md-4\">
+=======
+                <div class=\"col-md-4\">
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
                     <div class=\"card\" style=\"width: 18rem;\">
                         <img src=\"images/iphone.jpg\" class=\"card-img-top\" alt=\"...\">
                         <div class=\"card-body\">
                             <h5 class=\"card-title\">iphone 12 pro</h5>
                         </div>
                     </div>
+<<<<<<< HEAD
                 </div> #}
 
                 {# <div class=\"col-md-4\">
+=======
+                </div>
+
+                <div class=\"col-md-4\">
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
 
                     <div class=\"card\" style=\"width: 18rem;\">
                         <img src=\"images/saree.jpg\" class=\"card-img-top\" alt=\"...\">
@@ -367,15 +432,35 @@ class __TwigTemplate_1aafd0f3a20022df1d2deb7a932601c7 extends Template
                             <h5 class=\"card-title\">Banarasi Handmade Saree</h5>
                         </div>
                     </div>
+<<<<<<< HEAD
                 </div> #}
                 {# <div class=\"col-md-4\">
+=======
+                </div>
+                <div class=\"col-md-4\">
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
                     <div class=\"card\" style=\"width: 18rem;\">
                         <img src=\"images/nike_shoe.jpg\" class=\"card-img-top\" alt=\"...\">
                         <div class=\"card-body\">
                             <h5 class=\"card-title\">Nike sports shoe lightweight</h5>
                         </div>
                     </div>
+<<<<<<< HEAD
                 </div> #}", "default/home.html.twig", "/var/www/html/test/pimProject/templates/default/home.html.twig");
+=======
+                </div>
+            </div>
+    </section>
+\t\t{# header snippet#}
+\t\t{{ pimcore_snippet(\"footer\") }}
+
+\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js\"
+      integrity=\"sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3\"
+      crossorigin=\"anonymous\"></script>
+\t</body>
+</html>
+", "default/home.html.twig", "/var/www/html/test/pimProject/templates/default/home.html.twig");
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
     }
     
     public function checkSecurity()

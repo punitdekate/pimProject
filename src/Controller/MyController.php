@@ -6,10 +6,13 @@ use Pimcore\Controller\FrontendController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Pimcore\Model\Dataobject;
+<<<<<<< HEAD
 use Pimcore\Model\DataObject\Electronics;
 use Pimcore\Model\DataObject\Clothing;
 use Pimcore\Model\DataObject\Footwear;
 use Pimcore\Model\DataObject\Beauty;
+=======
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
 use Symfony\Component\Routing\Annotation\Route;
 
 
@@ -33,7 +36,11 @@ class MyController extends FrontendController
      */
     public function header(Request $request): Response
     {
+<<<<<<< HEAD
         return $this->render('default/header.html.twig');
+=======
+        return $this->render('snippet/header.html.twig');
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
     }
 
     // footer page
@@ -43,14 +50,19 @@ class MyController extends FrontendController
      */
     public function footer(Request $request): Response
     {
+<<<<<<< HEAD
         return $this->render('default/footer.html.twig');
 
+=======
+        return $this->render('snippet/footer.html.twig');
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
     }
 
     // electronics page
     public function electronics(Request $request): Response
     {
         return $this->render('default/electronics.html.twig');
+<<<<<<< HEAD
 
     }
     
@@ -129,5 +141,24 @@ class MyController extends FrontendController
 
 
 
+=======
+    }
+
+
+
+    //  do listing of objects
+
+    /**
+     * @Route("/electronics", name="electronics", methods={"GET","POST"})
+     * @param Request $request
+     * @return Response
+     */
+    public function add(Request $request):Response
+    {
+        $items = new DataObject\Electronics\Listing();
+        $items->setOrderKey("RAND()", false);
+        return $this->render('default/home.html.twig',['objects'=>$items]);
+    }
+>>>>>>> 68e50b2699b522c7fc2ae0ec4646593417116e7b
 }
 
