@@ -1,0 +1,3 @@
+ProductId ,ProductName,Decription,Price,ProductType,ProductImage,productColor,ManufacturingCompany,ManufacturingDate,expriyDate
+10,Laptop,new Branded laptop,45000,laptop,,#D12C2C,Dell,19-11-2022,24-09-30
+11,Moblie, vivo new version,30000,Moblie,,#D12C2C,vivo,12-3-2022,1-03-30

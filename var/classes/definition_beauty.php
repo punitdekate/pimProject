@@ -8,7 +8,7 @@
  *
  * Fields Summary:
  * - productId [input]
- * - pruductName [input]
+ * - brandName [input]
  * - description [textarea]
  * - price [numeric]
  * - productFor [select]
@@ -32,7 +32,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'description' => 'Contain information about clothing class and its attributes
 ',
    'creationDate' => 0,
-   'modificationDate' => 1673522238,
+   'modificationDate' => 1673835934,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -128,8 +128,8 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
               )),
               1 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
-                 'name' => 'pruductName',
-                 'title' => 'Pruduct Name',
+                 'name' => 'brandName',
+                 'title' => 'Brand',
                  'tooltip' => '',
                  'mandatory' => true,
                  'noteditable' => false,

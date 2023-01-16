@@ -1,0 +1,10 @@
+ProductId,ProductName,Description,Price,Gender,ProductColor,ManufaturingCompany,ManufacturingDate,ExpriyDate
+1,Shampoo,Pure 100% original shampoo,200,Women,#512D2D,mamaearth,19-11-22,23-12-24
+2,Shoes,leather shoes,2000,Men,#732323,puma,12-10-22,12-12-28
+3,Kurti,100% cotton design kurti,1999,Women,#512D2D,biba,02-03-22,23-12-25
+4,Jeans,new branded jeans,1200,Women,#504E89,zara,14-05-22,19-11-34
+5,Body lotion,Natural maded,243,Women,#C32C53,vasline,10-07-22,12-11-32
+6,Saree,Hand maded Sarees,1700,Women,#F4D65C,banarasi silk,12-02-22,29-09-22
+7,Lipstick,natural made lipstick,300,Women,#713407,matt,11-06-22,22-04-28
+8,laptop,latest new version laptop,65000,,#7E7581,dell,20-09-22,12-03-25
+9,Moblie,vivo new version with new latest feature,30000,,#482BC7,vivo,11-01-22,11-09-26

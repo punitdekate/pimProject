@@ -10,6 +10,7 @@ use Pimcore\Model\DataObject\Electronics;
 use Pimcore\Model\DataObject\Clothing;
 use Pimcore\Model\DataObject\Footwear;
 use Pimcore\Model\DataObject\Beauty;
+use Pimcore\Model\DataObject\Feedback;
 use Symfony\Component\Routing\Annotation\Route;
 
 
@@ -99,7 +100,8 @@ class MyController extends FrontendController
     public function showElectronics(Request $request):Response
     {
         $eItems = new Electronics\Listing();
-        $eItems->setOrderKey("RAND()", false);
+        $eItems->setOrderKey("price");
+        $eItems->setOrder("asc");
         return $this->render('default/electronics.html.twig',['objects'=>$eItems]);
     }
 
@@ -128,6 +130,41 @@ class MyController extends FrontendController
     }
 
 
+     // feedback page
+    /**
+     * @param Request $request
+     * @return Response
+     */
+    public function feedback(Request $request): Response
+    {
+        return $this->render('default/feedback.html.twig');
+    }
 
+
+
+    // Email trigger on feedback form
+    /**
+     * @Route("/submit", name="submit", methods={"POST"})
+     */
+
+     public function submit(Request $request): Response
+
+     {
+        $mail = new \Pimcore\Mail();
+        $mail->to('punitdekateofficial@gmail.com');
+        $str =$_POST['fname']." ".$_POST['lname']." has provided the feedback that is:  ".$_POST['message'];
+        $mail->text($str);
+        $mail->send();
+        
+        $obj=new Feedback();
+        $obj->setKey("feedback".time());
+        $obj->setParentId(55);
+        $obj->setFirstName($_POST["fname"]);
+        $obj->setLastName($_POST["lname"]);
+        $obj->setEmail($_POST["email"]);
+        $obj->setFeedback($_POST["message"]);
+        $obj->save();
+        return $this->render('default/email.html.twig',['name'=>$_POST["fname"]]);
+    }
 }
 

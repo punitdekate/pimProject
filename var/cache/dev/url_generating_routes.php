@@ -554,4 +554,9 @@ return [
     'electronics' => [[], ['_controller' => 'App\\Controller\\MyController::showElectronics'], [], [['text', '/electronics']], [], [], []],
     'footwear' => [[], ['_controller' => 'App\\Controller\\MyController::showFootwear'], [], [['text', '/footwear']], [], [], []],
     'beauty' => [[], ['_controller' => 'App\\Controller\\MyController::showBeauty'], [], [['text', '/beauty']], [], [], []],
+    'submit' => [[], ['_controller' => 'App\\Controller\\MyController::submit'], [], [['text', '/submit']], [], [], []],
+    'csearch' => [[], ['_controller' => 'App\\Controller\\SearchController::searchClothing'], [], [['text', '/csearch']], [], [], []],
+    'bsearch' => [[], ['_controller' => 'App\\Controller\\SearchController::searchBeauty'], [], [['text', '/bsearch']], [], [], []],
+    'fsearch' => [[], ['_controller' => 'App\\Controller\\SearchController::searchFootwear'], [], [['text', '/fsearch']], [], [], []],
+    'esearch' => [[], ['_controller' => 'App\\Controller\\SearchController::searchElectronics'], [], [['text', '/esearch']], [], [], []],
 ];

@@ -8,7 +8,7 @@
  *
  * Fields Summary:
  * - productId [input]
- * - productName [input]
+ * - brandName [input]
  * - description [textarea]
  * - price [numeric]
  * - footwearSpecific [objectbricks]
@@ -33,7 +33,7 @@ use Pimcore\Model\DataObject\PreGetValueHookInterface;
 /**
 * @method static \Pimcore\Model\DataObject\Footwear\Listing getList(array $config = [])
 * @method static \Pimcore\Model\DataObject\Footwear\Listing|\Pimcore\Model\DataObject\Footwear|null getByProductId($value, $limit = 0, $offset = 0, $objectTypes = null)
-* @method static \Pimcore\Model\DataObject\Footwear\Listing|\Pimcore\Model\DataObject\Footwear|null getByProductName($value, $limit = 0, $offset = 0, $objectTypes = null)
+* @method static \Pimcore\Model\DataObject\Footwear\Listing|\Pimcore\Model\DataObject\Footwear|null getByBrandName($value, $limit = 0, $offset = 0, $objectTypes = null)
 * @method static \Pimcore\Model\DataObject\Footwear\Listing|\Pimcore\Model\DataObject\Footwear|null getByDescription($value, $limit = 0, $offset = 0, $objectTypes = null)
 * @method static \Pimcore\Model\DataObject\Footwear\Listing|\Pimcore\Model\DataObject\Footwear|null getByPrice($value, $limit = 0, $offset = 0, $objectTypes = null)
 * @method static \Pimcore\Model\DataObject\Footwear\Listing|\Pimcore\Model\DataObject\Footwear|null getByGender($value, $limit = 0, $offset = 0, $objectTypes = null)
@@ -49,7 +49,7 @@ class Footwear extends Concrete
 protected $o_classId = "footwear";
 protected $o_className = "footwear";
 protected $productId;
-protected $productName;
+protected $brandName;
 protected $description;
 protected $price;
 protected $footwearSpecific;
@@ -109,19 +109,19 @@ public function setProductId(?string $productId)
 }
 
 /**
-* Get productName - Product Name
+* Get brandName - Brand
 * @return string|null
 */
-public function getProductName(): ?string
+public function getBrandName(): ?string
 {
 	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
-		$preValue = $this->preGetValue("productName");
+		$preValue = $this->preGetValue("brandName");
 		if ($preValue !== null) {
 			return $preValue;
 		}
 	}
 
-	$data = $this->productName;
+	$data = $this->brandName;
 
 	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
 		return $data->getPlain();
@@ -131,13 +131,13 @@ public function getProductName(): ?string
 }
 
 /**
-* Set productName - Product Name
-* @param string|null $productName
+* Set brandName - Brand
+* @param string|null $brandName
 * @return \Pimcore\Model\DataObject\Footwear
 */
-public function setProductName(?string $productName)
+public function setBrandName(?string $brandName)
 {
-	$this->productName = $productName;
+	$this->brandName = $brandName;
 
 	return $this;
 }

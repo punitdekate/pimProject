@@ -102,35 +102,43 @@ class __TwigTemplate_6ef2402a914d63f88067d91cd0f1d562 extends Template
             <div class=\"row justify-content-evenlys\">
                 <div class=\"col-md-3\">
     \t            <div style=\"border:solid black;margin-top:20px;\"align=\"center;\">
-        \t        <img class=\"rounded mx-auto d-block\" src=\"images/iphone.jpg\"style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
-            \t    <p style=\"height:100px; widht:100px;margin-top:20px; font-size:25px;\" align=\"center\" >iphone12 pro </p>
+        \t        <a href=\"electronics\">
+                    <img class=\"rounded mx-auto d-block\" src=\"images/iphone.jpg\"style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
+            \t    <p style=\"height:100px; widht:100px;margin-top:20px; font-size:25px;\" align=\"center\" >Electronic</p>
+                    </a>
     \t            </div>
       \t        </div>
 
                 <div class=\"col-md-3\">
     \t            <div style=\"border:solid black;margin-top:20px;\"align=\"center;\">
+                    <a href=\"clothing\">
         \t        <img class=\"rounded mx-auto d-block\" src=\"images/saree.jpg\" style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
-            \t    <p style=\"height:100px; widht:100px;margin-top:20px; font-size:25px;\" align=\"center\" >Banarasi Handmade Saree</p>
-    \t            </div>
+                    <p style=\"height:100px; widht:100px;margin-top:20px; font-size:25px;\" align=\"center\" >Clothing</p>
+    \t            </a>
+                    </div>
       \t        </div>
 
                 <div class=\"col-md-3\">
     \t            <div style=\"border:solid black;margin-top:20px;\"align=\"center;\">
+                    <a href=\"clothing\">
         \t        <img class=\"rounded mx-auto d-block\" src=\"images/nike_shoe.jpg\" style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
-            \t    <p style=\"height:100px; widht:100px;margin-top:20px; font-size:25px;\" align=\"center\" >Banarasi Handmade Saree</p>
-    \t            </div>
+            \t    <p style=\"height:100px; widht:100px;margin-top:20px; font-size:25px;\" align=\"center\">Shoes</p>
+    \t            </a>
+                    </div>
       \t        </div>
 
                 <div class=\"col-md-3\">
     \t            <div style=\"border:solid black;margin-top:20px;\"align=\"center;\">
+                    <a href=\"beauty\">
         \t        <img class=\"rounded mx-auto d-block\" src=\"images/perfume2.jpg\" style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
-            \t    <p style=\"height:100px; widht:100px;margin-top:20px; font-size:25px;\" align=\"center\" >Mercury Fragrance</p>
-    \t            </div>
+            \t    <p style=\"height:100px; widht:100px;margin-top:20px; font-size:25px;\" align=\"center\" >Beauty</p>
+    \t            </a>
+                    </div>
       \t        </div>
             </div>
     </section>
 \t\t";
-        // line 87
+        // line 95
         echo "\t\t";
         echo $this->extensions['Pimcore\Twig\Extension\DocumentEditableExtension']->renderEditable($context, "snippet", "footer");
         echo "
@@ -184,10 +192,10 @@ class __TwigTemplate_6ef2402a914d63f88067d91cd0f1d562 extends Template
 
 
 ";
-        // line 145
+        // line 153
         echo "
                 ";
-        // line 155
+        // line 163
         echo "                ";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
@@ -209,7 +217,7 @@ class __TwigTemplate_6ef2402a914d63f88067d91cd0f1d562 extends Template
 
     public function getDebugInfo()
     {
-        return array (  191 => 155,  188 => 145,  134 => 87,  72 => 26,  56 => 11,  45 => 1,);
+        return array (  199 => 163,  196 => 153,  142 => 95,  72 => 26,  56 => 11,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -272,30 +280,38 @@ class __TwigTemplate_6ef2402a914d63f88067d91cd0f1d562 extends Template
             <div class=\"row justify-content-evenlys\">
                 <div class=\"col-md-3\">
     \t            <div style=\"border:solid black;margin-top:20px;\"align=\"center;\">
-        \t        <img class=\"rounded mx-auto d-block\" src=\"images/iphone.jpg\"style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
-            \t    <p style=\"height:100px; widht:100px;margin-top:20px; font-size:25px;\" align=\"center\" >iphone12 pro </p>
+        \t        <a href=\"electronics\">
+                    <img class=\"rounded mx-auto d-block\" src=\"images/iphone.jpg\"style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
+            \t    <p style=\"height:100px; widht:100px;margin-top:20px; font-size:25px;\" align=\"center\" >Electronic</p>
+                    </a>
     \t            </div>
       \t        </div>
 
                 <div class=\"col-md-3\">
     \t            <div style=\"border:solid black;margin-top:20px;\"align=\"center;\">
+                    <a href=\"clothing\">
         \t        <img class=\"rounded mx-auto d-block\" src=\"images/saree.jpg\" style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
-            \t    <p style=\"height:100px; widht:100px;margin-top:20px; font-size:25px;\" align=\"center\" >Banarasi Handmade Saree</p>
-    \t            </div>
+                    <p style=\"height:100px; widht:100px;margin-top:20px; font-size:25px;\" align=\"center\" >Clothing</p>
+    \t            </a>
+                    </div>
       \t        </div>
 
                 <div class=\"col-md-3\">
     \t            <div style=\"border:solid black;margin-top:20px;\"align=\"center;\">
+                    <a href=\"clothing\">
         \t        <img class=\"rounded mx-auto d-block\" src=\"images/nike_shoe.jpg\" style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
-            \t    <p style=\"height:100px; widht:100px;margin-top:20px; font-size:25px;\" align=\"center\" >Banarasi Handmade Saree</p>
-    \t            </div>
+            \t    <p style=\"height:100px; widht:100px;margin-top:20px; font-size:25px;\" align=\"center\">Shoes</p>
+    \t            </a>
+                    </div>
       \t        </div>
 
                 <div class=\"col-md-3\">
     \t            <div style=\"border:solid black;margin-top:20px;\"align=\"center;\">
+                    <a href=\"beauty\">
         \t        <img class=\"rounded mx-auto d-block\" src=\"images/perfume2.jpg\" style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
-            \t    <p style=\"height:100px; widht:100px;margin-top:20px; font-size:25px;\" align=\"center\" >Mercury Fragrance</p>
-    \t            </div>
+            \t    <p style=\"height:100px; widht:100px;margin-top:20px; font-size:25px;\" align=\"center\" >Beauty</p>
+    \t            </a>
+                    </div>
       \t        </div>
             </div>
     </section>

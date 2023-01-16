@@ -43,11 +43,15 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="beauty">Beauty</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="feedback">Feedback</a>
         </li>  
       </ul>
-      <form class="d-flex"> 
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <form class="d-flex" action="{{ path('bsearch') }}" method="POST"> 
+        <input class="form-control me-2" name="search" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
+        </input>
       </form>
     </div>
   </div>
@@ -70,7 +74,8 @@
 		<div class="col-md-3">
     	<div style="border:solid black;margin-top:20px;"align="center;">
         	    <img class="rounded mx-auto d-block" src="{{ object.getProductImage() }}"style="height:300px; width:300px;margin-top:20px;" align="center"/><br>
-            	<h3 align="center"style="color:Black">Price :{{ object.getPrice}} </h3>
+              <h3 align="center"style="color:Black">Brand :{{ object.getBrandName}} </h3>
+            	<h4 align="center"style="color:Black">Price :{{ object.getPrice}} </h4>
             	<p style="height:100px; widht:100px;margin-top:20px;" align="center" >
 	               {{object.getDescription()}} </p>
     	     </div>

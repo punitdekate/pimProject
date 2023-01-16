@@ -565,6 +565,11 @@ return [
         '/electronics' => [[['_route' => 'electronics', '_controller' => 'App\\Controller\\MyController::showElectronics'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/footwear' => [[['_route' => 'footwear', '_controller' => 'App\\Controller\\MyController::showFootwear'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/beauty' => [[['_route' => 'beauty', '_controller' => 'App\\Controller\\MyController::showBeauty'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/submit' => [[['_route' => 'submit', '_controller' => 'App\\Controller\\MyController::submit'], null, ['POST' => 0], null, false, false, null]],
+        '/csearch' => [[['_route' => 'csearch', '_controller' => 'App\\Controller\\SearchController::searchClothing'], null, ['POST' => 0], null, false, false, null]],
+        '/bsearch' => [[['_route' => 'bsearch', '_controller' => 'App\\Controller\\SearchController::searchBeauty'], null, ['POST' => 0], null, false, false, null]],
+        '/fsearch' => [[['_route' => 'fsearch', '_controller' => 'App\\Controller\\SearchController::searchFootwear'], null, ['POST' => 0], null, false, false, null]],
+        '/esearch' => [[['_route' => 'esearch', '_controller' => 'App\\Controller\\SearchController::searchElectronics'], null, ['POST' => 0], null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

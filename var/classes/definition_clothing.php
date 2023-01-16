@@ -8,7 +8,7 @@
  *
  * Fields Summary:
  * - productId [input]
- * - productName [input]
+ * - brandName [input]
  * - description [textarea]
  * - price [numeric]
  * - clotheSpecific [objectbricks]
@@ -32,7 +32,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'description' => 'Contain information about clothing class and its attributes
 ',
    'creationDate' => 0,
-   'modificationDate' => 1673522228,
+   'modificationDate' => 1673835955,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -128,8 +128,8 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
               )),
               1 => 
               Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
-                 'name' => 'productName',
-                 'title' => 'Product Name',
+                 'name' => 'brandName',
+                 'title' => 'Brand',
                  'tooltip' => '',
                  'mandatory' => true,
                  'noteditable' => false,
@@ -827,6 +827,39 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'enableGridLocking' => false,
    'deletedDataComponents' => 
   array (
+    0 => 
+    Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+       'name' => 'productName',
+       'title' => 'Product Name',
+       'tooltip' => '',
+       'mandatory' => true,
+       'noteditable' => false,
+       'index' => false,
+       'locked' => false,
+       'style' => '',
+       'permissions' => NULL,
+       'datatype' => 'data',
+       'fieldtype' => 'input',
+       'relationType' => false,
+       'invisible' => false,
+       'visibleGridView' => false,
+       'visibleSearch' => false,
+       'blockedVarsForExport' => 
+      array (
+      ),
+       'width' => '',
+       'defaultValue' => NULL,
+       'queryColumnType' => 'varchar',
+       'columnType' => 'varchar',
+       'columnLength' => 190,
+       'regex' => '',
+       'regexFlags' => 
+      array (
+      ),
+       'unique' => false,
+       'showCharCount' => false,
+       'defaultValueGenerator' => '',
+    )),
   ),
    'blockedVarsForExport' => 
   array (
