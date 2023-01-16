@@ -8,15 +8,29 @@
  *
  * Fields Summary:
  * - productId [input]
+<<<<<<< HEAD
  * - productName [input]
  * - description [textarea]
  * - price [numeric]
+=======
+ * - brandName [input]
+ * - description [textarea]
+ * - price [numeric]
+ * - productType [select]
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
  * - productSpecific [objectbricks]
  * - ProductImage [image]
  * - ProductColor [rgbaColor]
  * - features [classificationstore]
+<<<<<<< HEAD
  * - manufacturerDetails [classificationstore]
  * - sellerDetails [classificationstore]
+=======
+ * - manufacturingCompany [input]
+ * - manufacturingDate [date]
+ * - expiryDate [date]
+ * - sellerDetails [manyToManyObjectRelation]
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
  * - ExtraAttributes [block]
  * -- AttributeName [input]
  * -- AttributeDetails [input]
@@ -30,10 +44,22 @@ use Pimcore\Model\DataObject\PreGetValueHookInterface;
 /**
 * @method static \Pimcore\Model\DataObject\Electronics\Listing getList(array $config = [])
 * @method static \Pimcore\Model\DataObject\Electronics\Listing|\Pimcore\Model\DataObject\Electronics|null getByProductId($value, $limit = 0, $offset = 0, $objectTypes = null)
+<<<<<<< HEAD
 * @method static \Pimcore\Model\DataObject\Electronics\Listing|\Pimcore\Model\DataObject\Electronics|null getByProductName($value, $limit = 0, $offset = 0, $objectTypes = null)
 * @method static \Pimcore\Model\DataObject\Electronics\Listing|\Pimcore\Model\DataObject\Electronics|null getByDescription($value, $limit = 0, $offset = 0, $objectTypes = null)
 * @method static \Pimcore\Model\DataObject\Electronics\Listing|\Pimcore\Model\DataObject\Electronics|null getByPrice($value, $limit = 0, $offset = 0, $objectTypes = null)
 * @method static \Pimcore\Model\DataObject\Electronics\Listing|\Pimcore\Model\DataObject\Electronics|null getByProductImage($value, $limit = 0, $offset = 0, $objectTypes = null)
+=======
+* @method static \Pimcore\Model\DataObject\Electronics\Listing|\Pimcore\Model\DataObject\Electronics|null getByBrandName($value, $limit = 0, $offset = 0, $objectTypes = null)
+* @method static \Pimcore\Model\DataObject\Electronics\Listing|\Pimcore\Model\DataObject\Electronics|null getByDescription($value, $limit = 0, $offset = 0, $objectTypes = null)
+* @method static \Pimcore\Model\DataObject\Electronics\Listing|\Pimcore\Model\DataObject\Electronics|null getByPrice($value, $limit = 0, $offset = 0, $objectTypes = null)
+* @method static \Pimcore\Model\DataObject\Electronics\Listing|\Pimcore\Model\DataObject\Electronics|null getByProductType($value, $limit = 0, $offset = 0, $objectTypes = null)
+* @method static \Pimcore\Model\DataObject\Electronics\Listing|\Pimcore\Model\DataObject\Electronics|null getByProductImage($value, $limit = 0, $offset = 0, $objectTypes = null)
+* @method static \Pimcore\Model\DataObject\Electronics\Listing|\Pimcore\Model\DataObject\Electronics|null getByManufacturingCompany($value, $limit = 0, $offset = 0, $objectTypes = null)
+* @method static \Pimcore\Model\DataObject\Electronics\Listing|\Pimcore\Model\DataObject\Electronics|null getByManufacturingDate($value, $limit = 0, $offset = 0, $objectTypes = null)
+* @method static \Pimcore\Model\DataObject\Electronics\Listing|\Pimcore\Model\DataObject\Electronics|null getByExpiryDate($value, $limit = 0, $offset = 0, $objectTypes = null)
+* @method static \Pimcore\Model\DataObject\Electronics\Listing|\Pimcore\Model\DataObject\Electronics|null getBySellerDetails($value, $limit = 0, $offset = 0, $objectTypes = null)
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
 */
 
 class Electronics extends Concrete
@@ -41,14 +67,27 @@ class Electronics extends Concrete
 protected $o_classId = "electronics";
 protected $o_className = "Electronics";
 protected $productId;
+<<<<<<< HEAD
 protected $productName;
 protected $description;
 protected $price;
+=======
+protected $brandName;
+protected $description;
+protected $price;
+protected $productType;
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
 protected $productSpecific;
 protected $ProductImage;
 protected $ProductColor;
 protected $features;
+<<<<<<< HEAD
 protected $manufacturerDetails;
+=======
+protected $manufacturingCompany;
+protected $manufacturingDate;
+protected $expiryDate;
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
 protected $sellerDetails;
 protected $ExtraAttributes;
 
@@ -98,6 +137,7 @@ public function setProductId(?string $productId)
 }
 
 /**
+<<<<<<< HEAD
 * Get productName - Product Name
 * @return string|null
 */
@@ -105,12 +145,25 @@ public function getProductName(): ?string
 {
 	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
 		$preValue = $this->preGetValue("productName");
+=======
+* Get brandName - Brand
+* @return string|null
+*/
+public function getBrandName(): ?string
+{
+	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
+		$preValue = $this->preGetValue("brandName");
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
 		if ($preValue !== null) {
 			return $preValue;
 		}
 	}
 
+<<<<<<< HEAD
 	$data = $this->productName;
+=======
+	$data = $this->brandName;
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
 
 	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
 		return $data->getPlain();
@@ -120,6 +173,7 @@ public function getProductName(): ?string
 }
 
 /**
+<<<<<<< HEAD
 * Set productName - Product Name
 * @param string|null $productName
 * @return \Pimcore\Model\DataObject\Electronics
@@ -127,6 +181,15 @@ public function getProductName(): ?string
 public function setProductName(?string $productName)
 {
 	$this->productName = $productName;
+=======
+* Set brandName - Brand
+* @param string|null $brandName
+* @return \Pimcore\Model\DataObject\Electronics
+*/
+public function setBrandName(?string $brandName)
+{
+	$this->brandName = $brandName;
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
 
 	return $this;
 }
@@ -201,6 +264,43 @@ public function setPrice(?float $price)
 }
 
 /**
+<<<<<<< HEAD
+=======
+* Get productType - Product Type
+* @return string|null
+*/
+public function getProductType(): ?string
+{
+	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
+		$preValue = $this->preGetValue("productType");
+		if ($preValue !== null) {
+			return $preValue;
+		}
+	}
+
+	$data = $this->productType;
+
+	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
+		return $data->getPlain();
+	}
+
+	return $data;
+}
+
+/**
+* Set productType - Product Type
+* @param string|null $productType
+* @return \Pimcore\Model\DataObject\Electronics
+*/
+public function setProductType(?string $productType)
+{
+	$this->productType = $productType;
+
+	return $this;
+}
+
+/**
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
 * @return \Pimcore\Model\DataObject\Electronics\ProductSpecific
 */
 public function getProductSpecific(): ?\Pimcore\Model\DataObject\Objectbrick
@@ -336,6 +436,7 @@ public function setFeatures(?\Pimcore\Model\DataObject\Classificationstore $feat
 }
 
 /**
+<<<<<<< HEAD
 * Get manufacturerDetails - Manufacturer Details
 * @return \Pimcore\Model\DataObject\Classificationstore|null
 */
@@ -343,17 +444,35 @@ public function getManufacturerDetails(): ?\Pimcore\Model\DataObject\Classificat
 {
 	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
 		$preValue = $this->preGetValue("manufacturerDetails");
+=======
+* Get manufacturingCompany - Manufacturing Company
+* @return string|null
+*/
+public function getManufacturingCompany(): ?string
+{
+	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
+		$preValue = $this->preGetValue("manufacturingCompany");
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
 		if ($preValue !== null) {
 			return $preValue;
 		}
 	}
 
+<<<<<<< HEAD
 	$data = $this->getClass()->getFieldDefinition("manufacturerDetails")->preGetData($this);
+=======
+	$data = $this->manufacturingCompany;
+
+	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
+		return $data->getPlain();
+	}
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
 
 	return $data;
 }
 
 /**
+<<<<<<< HEAD
 * Set manufacturerDetails - Manufacturer Details
 * @param \Pimcore\Model\DataObject\Classificationstore|null $manufacturerDetails
 * @return \Pimcore\Model\DataObject\Electronics
@@ -361,15 +480,98 @@ public function getManufacturerDetails(): ?\Pimcore\Model\DataObject\Classificat
 public function setManufacturerDetails(?\Pimcore\Model\DataObject\Classificationstore $manufacturerDetails)
 {
 	$this->manufacturerDetails = $manufacturerDetails;
+=======
+* Set manufacturingCompany - Manufacturing Company
+* @param string|null $manufacturingCompany
+* @return \Pimcore\Model\DataObject\Electronics
+*/
+public function setManufacturingCompany(?string $manufacturingCompany)
+{
+	$this->manufacturingCompany = $manufacturingCompany;
+
+	return $this;
+}
+
+/**
+* Get manufacturingDate - Manufacturing Date
+* @return \Carbon\Carbon|null
+*/
+public function getManufacturingDate(): ?\Carbon\Carbon
+{
+	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
+		$preValue = $this->preGetValue("manufacturingDate");
+		if ($preValue !== null) {
+			return $preValue;
+		}
+	}
+
+	$data = $this->manufacturingDate;
+
+	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
+		return $data->getPlain();
+	}
+
+	return $data;
+}
+
+/**
+* Set manufacturingDate - Manufacturing Date
+* @param \Carbon\Carbon|null $manufacturingDate
+* @return \Pimcore\Model\DataObject\Electronics
+*/
+public function setManufacturingDate(?\Carbon\Carbon $manufacturingDate)
+{
+	$this->manufacturingDate = $manufacturingDate;
+
+	return $this;
+}
+
+/**
+* Get expiryDate - Expiry Date
+* @return \Carbon\Carbon|null
+*/
+public function getExpiryDate(): ?\Carbon\Carbon
+{
+	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
+		$preValue = $this->preGetValue("expiryDate");
+		if ($preValue !== null) {
+			return $preValue;
+		}
+	}
+
+	$data = $this->expiryDate;
+
+	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
+		return $data->getPlain();
+	}
+
+	return $data;
+}
+
+/**
+* Set expiryDate - Expiry Date
+* @param \Carbon\Carbon|null $expiryDate
+* @return \Pimcore\Model\DataObject\Electronics
+*/
+public function setExpiryDate(?\Carbon\Carbon $expiryDate)
+{
+	$this->expiryDate = $expiryDate;
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
 
 	return $this;
 }
 
 /**
 * Get sellerDetails - Seller Details
+<<<<<<< HEAD
 * @return \Pimcore\Model\DataObject\Classificationstore|null
 */
 public function getSellerDetails(): ?\Pimcore\Model\DataObject\Classificationstore
+=======
+* @return \Pimcore\Model\DataObject\Seller[]
+*/
+public function getSellerDetails(): array
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
 {
 	if ($this instanceof PreGetValueHookInterface && !\Pimcore::inAdmin()) {
 		$preValue = $this->preGetValue("sellerDetails");
@@ -380,11 +582,19 @@ public function getSellerDetails(): ?\Pimcore\Model\DataObject\Classificationsto
 
 	$data = $this->getClass()->getFieldDefinition("sellerDetails")->preGetData($this);
 
+<<<<<<< HEAD
+=======
+	if ($data instanceof \Pimcore\Model\DataObject\Data\EncryptedField) {
+		return $data->getPlain();
+	}
+
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
 	return $data;
 }
 
 /**
 * Set sellerDetails - Seller Details
+<<<<<<< HEAD
 * @param \Pimcore\Model\DataObject\Classificationstore|null $sellerDetails
 * @return \Pimcore\Model\DataObject\Electronics
 */
@@ -392,6 +602,24 @@ public function setSellerDetails(?\Pimcore\Model\DataObject\Classificationstore 
 {
 	$this->sellerDetails = $sellerDetails;
 
+=======
+* @param \Pimcore\Model\DataObject\Seller[] $sellerDetails
+* @return \Pimcore\Model\DataObject\Electronics
+*/
+public function setSellerDetails(?array $sellerDetails)
+{
+	/** @var \Pimcore\Model\DataObject\ClassDefinition\Data\ManyToManyObjectRelation $fd */
+	$fd = $this->getClass()->getFieldDefinition("sellerDetails");
+	$hideUnpublished = \Pimcore\Model\DataObject\Concrete::getHideUnpublished();
+	\Pimcore\Model\DataObject\Concrete::setHideUnpublished(false);
+	$currentData = $this->getSellerDetails();
+	\Pimcore\Model\DataObject\Concrete::setHideUnpublished($hideUnpublished);
+	$isEqual = $fd->isEqual($currentData, $sellerDetails);
+	if (!$isEqual) {
+		$this->markFieldDirty("sellerDetails", true);
+	}
+	$this->sellerDetails = $fd->preSetData($this, $sellerDetails);
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
 	return $this;
 }
 

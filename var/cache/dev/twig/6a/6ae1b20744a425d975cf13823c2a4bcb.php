@@ -48,7 +48,11 @@ class __TwigTemplate_55ca9297fe5578b7e373ffa6899a30a2 extends Template
 <head>
     <meta charset=\"utf-8\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+<<<<<<< HEAD
     <title>Speed for life</title>
+=======
+    <title>electronics</title>
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
     <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\"
         integrity=\"sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi\" crossorigin=\"anonymous\">
     <link rel=\"stylesheet\" href=\"Style.css\">
@@ -57,6 +61,7 @@ class __TwigTemplate_55ca9297fe5578b7e373ffa6899a30a2 extends Template
     <link href=\"https://fonts.googleapis.com/css2?family=Skranjidisplay=swap\" rel=\"stylesheet\">
 </head>
 
+<<<<<<< HEAD
 <body>
 <div class=\"container\">
 
@@ -87,13 +92,63 @@ class __TwigTemplate_55ca9297fe5578b7e373ffa6899a30a2 extends Template
 \t\t\t\t\t";
             // line 48
             echo "\t\t\t\t";
+=======
+\t<body>
+\t\t<div class=\"row\" style=\"margin-top:20px;\">
+\t\t";
+        // line 19
+        echo "\t\t";
+        echo $this->extensions['Pimcore\Twig\Extension\DocumentEditableExtension']->renderEditable($context, "snippet", "header");
+        echo "
+\t\t<div class=\"d-flex flex-row-reverse\">
+\t\t\t<div class=\"btn-group\" role=\"group\" aria-label=\"Basic example\">Filters</div>
+        \t<button type=\"button\" class=\"btn btn-primary\">Left</button>
+        \t<button type=\"button\" class=\"btn btn-primary\">Middle</button>
+        \t<button type=\"button\" class=\"btn btn-primary\">Right</button>
+        \t</div>
+\t\t</div>
+
+\t\t";
+        // line 28
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["objects"]) || array_key_exists("objects", $context) ? $context["objects"] : (function () { throw new RuntimeError('Variable "objects" does not exist.', 28, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["object"]) {
+            // line 29
+            echo "\t\t<div class=\"col-md-3\">
+    \t<div style=\"border:solid black;margin-top:20px;\"align=\"center;\">
+        \t    <img class=\"rounded mx-auto d-block\" src=\"";
+            // line 31
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["object"], "getProductImage", [], "method", false, false, true, 31), 31, $this->source), "html", null, true);
+            echo "\"style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
+            \t<h3 align=\"center\"style=\"color:green\">Price :";
+            // line 32
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["object"], "getPrice", [], "any", false, false, true, 32), 32, $this->source), "html", null, true);
+            echo " </h3>
+            \t<p style=\"height:100px; widht:100px;margin-top:20px;\" align=\"center\" >
+\t               ";
+            // line 34
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["object"], "getDescription", [], "method", false, false, true, 34), 34, $this->source), "html", null, true);
+            echo " </p>
+    \t     </div>
+      \t</div>
+    \t";
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['object'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
+<<<<<<< HEAD
         // line 49
         echo "\t\t\t</div>
 \t\t</div>";
+=======
+        // line 38
+        echo "\t\t";
+        echo $this->extensions['Pimcore\Twig\Extension\DocumentEditableExtension']->renderEditable($context, "snippet", "footer");
+        echo "
+    </body>
+</html>";
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
 
@@ -114,7 +169,11 @@ class __TwigTemplate_55ca9297fe5578b7e373ffa6899a30a2 extends Template
 
     public function getDebugInfo()
     {
+<<<<<<< HEAD
         return array (  95 => 49,  89 => 48,  82 => 25,  78 => 24,  73 => 22,  70 => 21,  66 => 20,  45 => 1,);
+=======
+        return array (  104 => 38,  94 => 34,  89 => 32,  85 => 31,  81 => 29,  77 => 28,  64 => 19,  45 => 1,);
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
     }
 
     public function getSourceContext()
@@ -125,7 +184,11 @@ class __TwigTemplate_55ca9297fe5578b7e373ffa6899a30a2 extends Template
 <head>
     <meta charset=\"utf-8\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+<<<<<<< HEAD
     <title>Speed for life</title>
+=======
+    <title>electronics</title>
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
     <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\"
         integrity=\"sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi\" crossorigin=\"anonymous\">
     <link rel=\"stylesheet\" href=\"Style.css\">
@@ -134,6 +197,7 @@ class __TwigTemplate_55ca9297fe5578b7e373ffa6899a30a2 extends Template
     <link href=\"https://fonts.googleapis.com/css2?family=Skranjidisplay=swap\" rel=\"stylesheet\">
 </head>
 
+<<<<<<< HEAD
 <body>
 <div class=\"container\">
 
@@ -169,19 +233,56 @@ class __TwigTemplate_55ca9297fe5578b7e373ffa6899a30a2 extends Template
 \t\t\t\t{% endfor %}
 \t\t\t</div>
 \t\t</div>", "default/electronics.html.twig", "/var/www/html/test/pimProject/templates/default/electronics.html.twig");
+=======
+\t<body>
+\t\t<div class=\"row\" style=\"margin-top:20px;\">
+\t\t{# header snippet#}
+\t\t{{ pimcore_snippet(\"header\") }}
+\t\t<div class=\"d-flex flex-row-reverse\">
+\t\t\t<div class=\"btn-group\" role=\"group\" aria-label=\"Basic example\">Filters</div>
+        \t<button type=\"button\" class=\"btn btn-primary\">Left</button>
+        \t<button type=\"button\" class=\"btn btn-primary\">Middle</button>
+        \t<button type=\"button\" class=\"btn btn-primary\">Right</button>
+        \t</div>
+\t\t</div>
+
+\t\t{% for object in objects %}
+\t\t<div class=\"col-md-3\">
+    \t<div style=\"border:solid black;margin-top:20px;\"align=\"center;\">
+        \t    <img class=\"rounded mx-auto d-block\" src=\"{{ object.getProductImage() }}\"style=\"height:300px; width:300px;margin-top:20px;\" align=\"center\"/><br>
+            \t<h3 align=\"center\"style=\"color:green\">Price :{{ object.getPrice}} </h3>
+            \t<p style=\"height:100px; widht:100px;margin-top:20px;\" align=\"center\" >
+\t               {{object.getDescription()}} </p>
+    \t     </div>
+      \t</div>
+    \t{% endfor %}
+\t\t{{ pimcore_snippet(\"footer\") }}
+    </body>
+</html>", "default/electronics.html.twig", "/var/www/html/test/pimProject/templates/default/electronics.html.twig");
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
     }
     
     public function checkSecurity()
     {
+<<<<<<< HEAD
         static $tags = array("for" => 20);
         static $filters = array("escape" => 22);
         static $functions = array();
+=======
+        static $tags = array("for" => 28);
+        static $filters = array("escape" => 31);
+        static $functions = array("pimcore_snippet" => 19);
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
 
         try {
             $this->sandbox->checkSecurity(
                 ['for'],
                 ['escape'],
+<<<<<<< HEAD
                 []
+=======
+                ['pimcore_snippet']
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
             );
         } catch (SecurityError $e) {
             $e->setSourceContext($this->source);

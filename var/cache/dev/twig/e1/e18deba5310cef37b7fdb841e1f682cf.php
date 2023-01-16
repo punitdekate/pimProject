@@ -69,13 +69,21 @@ class __TwigTemplate_b25fe4aac2287c0297d189d0464802b0 extends Template
           <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Home</a>
         </li>
         <li class=\"nav-item\">
+<<<<<<< HEAD
           <a class=\"nav-link\" href=\"#\">Clothing</a>
+=======
+          <a class=\"nav-link\" href=\"/var/www/html/test/pimProject/templates/default/electronics.html.twig\">Electronics</a>
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
         </li>
         <li class=\"nav-item\">
           <a class=\"nav-link\" href=\"#\">Footwear</a>
         </li>
         <li class=\"nav-item\">
+<<<<<<< HEAD
           <a class=\"nav-link\" href=\"#\">Electronics</a>
+=======
+          <a class=\"nav-link\" href=\"/var/www/html/test/pimProject/templates/default/clothing.html.twig\">Clothing</a>
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
         </li>
         <li class=\"nav-item\">
           <a class=\"nav-link\" href=\"#\">Beauty</a>
@@ -139,13 +147,21 @@ class __TwigTemplate_b25fe4aac2287c0297d189d0464802b0 extends Template
           <a class=\"nav-link active\" aria-current=\"page\" href=\"#\">Home</a>
         </li>
         <li class=\"nav-item\">
+<<<<<<< HEAD
           <a class=\"nav-link\" href=\"#\">Clothing</a>
+=======
+          <a class=\"nav-link\" href=\"/var/www/html/test/pimProject/templates/default/electronics.html.twig\">Electronics</a>
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
         </li>
         <li class=\"nav-item\">
           <a class=\"nav-link\" href=\"#\">Footwear</a>
         </li>
         <li class=\"nav-item\">
+<<<<<<< HEAD
           <a class=\"nav-link\" href=\"#\">Electronics</a>
+=======
+          <a class=\"nav-link\" href=\"/var/www/html/test/pimProject/templates/default/clothing.html.twig\">Clothing</a>
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
         </li>
         <li class=\"nav-item\">
           <a class=\"nav-link\" href=\"#\">Beauty</a>

@@ -4,7 +4,10 @@
  * Fields Summary:
  * - dialShape [select]
  * - strapMaterial [select]
+<<<<<<< HEAD
  * - features [multiselect]
+=======
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
  */
 
 namespace Pimcore\Model\DataObject\Objectbrick\Data;
@@ -19,7 +22,10 @@ class SmarWatch extends DataObject\Objectbrick\Data\AbstractData
 protected $type = "SmarWatch";
 protected $dialShape;
 protected $strapMaterial;
+<<<<<<< HEAD
 protected $features;
+=======
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
 
 
 /**
@@ -99,6 +105,7 @@ public function setStrapMaterial (?string $strapMaterial)
 	return $this;
 }
 
+<<<<<<< HEAD
 /**
 * Get features - Features
 * @return string[]|null
@@ -132,5 +139,7 @@ public function setFeatures (?array $features)
 	return $this;
 }
 
+=======
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
 }
 

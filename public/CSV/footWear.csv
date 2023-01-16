@@ -1,0 +1,4 @@
+ProductId ,ProductName,Decription,Price,Producttype,ProductImage,productColor,ManufacturingCompany,ManufacturingDate,expriyDate,Gender
+15,Shoes,sport shoes,3200,Shoes,,#FFFFF,Puma,19-11-2022,24-09-30,Men
+16,Flip-flop,waterproof flip-flop,3000,Snadal,,#00008B,nike,12-3-2022,1-03-30,Men
+17,boot,leather boot,1000,boot,,#ffA500,himQuen,19-12-2022,21-4-25,Women

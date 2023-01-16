@@ -4,7 +4,10 @@
  * Fields Summary:
  * - dialShape [select]
  * - strapMaterial [select]
+<<<<<<< HEAD
  * - features [multiselect]
+=======
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
  */
 
 return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
@@ -156,6 +159,7 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'dynamicOptions' => false,
              'defaultValueGenerator' => '',
           )),
+<<<<<<< HEAD
           2 => 
           Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect::__set_state(array(
              'name' => 'features',
@@ -222,6 +226,8 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
              'optionsProviderData' => '',
              'dynamicOptions' => false,
           )),
+=======
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
         ),
          'locked' => false,
          'blockedVarsForExport' => 

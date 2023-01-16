@@ -250,6 +250,14 @@ return Pimcore\Model\DataObject\Objectbrick\Definition::__set_state(array(
                         'key' => 'AMD',
                         'value' => 'AMD',
                       ),
+<<<<<<< HEAD
+=======
+                      4 => 
+                      array (
+                        'key' => 'iphone',
+                        'value' => 'iphone',
+                      ),
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
                     ),
                      'width' => '',
                      'defaultValue' => '',

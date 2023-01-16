@@ -7,6 +7,7 @@
  * 
  *
  * Fields Summary:
+<<<<<<< HEAD
  * - BaseAttributes [classificationstore]
  * - footwearSpecific [objectbricks]
  * - ProductImage [image]
@@ -14,6 +15,21 @@
  * - featuresSpecification [classificationstore]
  * - manufacturerDetails [classificationstore]
  * - sellerDetails [classificationstore]
+=======
+ * - productId [input]
+ * - brandName [input]
+ * - description [textarea]
+ * - price [numeric]
+ * - footwearSpecific [objectbricks]
+ * - gender [select]
+ * - ProductImage [image]
+ * - ProductColor [rgbaColor]
+ * - featuresSpecification [classificationstore]
+ * - manufacturingCompany [input]
+ * - manufacturingDate [date]
+ * - expiryDate [date]
+ * - sellerDetails [manyToManyObjectRelation]
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
  * - ExtraAttributes [block]
  * -- AttributeName [input]
  * -- AttributeDetails [input]
@@ -26,7 +42,11 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'description' => 'Contain information about clothing class and its attributes
 ',
    'creationDate' => 0,
+<<<<<<< HEAD
    'modificationDate' => 1673262699,
+=======
+   'modificationDate' => 1673836001,
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -90,9 +110,15 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
+<<<<<<< HEAD
               Pimcore\Model\DataObject\ClassDefinition\Data\Classificationstore::__set_state(array(
                  'name' => 'BaseAttributes',
                  'title' => 'Base Attributes',
+=======
+              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+                 'name' => 'productId',
+                 'title' => 'Product Id',
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
                  'tooltip' => '',
                  'mandatory' => true,
                  'noteditable' => false,
@@ -101,7 +127,11 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'style' => '',
                  'permissions' => NULL,
                  'datatype' => 'data',
+<<<<<<< HEAD
                  'fieldtype' => 'classificationstore',
+=======
+                 'fieldtype' => 'input',
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
                  'relationType' => false,
                  'invisible' => false,
                  'visibleGridView' => false,
@@ -109,6 +139,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'blockedVarsForExport' => 
                 array (
                 ),
+<<<<<<< HEAD
                  'children' => 
                 array (
                 ),
@@ -135,6 +166,106 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'maxItems' => NULL,
                  'permissionView' => NULL,
                  'permissionEdit' => NULL,
+=======
+                 'width' => '',
+                 'defaultValue' => NULL,
+                 'columnLength' => 190,
+                 'regex' => '',
+                 'regexFlags' => 
+                array (
+                ),
+                 'unique' => false,
+                 'showCharCount' => false,
+                 'defaultValueGenerator' => '',
+              )),
+              1 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+                 'name' => 'brandName',
+                 'title' => 'Brand',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'input',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'width' => '',
+                 'defaultValue' => NULL,
+                 'columnLength' => 190,
+                 'regex' => '',
+                 'regexFlags' => 
+                array (
+                ),
+                 'unique' => false,
+                 'showCharCount' => false,
+                 'defaultValueGenerator' => '',
+              )),
+              2 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Textarea::__set_state(array(
+                 'name' => 'description',
+                 'title' => 'Description',
+                 'tooltip' => '',
+                 'mandatory' => true,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'textarea',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'width' => '',
+                 'height' => '',
+                 'maxLength' => NULL,
+                 'showCharCount' => false,
+                 'excludeFromSearchIndex' => false,
+              )),
+              3 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Numeric::__set_state(array(
+                 'name' => 'price',
+                 'title' => 'Price',
+                 'tooltip' => '',
+                 'mandatory' => true,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'numeric',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'width' => '',
+                 'defaultValue' => NULL,
+                 'integer' => false,
+                 'unsigned' => false,
+                 'minValue' => NULL,
+                 'maxValue' => NULL,
+                 'unique' => false,
+                 'decimalSize' => NULL,
+                 'decimalPrecision' => NULL,
+                 'defaultValueGenerator' => '',
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
               )),
             ),
              'locked' => false,
@@ -190,6 +321,50 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'maxItems' => NULL,
                  'border' => false,
               )),
+<<<<<<< HEAD
+=======
+              1 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Select::__set_state(array(
+                 'name' => 'gender',
+                 'title' => 'Gender',
+                 'tooltip' => '',
+                 'mandatory' => true,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'select',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'options' => 
+                array (
+                  0 => 
+                  array (
+                    'key' => 'Men',
+                    'value' => 'Men',
+                  ),
+                  1 => 
+                  array (
+                    'key' => 'Women',
+                    'value' => 'Women',
+                  ),
+                ),
+                 'width' => '',
+                 'defaultValue' => '',
+                 'optionsProviderClass' => '',
+                 'optionsProviderData' => '',
+                 'columnLength' => 190,
+                 'dynamicOptions' => false,
+                 'defaultValueGenerator' => '',
+              )),
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
             ),
              'locked' => false,
              'blockedVarsForExport' => 
@@ -365,9 +540,15 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
+<<<<<<< HEAD
               Pimcore\Model\DataObject\ClassDefinition\Data\Classificationstore::__set_state(array(
                  'name' => 'manufacturerDetails',
                  'title' => 'Manufacturer Details',
+=======
+              Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+                 'name' => 'manufacturingCompany',
+                 'title' => 'Manufacturing Company',
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
                  'tooltip' => '',
                  'mandatory' => false,
                  'noteditable' => false,
@@ -376,7 +557,11 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'style' => '',
                  'permissions' => NULL,
                  'datatype' => 'data',
+<<<<<<< HEAD
                  'fieldtype' => 'classificationstore',
+=======
+                 'fieldtype' => 'input',
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
                  'relationType' => false,
                  'invisible' => false,
                  'visibleGridView' => false,
@@ -384,6 +569,7 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'blockedVarsForExport' => 
                 array (
                 ),
+<<<<<<< HEAD
                  'children' => 
                 array (
                 ),
@@ -410,6 +596,70 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'maxItems' => NULL,
                  'permissionView' => NULL,
                  'permissionEdit' => NULL,
+=======
+                 'width' => '',
+                 'defaultValue' => NULL,
+                 'columnLength' => 190,
+                 'regex' => '',
+                 'regexFlags' => 
+                array (
+                ),
+                 'unique' => false,
+                 'showCharCount' => false,
+                 'defaultValueGenerator' => '',
+              )),
+              1 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
+                 'name' => 'manufacturingDate',
+                 'title' => 'Manufacturing Date',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'date',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'queryColumnType' => 'bigint(20)',
+                 'columnType' => 'bigint(20)',
+                 'defaultValue' => 1673461800,
+                 'useCurrentDate' => false,
+                 'defaultValueGenerator' => '',
+              )),
+              2 => 
+              Pimcore\Model\DataObject\ClassDefinition\Data\Date::__set_state(array(
+                 'name' => 'expiryDate',
+                 'title' => 'Expiry Date',
+                 'tooltip' => '',
+                 'mandatory' => false,
+                 'noteditable' => false,
+                 'index' => false,
+                 'locked' => false,
+                 'style' => '',
+                 'permissions' => NULL,
+                 'datatype' => 'data',
+                 'fieldtype' => 'date',
+                 'relationType' => false,
+                 'invisible' => false,
+                 'visibleGridView' => false,
+                 'visibleSearch' => false,
+                 'blockedVarsForExport' => 
+                array (
+                ),
+                 'queryColumnType' => 'bigint(20)',
+                 'columnType' => 'bigint(20)',
+                 'defaultValue' => NULL,
+                 'useCurrentDate' => false,
+                 'defaultValueGenerator' => '',
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
               )),
             ),
              'locked' => false,
@@ -439,7 +689,11 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
              'children' => 
             array (
               0 => 
+<<<<<<< HEAD
               Pimcore\Model\DataObject\ClassDefinition\Data\Classificationstore::__set_state(array(
+=======
+              Pimcore\Model\DataObject\ClassDefinition\Data\ManyToManyObjectRelation::__set_state(array(
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
                  'name' => 'sellerDetails',
                  'title' => 'Seller Details',
                  'tooltip' => '',
@@ -450,14 +704,20 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'style' => '',
                  'permissions' => NULL,
                  'datatype' => 'data',
+<<<<<<< HEAD
                  'fieldtype' => 'classificationstore',
                  'relationType' => false,
+=======
+                 'fieldtype' => 'manyToManyObjectRelation',
+                 'relationType' => true,
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
                  'invisible' => false,
                  'visibleGridView' => false,
                  'visibleSearch' => false,
                  'blockedVarsForExport' => 
                 array (
                 ),
+<<<<<<< HEAD
                  'children' => 
                 array (
                 ),
@@ -484,6 +744,26 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                  'maxItems' => NULL,
                  'permissionView' => NULL,
                  'permissionEdit' => NULL,
+=======
+                 'classes' => 
+                array (
+                  0 => 
+                  array (
+                    'classes' => 'seller',
+                  ),
+                ),
+                 'pathFormatterClass' => '',
+                 'width' => '',
+                 'height' => '',
+                 'maxItems' => NULL,
+                 'visibleFields' => 'sellerId,Name,product',
+                 'allowToCreateNewObject' => false,
+                 'optimizedAdminLoading' => false,
+                 'enableTextSelection' => false,
+                 'visibleFieldDefinitions' => 
+                array (
+                ),
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
               )),
             ),
              'locked' => false,
@@ -678,6 +958,42 @@ return Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'enableGridLocking' => false,
    'deletedDataComponents' => 
   array (
+<<<<<<< HEAD
+=======
+    0 => 
+    Pimcore\Model\DataObject\ClassDefinition\Data\Input::__set_state(array(
+       'name' => 'productName',
+       'title' => 'Product Name',
+       'tooltip' => '',
+       'mandatory' => false,
+       'noteditable' => false,
+       'index' => false,
+       'locked' => false,
+       'style' => '',
+       'permissions' => NULL,
+       'datatype' => 'data',
+       'fieldtype' => 'input',
+       'relationType' => false,
+       'invisible' => false,
+       'visibleGridView' => false,
+       'visibleSearch' => false,
+       'blockedVarsForExport' => 
+      array (
+      ),
+       'width' => '',
+       'defaultValue' => NULL,
+       'queryColumnType' => 'varchar',
+       'columnType' => 'varchar',
+       'columnLength' => 190,
+       'regex' => '',
+       'regexFlags' => 
+      array (
+      ),
+       'unique' => false,
+       'showCharCount' => false,
+       'defaultValueGenerator' => '',
+    )),
+>>>>>>> 256d15e6350525394dfdc17d6ff4023486afb9f0
   ),
    'blockedVarsForExport' => 
   array (
